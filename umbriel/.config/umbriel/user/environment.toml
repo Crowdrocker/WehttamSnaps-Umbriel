@@ -1,0 +1,44 @@
+[environment]
+# QT
+QT_QPA_PLATFORM = "wayland"
+QT_QPA_PLATFORMTHEME = "qtengine"
+QT_QPA_PLATFORMTHEME_QT6 = "qtengine"
+XDG_MENU_PREFIX = "arch-"
+
+# Electron
+LECTRON_OZONE_PLATFORM_HINT = "auto"
+
+# Java
+_JAVA_AWT_WM_NONREPARENTING = "1"
+
+# GTK
+GTK_THEME = "adw-gtk3-dark"
+
+# Misc (Aligned with your Nano-first workflow)
+EDITOR = "nano"
+VISUAL = "nano"
+MOZ_ENABLE_WAYLAND = "1"
+BROWSER = "waterfox"
+RUST_BACKTRACE = "full"
+
+
+# ==============================================================================
+# Environment Configuration & AMD Driver Tuning
+# ==============================================================================
+# Enforce native Wayland pathways across standard rendering engines
+SDL_VIDEODRIVER = "wayland"
+CLUTTER_BACKEND = "wayland"
+
+# RADV / Mesa Driver Optimization (Restored Smart Access Memory)
+AMD_VULKAN_ICD = "RADV"
+RADV_PERFTEST = "sam,aco"
+VK_EXT_graphics_pipeline_library = "1"
+
+# Hardware Accelerated Video Decoding (VA-API)
+# Point explicitly to the modern AMD open-source driver stack
+VDPAU_DRIVER = "radeonsi"
+LIBVA_DRIVER_NAME = "radeonsi"
+
+# Game Performance Flags
+# Enforce zero latency frames and smooth variable refresh scaling
+vblank_mode = "0"

@@ -1,0 +1,11 @@
+cat << 'EOF' > /home/wehttamsnaps/Documents/GitHub/WehttamSnaps-Umbriel/.gitignore
+.bash_history
+.zsh_history
+*.zwc
+*.bak
+*.log
+.zsh/zinit/
+.bash/ble.sh/
+*.secret
+projectdir.state
+EOF

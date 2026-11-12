@@ -1,0 +1,15 @@
+[general]
+autostart = [
+  "sh -c 'sleep 2 && fcitx5 -D'",
+  "otd-daemon",
+  "systemctl --user start opentabletdriver",
+  "env XDG_MENU_PREFIX=plasma- kbuildsycoca6",
+  "gnome-keyring-daemon --start --components=secrets,ssh",
+  "gamemoded &",
+  "openrgb --profile default --server &",
+
+  # ─── Security Authentication Layer ───
+  "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &" # <-- Add this line
+]
+
+

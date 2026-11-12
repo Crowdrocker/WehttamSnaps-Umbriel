@@ -1,0 +1,239 @@
+# ~/.zsh/.zshrc
+
+#=============================================================================================
+# ---  WehttamSnaps Niri Configuration
+# ---  Author: Matthew (Crowdrocker)
+# ---  Hardware: AM5 Build - Ryzen 5 9600X, XFX RX 7600 8GB, 16GB DDR5 RAM, 850W PSU
+
+#=============================================================================================
+
+# ================================= fastfetch ================================= #
+if command -v fastfetch &> /dev/null; then
+    if [[ -d "$HOME/.local/share/fastfetch" ]]; then
+export ffconfig="minimal"
+        command fastfetch --config \
+        "$HOME/.local/share/fastfetch/presets/${ffconfig}.jsonc"
+    else
+        command fastfetch
+    fi
+fi
+
+
+
+# Print custom system cheat sheet layout on interactive terminal start
+if [[ $- == *i* ]]; then
+    ~/.config/niri/scripts/motd.sh
+fi
+
+############################################
+# Download Zinit, if it's not there yet
+############################################
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if [ ! -d "$ZINIT_HOME" ]; then
+   mkdir -p "$(dirname $ZINIT_HOME)"
+   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+source "${ZINIT_HOME}/zinit.zsh"
+
+
+############################################
+# Add in zsh plugins
+############################################
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
+zinit light jeffreytse/zsh-vi-mode
+
+# Add in snippets
+zinit snippet OMZP::git
+zinit snippet OMZP::sudo
+# zinit snippet OMZP::tmuxinator
+# zinit snippet OMZP::docker
+zinit snippet OMZP::command-not-found
+
+# Disable the cursor style feature
+# ZVM_CURSOR_STYLE_ENABLED=false
+ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM
+ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BLOCK
+ZVM_OPPEND_MODE_CURSOR=$ZVM_CURSOR_BLINKING_UNDERLINE
+
+# Load completions (cached for speed)
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.m+1) ]]; then
+    compinit
+else
+    compinit -C
+fi
+
+zinit cdreplay -q
+
+
+############################################
+# Add in Starship
+############################################
+export STARSHIP_CONFIG="$HOME/.zsh/starship/starship-simple.toml"
+eval "$(starship init zsh)"
+
+
+#######################################################
+# ZSH Basic Options
+#######################################################
+setopt autocd              # change directory just by typing its name
+setopt correct             # auto correct mistakes
+setopt correct_all             # auto correct mistakes
+setopt interactivecomments # allow comments in interactive mode
+setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
+setopt nonomatch           # hide error message if there is no match for the pattern
+setopt notify              # report the status of background jobs immediately
+setopt numericglobsort     # sort filenames numerically when it makes sense
+setopt promptsubst         # enable command substitution in prompt
+
+
+#######################################################
+# Environment Variables
+#######################################################
+export EDITOR=nano
+export VISUAL=nano
+export SUDO_EDITOR=nano
+export FCEDIT=nano
+export BROWSER=com.brave.Browser
+
+if command -v bat >/dev/null 2>&1; then
+	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+	export PAGER=bat
+fi
+
+if command -v fzf >/dev/null 2>&1; then
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+	  --info=inline-right \
+	  --ansi \
+	  --layout=reverse \
+	  --border=rounded \
+	  --color=border:#27a1b9 \
+	  --color=fg:#c0caf5 \
+	  --color=gutter:#16161e \
+	  --color=header:#ff9e64 \
+	  --color=hl+:#2ac3de \
+	  --color=hl:#2ac3de \
+	  --color=info:#545c7e \
+	  --color=marker:#ff007c \
+	  --color=pointer:#ff007c \
+	  --color=prompt:#2ac3de \
+	  --color=query:#c0caf5:regular \
+	  --color=scrollbar:#27a1b9 \
+	  --color=separator:#ff9e64 \
+	  --color=spinner:#ff007c \
+	"
+fi
+
+
+#######################################################
+# ZSH Keybindings
+#######################################################
+bindkey -v
+# bindkey '^p' history-search-backward
+# bindkey '^n' history-search-forward
+# bindkey '^[w' kill-region
+# bindkey ' ' magic-space                           # do history expansion on space
+bindkey "^[[A" history-beginning-search-backward  # search history with up key
+bindkey "^[[B" history-beginning-search-forward   # search history with down key
+
+
+#######################################################
+# History Configuration
+#######################################################
+HISTSIZE=10000
+HISTFILE=~/.zsh/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+
+#######################################################
+# Completion styling
+#######################################################
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
+
+
+#######################################################
+# ZSH Syntax highlighting
+#######################################################
+# source ~/.zsh/zsh-syntax-highlighting.zsh
+# source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+
+#######################################################
+# eval functions
+#######################################################
+if command -v fzf >/dev/null 2>&1; then
+    eval "$(fzf --zsh)" # fzf
+fi
+
+if command -v thefuck >/dev/null 2>&1; then
+    fuck() {
+        TF_PYTHONIOENCODING=$PYTHONIOENCODING
+        export TF_SHELL=zsh
+        export TF_ALIAS=fuck
+        TF_SHELL_ALIASES=$(alias)
+        export TF_SHELL_ALIASES
+        TF_HISTORY="$(fc -ln -10)"
+        export TF_HISTORY
+        export PYTHONIOENCODING=utf-8
+        TF_CMD=$(thefuck THEFUCK_ARGUMENT_PLACEHOLDER "$@") && eval "$TF_CMD"
+        unset TF_HISTORY
+        export PYTHONIOENCODING=$TF_PYTHONIOENCODING
+        test -n "$TF_CMD" && print -s "$TF_CMD"
+    }
+    hell() {
+        TF_PYTHONIOENCODING=$PYTHONIOENCODING
+        export TF_SHELL=zsh
+        export TF_ALIAS=hell
+        TF_SHELL_ALIASES=$(alias)
+        export TF_SHELL_ALIASES
+        TF_HISTORY="$(fc -ln -10)"
+        export TF_HISTORY
+        export PYTHONIOENCODING=utf-8
+        TF_CMD=$(thefuck THEFUCK_ARGUMENT_PLACEHOLDER "$@") && eval "$TF_CMD"
+        unset TF_HISTORY
+        export PYTHONIOENCODING=$TF_PYTHONIOENCODING
+        test -n "$TF_CMD" && print -s "$TF_CMD"
+    }
+    alias damn='eval "$(TF_ALIAS=damn PYTHONIOENCODING=utf-8 thefuck "$(fc -ln -1)")"'
+fi
+
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init zsh)"
+fi
+
+
+#######################################################
+# source alias and functions
+#######################################################
+source ~/.zsh/alias.zsh
+source ~/.zsh/functions.zsh
+
+
+# ── WEHTTAMSNAPS - CORE NIRI SYSTEM ALIAS HOOKS ──
+alias set-game="~/.config/niri/scripts/audio-routing.sh gaming"
+alias set-chill="~/.config/niri/scripts/audio-routing.sh music_only"
+alias audio-graph="qpwgraph &"
+alias audio-reset="killall wireplumber && systemctl --user restart pipewire wireplumber && sleep 1 && ~/.config/niri/scripts/audio-routing.sh gaming"
+
+# ── SNAPS-OS SHORTCUT COMPATIBILITY ──
+alias pacgui="ghostty --title=pacgui -e aurgui"
+alias projectdir="cat ~/.config/projectdir.state"
+alias tipme="~/.config/niri/scripts/tips.sh random"
+alias alltips="~/.config/niri/scripts/tips.sh list"
