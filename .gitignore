@@ -8,3 +8,4 @@
 *.secret
 projectdir.state
 
+umbriel/.config/umbriel/shaders/community/
