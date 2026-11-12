@@ -1,4 +1,3 @@
-cat << 'EOF' > /home/wehttamsnaps/Documents/GitHub/WehttamSnaps-Umbriel/.gitignore
 .bash_history
 .zsh_history
 *.zwc
@@ -8,4 +7,4 @@ cat << 'EOF' > /home/wehttamsnaps/Documents/GitHub/WehttamSnaps-Umbriel/.gitigno
 .bash/ble.sh/
 *.secret
 projectdir.state
-EOF
+umbriel/.config/umbriel/shaders
