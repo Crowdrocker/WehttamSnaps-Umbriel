@@ -53,3 +53,4 @@ Tested on **AMD Ryzen 5 9600X** + **Radeon RX 7600** at **1920x1080 High Setting
 | **Tom Clancy's The Division 2** | **215 FPS** | — | — | DirectX 12 + Gamescope (`1920x1080`) |
 | **Horizon Forbidden West** | **132 FPS** | — | — | High Textures + 16x AF + FSR 3 Quality |
 | **Cyberpunk 2077 (v2.5)** | **113.35 FPS** | **93.30 FPS** | **139.30 FPS** | Custom High + FSR 2.1 Quality + RT Off |
+| **Shadow of the Tomb Raider** | **231 FPS** | — | — | Proton DX12 (VKD3D) + Highest Preset (RT Shadows Off) |
