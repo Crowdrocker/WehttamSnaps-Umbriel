@@ -13,11 +13,11 @@ Curated references for **Linux gaming**, **Wayland compositors**, and **low-late
 
 ## 📡 Low-Latency Game Streaming & Virtual Displays
 
-* **[Nonary/Vibepollo (`://github.com`)](https://://github.com)**
+* **[Nonary/Vibepollo (`github.com/Nonary/Vibepollo`)](https://github.com/Nonary/Vibepollo)**
   * Enhanced fork of Apollo/Sunshine with automated virtual displays, native client resolution/refresh matching, **PyroWave** low-latency GPU wavelet streaming, and **Remote Monitor** support.
   * *Notes:* Runs as a Windows service with full WGC virtual display automation, and includes an Arch/CachyOS Linux beta (tested primarily on Plasma 6 Wayland).
 
-* **[Nonary/moonlight-qt (`://github.com`)](https://://github.com)**
+* **[Nonary/moonlight-qt (`github.com/Nonary/moonlight-qt`)](https://github.com/Nonary/moonlight-qt)**
   * Custom Moonlight desktop client fork built to pair with Vibepollo, unlocking **VRR frame pacing**, the **PyroWave** codec, and **Remote Monitor** mode over wired LAN.
 
 ---
