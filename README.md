@@ -33,6 +33,15 @@ stow -v umbriel mangohud bash zsh
 
 ---
 
+## 📚 Documentation & Guides
+
+* [🚀 Steam Launch Options & In-Game Graphics Profiles](docs/steam-launch-options.md)
+* [📊 MangoHUD Telemetry & Hotkeys](docs/mangohud.md)
+* [🛠️ Hardware, Ethernet & Compositor Troubleshooting Log](docs/troubleshooting.md)
+* [🔊 Adaptive Sound System (J.A.R.V.I.S. & iDroid)](docs/sound-system.md)
+
+---
+
 ## 📜 License
 
 Released under the [MIT License](LICENSE).
