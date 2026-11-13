@@ -96,20 +96,6 @@
 
 ---
 
-## 🗃️ Modular Configuration Matrix (`snaps/`)
-
-To prevent monolith configuration decay, my main Niri `config.kdl` parses modular file segments sequentially:
-
-*   📁 **`00-base.kdl`**: Root environment limits, 1:1 flat mouse tracking configuration, and XWayland scale handling.
-*   📁 **`05-wiri_startup.kdl`**: Autostart system bridges (`xwayland-satellite`), secure storage auto-mounters, GNOME Polkit agents, and background scripts.
-*   📁 **`10-wiri_keybinds.kdl`**: Keyboard layout mappings (Vim-style navigation) and J.A.R.V.I.S automation execution hooks.
-*   📁 **`20-wiri_rules.kdl`**: Precise window geometry bounds and floating rules for modding infrastructure (Vortex, MO2, xEdit, SteamTinkerLaunch).
-*   📁 **`30-workspaces.kdl`**: Monitored desktop layouts splitting peripheral applications to the left screen and full-screen environments to the center display.
-*   📁 **`40-gaming.kdl`**: Exclusive full-screen application sandboxing rules utilizing `gamescope`.
-*   📁 **`99-overrides.kdl`**: Absolute layout overrides pinning coordinate geometry planes for my dual 1080p display matrix.
-
----
-
 ## 🎵 J.A.R.V.I.S Audio Routing Matrix
 
 System audio streams are parsed cleanly into isolated virtual lines using PipeW
@@ -289,41 +275,6 @@ Full list in [docs/KEYBINDS.md](docs/KEYBINDS.md).
 
 ---
 
-## IPC (for nerds who want custom bindings)
-
-ii exposes IPC targets you can bind to whatever keys you want. Syntax:
-
-```kdl
-bind "Key" { spawn "qs" "-c" "ii" "ipc" "call" "<target>" "<function>"; }
-```
-
-Main targets:
-
-| Target | Functions |
-|--------|-----------|
-| `overview` | `toggle` |
-| `overlay` | `toggle` |
-| `clipboard` | `toggle`, `open`, `close` |
-| `altSwitcher` | `next`, `previous`, `toggle` |
-| `region` | `screenshot`, `ocr`, `search`, `record` |
-| `session` | `toggle` |
-| `lock` | `activate` |
-| `cheatsheet` | `toggle` |
-| `settings` | `open` |
-| `sidebarLeft` | `toggle` |
-| `sidebarRight` | `toggle` |
-| `wallpaperSelector` | `toggle` |
-| `panelFamily` | `cycle`, `set` |
-| `mpris` | `playPause`, `next`, `previous` |
-| `brightness` | `increment`, `decrement` |
-| `gamemode` | `toggle`, `activate`, `deactivate`, `status` |
-| `notifications` | `test`, `clearAll`, `toggleSilent` |
-| `audio` | `volumeUp`, `volumeDown`, `mute`, `micMute` |
-
-Full reference with examples: [docs/IPC.md](docs/IPC.md)
-
----
-
 
 🛠️<a id="Troubleshooting"></a>
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Troubleshooting" width="450"/>
@@ -389,12 +340,11 @@ This fork diverged a lot from the original - different compositor, different fea
 
 🙏<a id="Credits"></a>
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Credits" width="450"/>
-- [**end-4**](https://github.com/end-4/dots-hyprland) –  illogical-impulse for Hyprland
+- [**end-4**](https://github.com/end-4/dots-hyprland) –  a fork with ideas worth taking
 - [**Quickshell**](https://quickshell.outfoxxed.me/) – the framework that makes this possible
 - [**snowarch**](https://github.com/snowarch) – Theming concepts
-- [**Chris Titus**](https://github.com/YaLTeR/niri) – Linutil tool
-- [**Community**](https://github.com/YaLTeR/niri) – Arch Linux, Niri, and PipeWire communities
-
+- [**niri**](https://github.com/YaLTeR/niri) – by YaLTeR: the compositor
+- [**Umbriel**](https://github.com/noctalia-dev/umbriel) – by the Noctalia team: the other compositor iNiR runs on
 ---
 
 ## 📞 Contact
