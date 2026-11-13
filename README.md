@@ -20,6 +20,23 @@ Modular, GPU-accelerated Wayland desktop dotfiles for **CachyOS**, built around 
 * **Hardware:** AMD Ryzen 5 9600X | Radeon RX 7600 | 16GB DDR5
 
 ---
+### 🎩 Fedora 45 Migration & Deployment
+
+For a lower-maintenance, point-release base system with **Linux Kernel 7.2**, run the automated Fedora installer. It configures **RPM Fusion**, swaps in full **FFmpeg + AMD Mesa VA-API codecs**, adds the **Terra** and **Copr** repositories for **Umbriel**, **Ghostty**, and **Yazi**, applies global **RADV** fixes, and links all dotfiles via **GNU Stow**:
+
+```bash
+git clone https://github.com ~/Documents/GitHub/WehttamSnaps-Umbriel
+cd ~/Documents/GitHub/WehttamSnaps-Umbriel
+chmod +x fedora-install.sh && ./fedora-install.sh
+```
+
+After the script finishes, complete the **iNiR** shell registration and reboot:
+
+```bash
+cd ~/inir && ./setup install   # Select Umbriel when prompted
+inir compositor add umbriel && inir compositor sync
+umbriel config validate
+```
 
 ## 🚀 Quick Deployment (GNU Stow)
 
