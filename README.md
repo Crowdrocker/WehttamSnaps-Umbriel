@@ -62,3 +62,11 @@ stow -v umbriel mangohud bash zsh
 ## 📜 License
 
 Released under the [MIT License](LICENSE).
+
+---
+
+## 🎨 iNiR Shell Layout Gallery
+
+| Waffle (Taskbar) | iRiS (Island) | Material ii (Sidebars) |
+| :---: | :---: | :---: |
+| ![Waffle Layout](assets/layout-waffle.png) | ![iRiS Layout](assets/layout-iris.png) | ![Material ii Layout](assets/layout-material.png) |
