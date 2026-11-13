@@ -137,6 +137,35 @@ if command -v umbriel &>/dev/null; then
     umbriel config validate
 fi
 
+# ── Optional Persistent /etc/fstab Drive Setup ───────────────────────────────
+read -rp "💾 Configure /etc/fstab auto-mounts for your 5 data drives? [y/N]: " SETUP_FSTAB
+if [[ "${SETUP_FSTAB,,}" == "y" ]]; then
+    echo "📁 Creating mount directories under /mnt/..."
+    sudo mkdir -p /mnt/{LINUXDRIVE,EXTRA1TB,GAMEDRIVE,WettamSnapsMain,512GB}
+
+    FSTAB_ENTRIES=(
+        "UUID=2be94340-fe0c-464c-9afc-fde6ddc300cc  /mnt/LINUXDRIVE      ext4    defaults,noatime,nofail  0 2"
+        "UUID=d3283959-c9d3-494a-b832-72f961ea7a92  /mnt/EXTRA1TB        ext4    defaults,noatime,nofail  0 2"
+        "UUID=3f996c97-b699-4208-b9fc-1a64bc65b478  /mnt/GAMEDRIVE       ext4    defaults,noatime,nofail  0 2"
+        "UUID=2C66D88566D850E6                      /mnt/WettamSnapsMain ntfs-3g defaults,uid=1000,gid=1000,dmask=022,fmask=111,nofail  0 0"
+        "UUID=47780A83503AF675                      /mnt/512GB           ntfs-3g defaults,uid=1000,gid=1000,dmask=022,fmask=111,nofail  0 0"
+    )
+
+    for entry in "${FSTAB_ENTRIES[@]}"; do
+        uuid="${entry%% *}"
+        if ! grep -q "$uuid" /etc/fstab; then
+            echo "$entry" | sudo tee -a /etc/fstab >/dev/null
+            echo "   -> Added $uuid"
+        else
+            echo "   -> Skipped $uuid (already in /etc/fstab)"
+        fi
+    done
+
+    sudo systemctl daemon-reload
+    sudo mount -a
+    echo "✅ Drives mounted and verified."
+fi
+
 echo ""
 echo "🎉 Fedora $FEDORA_VER deployment complete! Backup saved at: $BACKUP_DIR"
 echo "➡️  Next steps:"
