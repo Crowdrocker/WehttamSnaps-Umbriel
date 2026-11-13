@@ -39,7 +39,7 @@ stow -v umbriel mangohud bash zsh
 * [📊 MangoHUD Telemetry & Hotkeys](docs/mangohud.md)
 * [🛠️ Hardware, Ethernet & Compositor Troubleshooting Log](docs/troubleshooting.md)
 * [🔊 Adaptive Sound System (J.A.R.V.I.S. & iDroid)](docs/sound-system.md)
-
+* [🧩 iNiR Desktop Shell Setup & Maintenance](docs/inir.md)
 ---
 
 ## 📜 License
