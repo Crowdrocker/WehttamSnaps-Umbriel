@@ -357,4 +357,12 @@ This fork diverged a lot from the original - different compositor, different fea
 
 Made with ❤️ by WehttamSnaps If you found this helpful, please consider giving it a star! It helps others discover this project.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Crowdrocker/WehttamSnaps-Umbriel&type=date&legend=top-left)](https://www.star-history.com/#Crowdrocker/WehttamSnaps-Umbriel&type=date&legend=top-left)
+## Star History
+
+<a href="https://www.star-history.com/?type=date&legend=top-left&repos=Crowdrocker%2FWehttamSnaps-Umbriel">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Crowdrocker/WehttamSnaps-Umbriel&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Crowdrocker/WehttamSnaps-Umbriel&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Crowdrocker/WehttamSnaps-Umbriel&type=date&legend=top-left" />
+ </picture>
+</a>
