@@ -237,3 +237,25 @@ alias pacgui="ghostty --title=pacgui -e aurgui"
 alias projectdir="cat ~/.config/projectdir.state"
 alias tipme="~/.config/niri/scripts/tips.sh random"
 alias alltips="~/.config/niri/scripts/tips.sh list"
+
+# iNiR environment
+# Terminal colors (Material You from the wallpaper) and the prompt only where someone types: ssh commands, scp and
+# scripts that read this file get clean output
+case $- in *i*)
+  if [ -f ~/.local/state/quickshell/user/generated/terminal/sequences.txt ]; then
+    /usr/bin/cat ~/.local/state/quickshell/user/generated/terminal/sequences.txt
+  fi
+  # Starship prompt (fish is wired via config.fish; zsh needs its own init)
+  if command -v starship >/dev/null 2>&1; then
+    eval "$(starship init zsh)"
+  fi
+  ;;
+esac
+# end iNiR
+
+# iNiR launcher PATH
+case ":$PATH:" in
+  *:"/home/wehttamsnaps/.local/bin":*) ;;
+  *) export PATH="/home/wehttamsnaps/.local/bin:$PATH" ;;
+esac
+# end iNiR launcher PATH

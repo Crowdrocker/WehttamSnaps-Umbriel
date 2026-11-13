@@ -1,0 +1,74 @@
+# 20 — Layout, look and the overview
+
+[layout]
+# scrolling (Niri's model), dwindle, master or stacking; a workspace can switch at runtime (workspace-set-layout).
+mode = "scrolling"
+gap = 25
+extent_presets = [0.33333, 0.5, 0.66667]
+
+[layout.scrolling]
+default_extent_fraction = 0.5
+center_focused = "never"
+
+[animation.beziers]
+appleEase = [0.25, 1.0, 0.5, 1.0]
+
+[animation.springs]
+appleSpring = { damping = 1.0, stiffness = 256 }
+
+[animation]
+enabled = true
+duration_ms = 350
+curve = "appleEase"
+
+[animation.windows_in]
+enabled = true
+effect = "tv-glitch"
+duration_ms = 750
+curve = "linear"
+
+[animation.windows_out]
+enabled = true
+effect = "tv-glitch"
+duration_ms = 750
+curve = "linear"
+
+[animation.windows_move]
+enabled = true
+curve = "appleSpring"
+
+[animation.workspaces]
+enabled = true
+curve = "appleSpring"
+
+[animation.overview]
+enabled = true
+duration_ms = 400
+curve = "appleEase"
+
+[animation.scratchpad]
+enabled = true
+curve = "appleSpring"
+dim = 0.3
+blur = true
+
+[animation.border]
+enabled = true
+duration_ms = 200
+curve = "linear"
+
+[animation.dim_unfocused]
+enabled = false
+duration_ms = 300
+curve = "appleEase"
+dim = 0.0
+
+[animation.layers]
+enabled = true
+duration_ms = 250
+curve = "appleEase"
+
+[overview]
+zoom = 0.6
+# iNiR draws its own wallpaper and widgets; Umbriel's overview shows them behind each workspace.
+workspace_wallpaper = true

@@ -1,0 +1,42 @@
+# Written by iNiR from your Niri config (inir compositor sync): the same keys and keyboard on Umbriel.
+# Edits here are lost on the next sync; your own changes go in 90-user-extra.toml.
+
+[keybinds]
+"Mod+Shift+R" = "spawn niri msg action load-config-file"
+"Mod+Alt+M" = "spawn sh -c 'pkill -USR1 mangohud || xdotool key Shift_R+F12'"
+"Mod+Alt+F12" = "spawn sh -c 'pkill -USR2 mangohud'"
+"Mod+Alt+Space" = "spawn jarvis-menu main"
+"Mod+Alt+A" = "spawn jarvis-menu apps"
+"Mod+W" = "spawn jarvis-menu workspaces"
+"Mod+Alt+Slash" = "spawn jarvis-menu command"
+"Mod+Alt+J" = "spawn konsole -e jarvis interactive"
+"Mod+M" = "spawn sh -c 'ghostty -e ~/.config/snapsos/niri-config.sh'"
+"Mod+0" = "spawn sh -c 'notify-send \\\\\"SNAPS-OS Tips\\\\\" \\\\\"$(shuf -n 1 ~/.config/snapsos/tips/tips.list | sed '\\\\\\\\''s/.*: //'\\\\\\\\'')\\\\\"'"
+"Mod+Y" = "spawn shelly-ui"
+"Mod+Shift+Y" = "spawn sh -c 'ghostty -e unipkg launch-tui'"
+"Mod+Ctrl+G" = "spawn /usr/bin/glyphs --dictionary"
+"Mod+Alt+W" = "spawn sh -c 'pkill -f \\\\\"[p]ython3 /usr/bin/glyphs\\\\\"'"
+"Mod+Shift+Tab" = "spawn sh -c 'ghostty -e ~/.config/snapsos/tuis/project-select.sh'"
+"Mod+Shift+Return" = "spawn kitty"
+"Mod+Alt+B" = "spawn sh -c '/usr/bin/sound-system launch-firefox && firefox'"
+"Mod+E" = "spawn yazi -e y"
+"Mod+Shift+T" = "spawn kate"
+"Mod+O" = "spawn flatpak run --env=QT_QPA_PLATFORM=xcb com.obsproject.Studio"
+"Mod+P" = "spawn spotify-launcher"
+"Mod+Ctrl+T" = "spawn sh -c '~/.config/niri/scripts/webapp-launcher.sh twitch'"
+"Mod+Ctrl+Y" = "spawn sh -c '~/.config/niri/scripts/webapp-launcher.sh youtube'"
+"Mod+Ctrl+S" = "spawn sh -c '~/.config/niri/scripts/webapp-launcher.sh spotify'"
+"Mod+Ctrl+D" = "spawn sh -c '~/.config/niri/scripts/webapp-launcher.sh discord'"
+"Mod+Shift+S" = "spawn sh -c '/usr/bin/sound-system steam-launch && steam'"
+"Mod+Alt+G" = "spawn /usr/bin/game-launcher"
+"Mod+Ctrl+F10" = "spawn sh -c '~/.config/snapsos/wayshell/configs/ss-capture.sh active'"
+"Mod+Shift+F10" = "spawn sh -c '~/.config/snapsos/wayshell/configs/ss-capture.sh output'"
+"Mod+Ctrl+Shift+F10" = "spawn sh -c '~/.config/snapsos/wayshell/configs/ss-capture.sh screen'"
+"XF86AudioRaiseVolume" = { action = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle", allow_when_locked = true }
+
+[input.keyboard]
+layout = "us"
+repeat_delay = 250
+repeat_rate = 50
