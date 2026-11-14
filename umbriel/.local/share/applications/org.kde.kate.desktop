@@ -1,0 +1,56 @@
+[Desktop Entry]
+Actions=Session 16a66639d84e8aec30db7dd0516e7220;Session a69020db0ccbd083e3df17a9227c8813;Session edc9f0a5a5d57797bf68e37364743831;Session ca5c504c6136e20051be115160b0f0b8;Session d8eac81b506cb0c5d55910805184d7ae;Session 47ae612ee870f9fee077fcdff1a8d768;Session 967ef2eb34634ba418db94dab610ba6f;Session 22af645d1859cb5ca6da0c484f1f37ea;Session 348a448a51d1e0f0f5eee42337d12adc;Session 67e92c8765a9bc7fb2d335c459de9eb5;
+Categories=Qt;KDE;Development;TextEditor;
+Comment=KDE Advanced Text Editor
+Exec=kate -b %U
+GenericName=Advanced Text Editor
+Icon=kate
+InitialPreference=9
+Keywords=text;txt;editor;programming;programmer;development;developer;code;
+MimeType=text/plain;inode/directory;
+Name=Kate
+StartupNotify=true
+StartupWMClass=kate
+Type=Application
+X-DocPath=kate/index.html
+X-KDE-HasTempFileOption=true
+
+[Desktop Action Session 16a66639d84e8aec30db7dd0516e7220]
+Exec=kate -n -s EDITING
+Name=EDITING
+
+[Desktop Action Session 22af645d1859cb5ca6da0c484f1f37ea]
+Exec=kate -n -s new
+Name=new
+
+[Desktop Action Session 348a448a51d1e0f0f5eee42337d12adc]
+Exec=kate -n -s sexy
+Name=sexy
+
+[Desktop Action Session 47ae612ee870f9fee077fcdff1a8d768]
+Exec=kate -n -s 'NOTES AND THINGS'
+Name=NOTES AND THINGS
+
+[Desktop Action Session 67e92c8765a9bc7fb2d335c459de9eb5]
+Exec=kate -n -s work
+Name=work
+
+[Desktop Action Session 967ef2eb34634ba418db94dab610ba6f]
+Exec=kate -n -s gaming
+Name=gaming
+
+[Desktop Action Session a69020db0ccbd083e3df17a9227c8813]
+Exec=kate -n -s FUN
+Name=FUN
+
+[Desktop Action Session ca5c504c6136e20051be115160b0f0b8]
+Exec=kate -n -s MISC
+Name=MISC
+
+[Desktop Action Session d8eac81b506cb0c5d55910805184d7ae]
+Exec=kate -n -s MODDING/GAMING
+Name=MODDING/GAMING
+
+[Desktop Action Session edc9f0a5a5d57797bf68e37364743831]
+Exec=kate -n -s Linux
+Name=Linux

@@ -1,0 +1,482 @@
+[Document 0]
+URL=file:///mnt/GAMEDRIVE/MY-NOTES/store passwords, notes
+
+[Document 1]
+URL=file:///mnt/GAMEDRIVE/MY-NOTES/STEAMLAUNCH
+
+[Document 10]
+URL=
+stashedFile=/home/wehttamsnaps/.local/share/kate/stash/gaming.katesession/Document 10
+
+[Document 11]
+URL=file:///home/wehttamsnaps/.config/hypr/conf.d/00-base.lua
+
+[Document 12]
+URL=file:///home/wehttamsnaps/.config/hypr/hyprland.lua
+
+[Document 13]
+URL=file:///home/wehttamsnaps/.config/hypr/conf.d/30-workspaces.lua
+
+[Document 14]
+URL=file:///home/wehttamsnaps/.mydotfiles/backups/com.ml4w.dotfiles.stable/20261016_120211/hypr/monitors.lua
+
+[Document 15]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/workspaces.lua
+
+[Document 16]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/monitor.lua
+
+[Document 17]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/monitors/1920x1080.lua
+
+[Document 18]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/keybindings/default.lua
+
+[Document 19]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/environments/default.lua
+
+[Document 2]
+URL=
+stashedFile=/home/wehttamsnaps/.local/share/kate/stash/gaming.katesession/Document 2
+
+[Document 20]
+URL=file:///home/wehttamsnaps/.mydotfiles/backups/com.ml4w.dotfiles.stable/20261016_120211/hypr/conf.d/70-environment.lua
+
+[Document 21]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/layouts/default.lua
+
+[Document 22]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/workspaces/default.lua
+
+[Document 23]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/misc.lua
+
+[Document 24]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/ml4w.lua
+
+[Document 25]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/windowrules/default.lua
+
+[Document 26]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/autostart.lua
+
+[Document 27]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/workspace.lua
+
+[Document 28]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/windowrules/default.lua
+
+[Document 29]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/autostart.lua
+
+[Document 3]
+URL=file:///mnt/GAMEDRIVE/MY-NOTES/Steam Lauch Options
+
+[Document 30]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/workspace.lua
+
+[Document 31]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/autostart.lua
+
+[Document 32]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/workspace.lua
+
+[Document 33]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/autostart.lua
+
+[Document 34]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/workspace.lua
+
+[Document 35]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/workspace.lua
+
+[Document 36]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/windowrules/default.lua
+
+[Document 37]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/autostart.lua
+
+[Document 38]
+URL=file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/workspace.lua
+
+[Document 4]
+URL=file:///mnt/EXTRA1TB/MYBACK/flatpak_list.txt
+
+[Document 5]
+URL=
+stashedFile=/home/wehttamsnaps/.local/share/kate/stash/gaming.katesession/Document 5
+
+[Document 6]
+URL=file:///mnt/GAMEDRIVE/Dotfiles backup/.config/niri/Modules/Input.kdl
+
+[Document 7]
+URL=
+
+[Document 8]
+URL=file:///home/wehttamsnaps/Downloads/WehttamSnaps-Niri-main/dots/.config/niri/snaps/20-wiri_rules.kdl
+
+[Document 9]
+URL=
+stashedFile=/home/wehttamsnaps/.local/share/kate/stash/gaming.katesession/Document 9
+
+[Kate Plugins]
+bookmarksplugin=false
+cmaketoolsplugin=false
+compilerexplorer=false
+eslintplugin=false
+externaltoolsplugin=true
+formatplugin=false
+katebacktracebrowserplugin=false
+katebuildplugin=false
+katecloseexceptplugin=false
+katecolorpickerplugin=false
+katectagsplugin=false
+katefilebrowserplugin=false
+katefiletreeplugin=true
+kategdbplugin=false
+kategitblameplugin=false
+kategpgplugin=false
+katekonsoleplugin=true
+kateprojectplugin=true
+katereplicodeplugin=false
+katesearchplugin=true
+kateshownonprintableplugin=false
+katesnippetsplugin=false
+katesqlplugin=false
+katesymbolviewerplugin=false
+katexmlcheckplugin=false
+katexmltoolsplugin=false
+keyboardmacrosplugin=false
+ktexteditorpreviewplugin=false
+latexcompletionplugin=false
+lspclientplugin=true
+openlinkplugin=false
+rainbowparens=false
+rbqlplugin=false
+tabswitcherplugin=true
+templateplugin=false
+textfilterplugin=true
+
+[MainWindow0]
+Active ViewSpace=1
+Kate-MDI-H-Splitter=0,1842,0
+Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,lspclient_symbol_outline
+Kate-MDI-Sidebar-0-LastSize=189
+Kate-MDI-Sidebar-0-SectSizes=0
+Kate-MDI-Sidebar-0-Splitter=835
+Kate-MDI-Sidebar-1-Bar-0-TvList=
+Kate-MDI-Sidebar-1-LastSize=200
+Kate-MDI-Sidebar-1-SectSizes=0
+Kate-MDI-Sidebar-1-Splitter=835
+Kate-MDI-Sidebar-2-Bar-0-TvList=
+Kate-MDI-Sidebar-2-LastSize=200
+Kate-MDI-Sidebar-2-SectSizes=0
+Kate-MDI-Sidebar-2-Splitter=1842
+Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
+Kate-MDI-Sidebar-3-LastSize=227
+Kate-MDI-Sidebar-3-SectSizes=0
+Kate-MDI-Sidebar-3-Splitter=1589
+Kate-MDI-Sidebar-Style=2
+Kate-MDI-Sidebar-Visible=true
+Kate-MDI-ToolView-diagnostics-Position=3
+Kate-MDI-ToolView-diagnostics-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-diagnostics-Visible=false
+Kate-MDI-ToolView-kate_plugin_katesearch-Position=3
+Kate-MDI-ToolView-kate_plugin_katesearch-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_plugin_katesearch-Visible=true
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Position=0
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Visible=false
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Position=3
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Visible=false
+Kate-MDI-ToolView-kateproject-Position=0
+Kate-MDI-ToolView-kateproject-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kateproject-Visible=false
+Kate-MDI-ToolView-kateprojectgit-Position=0
+Kate-MDI-ToolView-kateprojectgit-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kateprojectgit-Visible=false
+Kate-MDI-ToolView-kateprojectinfo-Position=3
+Kate-MDI-ToolView-kateprojectinfo-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kateprojectinfo-Visible=false
+Kate-MDI-ToolView-lspclient_symbol_outline-Position=0
+Kate-MDI-ToolView-lspclient_symbol_outline-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-lspclient_symbol_outline-Visible=false
+Kate-MDI-ToolView-output-Position=3
+Kate-MDI-ToolView-output-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-output-Visible=false
+Kate-MDI-V-Splitter=0,607,227
+
+[MainWindow0 Settings]
+WindowState=10
+
+[MainWindow0-Splitter 0]
+Children=MainWindow0-ViewSpace 0,MainWindow0-ViewSpace 1
+Orientation=1
+Sizes=905,936
+
+[MainWindow0-ViewSpace 0]
+Active View=10
+Count=2
+Documents=0,1,3,4,6,8,9,10
+View 0=9
+View 1=10
+View 2=13
+
+[MainWindow0-ViewSpace 0 0]
+CursorColumn=0
+CursorLine=23
+ScrollLine=11
+
+[MainWindow0-ViewSpace 0 1]
+CursorColumn=91
+CursorLine=14
+
+[MainWindow0-ViewSpace 0 10]
+CursorColumn=48
+CursorLine=1
+
+[MainWindow0-ViewSpace 0 11]
+CursorColumn=9
+CursorLine=467
+ScrollLine=455
+
+[MainWindow0-ViewSpace 0 12]
+CursorColumn=135
+CursorLine=29
+
+[MainWindow0-ViewSpace 0 13]
+CursorColumn=48
+CursorLine=1
+
+[MainWindow0-ViewSpace 0 14]
+CursorColumn=135
+CursorLine=29
+
+[MainWindow0-ViewSpace 0 15]
+CursorColumn=48
+CursorLine=1
+
+[MainWindow0-ViewSpace 0 16]
+CursorColumn=135
+CursorLine=29
+
+[MainWindow0-ViewSpace 0 17]
+CursorColumn=48
+CursorLine=1
+
+[MainWindow0-ViewSpace 0 21]
+ScrollLine=80
+
+[MainWindow0-ViewSpace 0 22]
+ScrollLine=33
+
+[MainWindow0-ViewSpace 0 23]
+CursorColumn=0
+CursorLine=8
+ScrollLine=1
+
+[MainWindow0-ViewSpace 0 33]
+CursorColumn=34
+CursorLine=119
+ScrollLine=115
+
+[MainWindow0-ViewSpace 0 4]
+CursorColumn=22
+CursorLine=3
+
+[MainWindow0-ViewSpace 0 7]
+ScrollLine=14
+
+[MainWindow0-ViewSpace 0 8]
+CursorColumn=9
+CursorLine=354
+ScrollLine=444
+
+[MainWindow0-ViewSpace 0 9]
+CursorColumn=135
+CursorLine=29
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.config/hypr/monitors.lua]
+CursorColumn=0
+CursorLine=8
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.local/share/calos/install.sh]
+ScrollLine=80
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.local/share/calos/install/packages.sh]
+ScrollLine=33
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.mydotfiles/backups/com.ml4w.dotfiles.stable/20261016_120211/hypr/conf.d/30-workspaces.lua]
+CursorColumn=34
+CursorLine=119
+
+[MainWindow0-ViewSpace 0 file:///mnt/GAMEDRIVE/NIRI-post_install.sh]
+CursorColumn=9
+CursorLine=467
+ScrollLine=455
+
+[MainWindow0-ViewSpace 1]
+Active View=5
+Count=1
+Documents=2,5
+View 0=5
+View 1=20
+View 10=32
+View 11=34
+View 12=35
+View 13=36
+View 14=37
+View 15=38
+View 2=24
+View 3=25
+View 4=26
+View 5=27
+View 6=28
+View 7=29
+View 8=30
+View 9=31
+
+[MainWindow0-ViewSpace 1 19]
+ScrollLine=21
+
+[MainWindow0-ViewSpace 1 2]
+CursorColumn=0
+CursorLine=10
+
+[MainWindow0-ViewSpace 1 24]
+CursorColumn=20
+CursorLine=17
+ScrollLine=3
+
+[MainWindow0-ViewSpace 1 26]
+CursorColumn=4
+CursorLine=71
+ScrollLine=39
+
+[MainWindow0-ViewSpace 1 27]
+CursorColumn=0
+CursorLine=10
+
+[MainWindow0-ViewSpace 1 28]
+CursorColumn=110
+CursorLine=78
+ScrollLine=75
+
+[MainWindow0-ViewSpace 1 29]
+CursorColumn=4
+CursorLine=71
+ScrollLine=39
+
+[MainWindow0-ViewSpace 1 30]
+CursorColumn=32
+CursorLine=43
+ScrollLine=37
+
+[MainWindow0-ViewSpace 1 31]
+CursorColumn=4
+CursorLine=71
+ScrollLine=39
+
+[MainWindow0-ViewSpace 1 32]
+CursorColumn=3
+CursorLine=160
+ScrollLine=157
+
+[MainWindow0-ViewSpace 1 33]
+CursorColumn=4
+CursorLine=71
+ScrollLine=39
+
+[MainWindow0-ViewSpace 1 34]
+CursorColumn=4
+CursorLine=71
+ScrollLine=39
+
+[MainWindow0-ViewSpace 1 35]
+ScrollLine=161
+
+[MainWindow0-ViewSpace 1 37]
+CursorColumn=4
+CursorLine=71
+ScrollLine=39
+
+[MainWindow0-ViewSpace 1 38]
+CursorColumn=0
+CursorLine=1
+
+[MainWindow0-ViewSpace 1 5]
+CursorColumn=0
+CursorLine=23
+ScrollLine=27
+
+[MainWindow0-ViewSpace 1 6]
+CursorColumn=16
+CursorLine=2
+
+[MainWindow0-ViewSpace 1 file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/autostart.lua]
+CursorColumn=4
+CursorLine=71
+ScrollLine=39
+
+[MainWindow0-ViewSpace 1 file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/environments/default.lua]
+ScrollLine=21
+
+[MainWindow0-ViewSpace 1 file:///home/wehttamsnaps/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/ml4w.lua]
+CursorColumn=0
+CursorLine=17
+
+[Open Documents]
+Count=11
+
+[Open MainWindows]
+Count=1
+
+[Plugin:kateprojectplugin:]
+projects=
+
+[Plugin:katesearchplugin:MainWindow:0]
+BinaryFiles=false
+CurrentExcludeFilter=0
+CurrentFilter=0
+ExcludeFilters=\\0
+ExpandSearchResults=false
+Filters=\\0
+FollowSymLink=false
+HiddenFiles=false
+MatchCase=false
+Place=0
+Recursive=true
+Replaces=\s- ,My,-,+,/,paru --needed --noconfirm -S\s
+Search=mango,Fallout,draw-border-with-barbage,Print,steam,noctalia,skip-at-startup,prefer-no-csd,geometry-corner-radius 20,default-window-heigh,UbisoftConnect,xwayland,DISPLAY,$DISPLAY,_JAVA_AWT_WM_NONREPARENTING,fDefaultAutoVanityZoom,fVertibirdVanityModeMaxDist,fSafeZoneY,fDefaultWorldFOV,fDialogueCameraMouseMoveExit,fLThumbDeadzone,f3rdPersonCameraBoneHeightMult,fGamepadHeadingSensitivityDefault,fDefault1stPersonFOV
+SearchAsYouTypeAllProjects=true
+SearchAsYouTypeCurrentFile=true
+SearchAsYouTypeFolder=true
+SearchAsYouTypeOpenFiles=true
+SearchAsYouTypeProject=true
+SearchDiskFiles=
+SearchDiskFiless=\\0
+SizeLimit=128
+UseRegExp=false
+
+[Recent Files]
+File1[$e]=$HOME/.mydotfiles/backups/com.ml4w.dotfiles.stable/20261016_120211/hypr/conf.d/70-environment.lua
+File10[$e]=$HOME/.config/hypr/conf.d/00-base.lua
+File2[$e]=$HOME/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/environments/default.lua
+File3[$e]=$HOME/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/keybindings/default.lua
+File4[$e]=$HOME/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/monitors/1920x1080.lua
+File5[$e]=$HOME/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/conf/monitor.lua
+File6[$e]=$HOME/.mydotfiles/com.ml4w.dotfiles.stable/.config/hypr/workspaces.lua
+File7[$e]=$HOME/.mydotfiles/backups/com.ml4w.dotfiles.stable/20261016_120211/hypr/monitors.lua
+File8[$e]=$HOME/.config/hypr/conf.d/30-workspaces.lua
+File9[$e]=$HOME/.config/hypr/hyprland.lua
+Name1[$e]=70-environment.lua
+Name10[$e]=00-base.lua
+Name2[$e]=default.lua
+Name3[$e]=default.lua
+Name4[$e]=1920x1080.lua
+Name5[$e]=monitor.lua
+Name6[$e]=workspaces.lua
+Name7[$e]=monitors.lua
+Name8[$e]=30-workspaces.lua
+Name9[$e]=hyprland.lua

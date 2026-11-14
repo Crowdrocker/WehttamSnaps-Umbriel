@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=iNiR
+Comment=iNiR desktop shell session
+Exec=/home/wehttamsnaps/.local/bin/inir service restart
+Icon=inir
+Terminal=false
+NoDisplay=true
+Categories=System;
+StartupWMClass=inir

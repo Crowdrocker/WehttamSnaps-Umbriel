@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Horizon - Forbidden West CE
+Exec=/usr/bin/faugus-launcher --game horizon---forbidden-west-ce
+Icon=/home/wehttamsnaps/.local/share/faugus-launcher/icons/horizon---forbidden-west-ce.png
+Type=Application
+Categories=Game;
+Path=/mnt/WettamSnapsMain/Games/FitGirl-Repack_GAMES/Horizon - Forbidden West CE
+StartupWMClass=steam_app_faugusd543770a

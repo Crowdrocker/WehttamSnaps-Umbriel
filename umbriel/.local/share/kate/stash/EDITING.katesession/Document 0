@@ -1,0 +1,80 @@
+sdgvox
+SDG-VOX
+sudo cp -a /mnt/GAMEDRIVE/Dotfiles backup/dotfiles/usr/bin/sound-system /usr/bin/
+
+sudo ln -s /usr/bin/jarvis /usr/bin/sound-system
+
+SNAPS-VOX
+
+DXVK_STATE_CACHE=1 RADV_PERFTEST=fastclears gamescope -f -w 1920 -h 1080 -r 60 -- %command% -nogui
+
+
+Crowdrocker
+
+SNAPS-PKG
+unipkg
+SNAPS-REPO
+snaps
+snapstip
+
+
+To get a cyberpunk color scheme border in Niri (https://www.google.com/search?kgmid=%2Fg%2F11yjl8x6gh&q=Niri), use high-contrast neon pairings like cyan to magenta or vivid purple to electric blue.
+Update your config.kdl using one of the stylized combinations below.
+
+Option 1: The Classic Neon Outrun (Cyan to Magenta)
+
+This is the ultimate cyberpunk look, utilizing a 45-degree angle to sweep across the window edges.
+kdl
+layout {
+    border {
+        width 4
+
+        // Neon Cyan to Vivid Magenta/Pink
+        active-gradient from="#00f3ff" to="#ff00a0" angle=45
+
+        // Dark, muted tone for inactive windows to make the active window pop
+        inactive-gradient from="#1a1c23" to="#251b2e" angle=45
+    }
+}
+Use code with caution.
+
+Option 2: Deep Netrunner (Purple to Electric Blue)
+
+A slightly colder, matrix-adjacent grid runner aesthetic.
+kdl
+layout {
+    border {
+        width 4
+
+        // Deep Violet to Electric Sky Blue
+        active-gradient from="#8a2be2" to="#00dfff" angle=45
+
+        // Muted gray-blue for inactive windows
+        inactive-gradient from="#20222c" to="#182730" angle=45
+    }
+}
+Use code with caution.
+
+Option 3: Tox-Green & Amber (Edgerunner Style)
+
+If you prefer the gritty, industrial cyberpunk look, try pairing a toxic neon green with a bright hazard amber.
+kdl
+layout {
+    border {
+        width 4
+
+        // Toxic Neon Green to Hazard Orange/Amber
+        active-gradient from="#39ff14" to="#ffaa00" angle=45
+
+        inactive-gradient from="#1b241c" to="#26221a" angle=45
+    }
+}
+Use code with caution.
+
+💡 Dynamic Workspace Gradient Trick
+
+If you want your windows to look like they are moving through a massive neon grid, change the relative-to property to "workspace-view". This locks the gradient to your monitor's viewport so individual windows shift colors dynamically as you scroll or resize them:
+kdl
+active-gradient from="#00f3ff" to="#ff00a0" angle=45 relative-to="workspace-view"
+Use code with caution.
+Do you want to apply these cyberpunk color schemes anywhere else in your setup, like your Noctalia status bar or terminal emulator?

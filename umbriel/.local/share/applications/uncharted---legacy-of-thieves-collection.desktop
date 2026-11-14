@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=UNCHARTED - Legacy of Thieves Collection
+Exec=/usr/bin/faugus-launcher --game uncharted---legacy-of-thieves-collection
+Icon=/home/wehttamsnaps/.local/share/faugus-launcher/icons/uncharted---legacy-of-thieves-collection.png
+Type=Application
+Categories=Game;
+Path=/mnt/LINUXDRIVE/Games/UNCHARTED - Legacy of Thieves Collection
+StartupWMClass=steam_app_faugus6a3095e2

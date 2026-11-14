@@ -1,0 +1,25 @@
+qf^4dZs$%QZEEGhg67GR
+paru -S noctalia-git   # or: yay -S noctalia-git
+
+Then add the repo to /etc/pacman.conf (e.g. sudo nano /etc/pacman.conf):
+
+[kineticwe]
+SigLevel = Never
+Server = https://theblackdon.gitlab.io/kineticwe/$arch
+
+and install:
+
+sudo pacman -Sy kineticwe
+
+yay -S kineticwe
+
+
+
+
+
+
+
+
+
+
+

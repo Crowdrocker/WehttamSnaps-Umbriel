@@ -1,0 +1,290 @@
+[Document 0]
+URL=file:///home/wehttamsnaps/.config/umbriel/config.d/70-binds.toml
+
+[Document 1]
+URL=file:///home/wehttamsnaps/.config/umbriel/config.d/90-user-extra.toml
+
+[Document 10]
+URL=
+
+[Document 11]
+URL=file:///home/wehttamsnaps/.config/obs-studio/plugins/install.sh
+
+[Document 2]
+URL=
+
+[Document 3]
+URL=file:///home/wehttamsnaps/.config/umbriel/config.d/20-layout.toml
+
+[Document 4]
+URL=file:///home/wehttamsnaps/.config/umbriel/config.d/30-window-rules.toml
+
+[Document 5]
+URL=file:///home/wehttamsnaps/.config/umbriel/config.d/40-environment.toml
+
+[Document 6]
+URL=file:///home/wehttamsnaps/.config/umbriel/config.d/50-startup.toml
+
+[Document 7]
+URL=file:///home/wehttamsnaps/.config/umbriel/config.d/60-from-niri.toml
+
+[Document 8]
+URL=file:///home/wehttamsnaps/.config/umbriel/config.d/80-layer-rules.toml
+
+[Document 9]
+URL=file:///home/wehttamsnaps/.config/umbriel/config.d/90-user-extra.toml
+
+[Kate Plugins]
+bookmarksplugin=false
+cmaketoolsplugin=false
+compilerexplorer=false
+eslintplugin=false
+externaltoolsplugin=true
+formatplugin=false
+katebacktracebrowserplugin=false
+katebuildplugin=false
+katecloseexceptplugin=false
+katecolorpickerplugin=false
+katectagsplugin=false
+katefilebrowserplugin=false
+katefiletreeplugin=true
+kategdbplugin=false
+kategitblameplugin=false
+kategpgplugin=false
+katekonsoleplugin=true
+kateprojectplugin=true
+katereplicodeplugin=false
+katesearchplugin=true
+kateshownonprintableplugin=false
+katesnippetsplugin=false
+katesqlplugin=false
+katesymbolviewerplugin=false
+katexmlcheckplugin=false
+katexmltoolsplugin=false
+keyboardmacrosplugin=false
+ktexteditorpreviewplugin=false
+latexcompletionplugin=false
+lspclientplugin=true
+openlinkplugin=false
+rainbowparens=false
+rbqlplugin=false
+tabswitcherplugin=true
+templateplugin=false
+textfilterplugin=true
+
+[MainWindow0]
+Active ViewSpace=1
+Kate-MDI-H-Splitter=200,1583,0
+Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,lspclient_symbol_outline
+Kate-MDI-Sidebar-0-LastSize=200
+Kate-MDI-Sidebar-0-SectSizes=0
+Kate-MDI-Sidebar-0-Splitter=873
+Kate-MDI-Sidebar-1-Bar-0-TvList=
+Kate-MDI-Sidebar-1-LastSize=200
+Kate-MDI-Sidebar-1-SectSizes=0
+Kate-MDI-Sidebar-1-Splitter=873
+Kate-MDI-Sidebar-2-Bar-0-TvList=
+Kate-MDI-Sidebar-2-LastSize=200
+Kate-MDI-Sidebar-2-SectSizes=0
+Kate-MDI-Sidebar-2-Splitter=1583
+Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
+Kate-MDI-Sidebar-3-LastSize=240
+Kate-MDI-Sidebar-3-SectSizes=0
+Kate-MDI-Sidebar-3-Splitter=1451
+Kate-MDI-Sidebar-Style=2
+Kate-MDI-Sidebar-Visible=true
+Kate-MDI-ToolView-diagnostics-Position=3
+Kate-MDI-ToolView-diagnostics-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-diagnostics-Visible=false
+Kate-MDI-ToolView-kate_plugin_katesearch-Position=3
+Kate-MDI-ToolView-kate_plugin_katesearch-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_plugin_katesearch-Visible=true
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Position=0
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Visible=true
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Position=3
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Visible=false
+Kate-MDI-ToolView-kateproject-Position=0
+Kate-MDI-ToolView-kateproject-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kateproject-Visible=false
+Kate-MDI-ToolView-kateprojectgit-Position=0
+Kate-MDI-ToolView-kateprojectgit-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kateprojectgit-Visible=false
+Kate-MDI-ToolView-kateprojectinfo-Position=3
+Kate-MDI-ToolView-kateprojectinfo-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kateprojectinfo-Visible=false
+Kate-MDI-ToolView-lspclient_symbol_outline-Position=0
+Kate-MDI-ToolView-lspclient_symbol_outline-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-lspclient_symbol_outline-Visible=false
+Kate-MDI-ToolView-output-Position=3
+Kate-MDI-ToolView-output-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-output-Visible=false
+Kate-MDI-V-Splitter=0,632,240
+
+[MainWindow0 Settings]
+WindowState=10
+
+[MainWindow0-Splitter 0]
+Children=MainWindow0-ViewSpace 0,MainWindow0-ViewSpace 1
+Orientation=1
+Sizes=791,791
+
+[MainWindow0-ViewSpace 0]
+Active View=2
+Count=3
+Documents=0,1,2
+View 0=0
+View 1=1
+View 10=10
+View 11=11
+View 2=2
+View 3=4
+View 4=5
+View 5=6
+View 6=7
+View 7=8
+View 8=9
+View 9=11
+
+[MainWindow0-ViewSpace 0 1]
+CursorColumn=0
+CursorLine=33
+ScrollLine=12
+
+[MainWindow0-ViewSpace 0 2]
+CursorColumn=0
+CursorLine=37
+ScrollLine=11
+
+[MainWindow0-ViewSpace 0 6]
+CursorColumn=32
+CursorLine=15
+
+[MainWindow0-ViewSpace 0 9]
+CursorColumn=17
+CursorLine=102
+ScrollLine=95
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.bashrc]
+CursorColumn=26
+CursorLine=32
+ScrollLine=19
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.config/obs-studio/plugins/install.sh]
+CursorColumn=0
+CursorLine=6
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.config/snapsos/config-overview/browser.sh]
+CursorColumn=0
+CursorLine=32
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.config/snapsos/config-overview/checker.sh]
+CursorColumn=0
+CursorLine=82
+ScrollLine=56
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.config/snapsos/config-overview/options.list]
+CursorColumn=0
+CursorLine=22
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.config/snapsos/niri-config.sh]
+CursorColumn=19
+CursorLine=4
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/.config/snapsos/umbriel-config.sh]
+CursorColumn=19
+CursorLine=4
+
+[MainWindow0-ViewSpace 0 file:///home/wehttamsnaps/Downloads/binds.conf]
+CursorColumn=8
+CursorLine=196
+ScrollLine=188
+
+[MainWindow0-ViewSpace 1]
+Active View=2
+Count=1
+Documents=2
+View 0=2
+View 1=10
+
+[MainWindow0-ViewSpace 1 1]
+CursorColumn=109
+CursorLine=8
+
+[MainWindow0-ViewSpace 1 10]
+CursorColumn=85
+CursorLine=53
+ScrollLine=45
+
+[MainWindow0-ViewSpace 1 2]
+CursorColumn=0
+CursorLine=37
+ScrollLine=18
+
+[MainWindow0-ViewSpace 1 4]
+CursorColumn=30
+CursorLine=11
+
+[MainWindow0-ViewSpace 1 6]
+CursorColumn=30
+CursorLine=11
+
+[MainWindow0-ViewSpace 1 8]
+CursorColumn=30
+CursorLine=11
+
+[Open Documents]
+Count=3
+
+[Open MainWindows]
+Count=1
+
+[Plugin:kateprojectplugin:]
+projects=
+
+[Plugin:katesearchplugin:MainWindow:0]
+BinaryFiles=false
+CurrentExcludeFilter=0
+CurrentFilter=0
+ExcludeFilters=\\0
+ExpandSearchResults=false
+Filters=\\0
+FollowSymLink=false
+HiddenFiles=false
+MatchCase=false
+Place=0
+Recursive=true
+Replaces=firefox,WehttamSnaps-Umbriel,yay --needed --noconfirm -S\s
+Search=brave,local/,/config-overview,Mod+Shift+R,workmode,Mod+F10,Mod+F10",install,Troubleshooting,WehttamSnaps-Niri,Mod+Alt+L,scree,music,Alt+Shift+P,Scratchpad,Space,"window-focus-left",Mod+Return,gamescope,Screenshots
+SearchAsYouTypeAllProjects=true
+SearchAsYouTypeCurrentFile=true
+SearchAsYouTypeFolder=true
+SearchAsYouTypeOpenFiles=true
+SearchAsYouTypeProject=true
+SearchDiskFiles=
+SearchDiskFiless=\\0
+SizeLimit=128
+UseRegExp=false
+
+[Recent Files]
+File1[$e]=$HOME/.config/umbriel/config.d/10-input.toml
+File10[$e]=$HOME/.config/umbriel/config.d/90-user-extra.toml
+File2[$e]=$HOME/.config/umbriel/config.d/20-layout.toml
+File3[$e]=$HOME/.config/umbriel/config.d/30-window-rules.toml
+File4[$e]=$HOME/.config/umbriel/config.d/40-environment.toml
+File5[$e]=$HOME/.config/umbriel/config.d/50-startup.toml
+File6[$e]=$HOME/.config/umbriel/config.d/60-from-niri.toml
+File7[$e]=$HOME/.config/umbriel/config.d/80-layer-rules.toml
+File8[$e]=$HOME/.config/obs-studio/plugins/install.sh
+File9[$e]=$HOME/.config/umbriel/config.d/70-binds.toml
+Name1[$e]=10-input.toml
+Name10[$e]=90-user-extra.toml
+Name2[$e]=20-layout.toml
+Name3[$e]=30-window-rules.toml
+Name4[$e]=40-environment.toml
+Name5[$e]=50-startup.toml
+Name6[$e]=60-from-niri.toml
+Name7[$e]=80-layer-rules.toml
+Name8[$e]=install.sh
+Name9[$e]=70-binds.toml

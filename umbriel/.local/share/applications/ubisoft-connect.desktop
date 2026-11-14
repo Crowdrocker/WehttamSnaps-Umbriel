@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Ubisoft Connect
+Exec=/usr/bin/faugus-launcher --game ubisoft-connect
+Icon=/home/wehttamsnaps/.local/share/faugus-launcher/icons/ubisoft-connect.png
+Type=Application
+Categories=Game;
+Path=/mnt/LINUXDRIVE/Games/Faugus/ubisoft-connect/drive_c/Program Files (x86)/Ubisoft/Ubisoft Game Launcher
+StartupWMClass=steam_app_faugus6c437a00

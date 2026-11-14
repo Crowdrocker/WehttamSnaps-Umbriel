@@ -1,0 +1,5 @@
+clone the repository into your home (~) directory:
+
+git clone https://github.com/snowarch/inir.git
+cd inir
+./setup install

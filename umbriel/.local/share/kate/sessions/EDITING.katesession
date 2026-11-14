@@ -1,0 +1,270 @@
+[Document 0]
+URL=
+stashedFile=/home/wehttamsnaps/.local/share/kate/stash/EDITING.katesession/Document 0
+
+[Document 1]
+URL=
+stashedFile=/home/wehttamsnaps/.local/share/kate/stash/EDITING.katesession/Document 1
+
+[Document 10]
+URL=file:///home/wehttamsnaps/.config/niri/config.d/30-window-rules.kdl
+
+[Document 11]
+URL=file:///home/wehttamsnaps/.config/niri/config.d/80-layer-rules.kdl
+
+[Document 12]
+URL=file:///home/wehttamsnaps/.config/niri/config.d/85-gaming.kdl
+
+[Document 13]
+URL=
+stashedFile=/home/wehttamsnaps/.local/share/kate/stash/EDITING.katesession/Document 13
+
+[Document 2]
+URL=file:///mnt/GAMEDRIVE/WehttamSnaps-Niri/Packages/NEWpkglist.txt
+
+[Document 3]
+URL=
+stashedFile=/home/wehttamsnaps/.local/share/kate/stash/EDITING.katesession/Document 3
+
+[Document 4]
+URL=file:///home/wehttamsnaps/WehttamSnaps-Niri/Packages/pkglist.txt
+
+[Document 5]
+URL=file:///home/wehttamsnaps/.config/niri/config.d/20-layout-and-overview.kdl
+
+[Document 6]
+URL=file:///home/wehttamsnaps/.config/niri/config.d/10-input-and-cursor.kdl
+
+[Document 7]
+URL=file:///home/wehttamsnaps/.config/niri/config.d/70-binds.kdl
+
+[Document 8]
+URL=file:///mnt/GAMEDRIVE/MY-NOTES/The Ultimate Guide to Arch Linux Gaming for Beginners
+
+[Document 9]
+URL=file:///home/wehttamsnaps/.config/niri/config.d/40-environment.kdl
+
+[Kate Plugins]
+bookmarksplugin=false
+cmaketoolsplugin=false
+compilerexplorer=false
+eslintplugin=false
+externaltoolsplugin=true
+formatplugin=false
+katebacktracebrowserplugin=false
+katebuildplugin=false
+katecloseexceptplugin=false
+katecolorpickerplugin=false
+katectagsplugin=false
+katefilebrowserplugin=false
+katefiletreeplugin=true
+kategdbplugin=false
+kategitblameplugin=false
+kategpgplugin=false
+katekonsoleplugin=true
+kateprojectplugin=true
+katereplicodeplugin=false
+katesearchplugin=true
+kateshownonprintableplugin=false
+katesnippetsplugin=false
+katesqlplugin=false
+katesymbolviewerplugin=false
+katexmlcheckplugin=false
+katexmltoolsplugin=false
+keyboardmacrosplugin=false
+ktexteditorpreviewplugin=false
+latexcompletionplugin=false
+lspclientplugin=true
+openlinkplugin=false
+rainbowparens=false
+rbqlplugin=false
+tabswitcherplugin=true
+templateplugin=false
+textfilterplugin=true
+
+[MainWindow0]
+Active ViewSpace=0
+Kate-MDI-H-Splitter=0,1852,0
+Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,lspclient_symbol_outline
+Kate-MDI-Sidebar-0-LastSize=408
+Kate-MDI-Sidebar-0-SectSizes=0
+Kate-MDI-Sidebar-0-Splitter=838
+Kate-MDI-Sidebar-1-Bar-0-TvList=
+Kate-MDI-Sidebar-1-LastSize=200
+Kate-MDI-Sidebar-1-SectSizes=0
+Kate-MDI-Sidebar-1-Splitter=838
+Kate-MDI-Sidebar-2-Bar-0-TvList=
+Kate-MDI-Sidebar-2-LastSize=200
+Kate-MDI-Sidebar-2-SectSizes=0
+Kate-MDI-Sidebar-2-Splitter=1852
+Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
+Kate-MDI-Sidebar-3-LastSize=240
+Kate-MDI-Sidebar-3-SectSizes=0
+Kate-MDI-Sidebar-3-Splitter=1473
+Kate-MDI-Sidebar-Style=2
+Kate-MDI-Sidebar-Visible=true
+Kate-MDI-ToolView-diagnostics-Position=3
+Kate-MDI-ToolView-diagnostics-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-diagnostics-Visible=false
+Kate-MDI-ToolView-kate_plugin_katesearch-Position=3
+Kate-MDI-ToolView-kate_plugin_katesearch-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_plugin_katesearch-Visible=true
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Position=0
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Visible=false
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Position=3
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Visible=false
+Kate-MDI-ToolView-kateproject-Position=0
+Kate-MDI-ToolView-kateproject-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kateproject-Visible=false
+Kate-MDI-ToolView-kateprojectgit-Position=0
+Kate-MDI-ToolView-kateprojectgit-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kateprojectgit-Visible=false
+Kate-MDI-ToolView-kateprojectinfo-Position=3
+Kate-MDI-ToolView-kateprojectinfo-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kateprojectinfo-Visible=false
+Kate-MDI-ToolView-lspclient_symbol_outline-Position=0
+Kate-MDI-ToolView-lspclient_symbol_outline-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-lspclient_symbol_outline-Visible=false
+Kate-MDI-ToolView-output-Position=3
+Kate-MDI-ToolView-output-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-output-Visible=false
+Kate-MDI-V-Splitter=0,597,240
+
+[MainWindow0 Settings]
+WindowState=8
+
+[MainWindow0-Splitter 0]
+Children=MainWindow0-ViewSpace 0,MainWindow0-ViewSpace 1
+Orientation=1
+Sizes=1095,756
+
+[MainWindow0-ViewSpace 0]
+Active View=13
+Count=8
+Documents=1,2,3,4,5,6,7,9,10,11,12,13
+View 0=5
+View 1=6
+View 2=7
+View 3=9
+View 4=10
+View 5=11
+View 6=12
+View 7=13
+
+[MainWindow0-ViewSpace 0 1]
+CursorColumn=0
+CursorLine=1
+
+[MainWindow0-ViewSpace 0 10]
+CursorColumn=26
+CursorLine=491
+ScrollLine=472
+
+[MainWindow0-ViewSpace 0 2]
+CursorColumn=0
+CursorLine=132
+ScrollLine=126
+
+[MainWindow0-ViewSpace 0 3]
+CursorColumn=15
+CursorLine=4
+
+[MainWindow0-ViewSpace 0 4]
+CursorColumn=0
+CursorLine=490
+
+[MainWindow0-ViewSpace 0 5]
+CursorColumn=0
+CursorLine=32
+ScrollLine=24
+
+[MainWindow0-ViewSpace 0 6]
+ScrollLine=108
+
+[MainWindow0-ViewSpace 0 7]
+CursorColumn=7
+CursorLine=114
+ScrollLine=97
+
+[MainWindow0-ViewSpace 0 9]
+CursorColumn=0
+CursorLine=36
+ScrollLine=10
+
+[MainWindow0-ViewSpace 1]
+Active View=8
+Count=2
+Documents=0,8
+View 0=0
+View 1=8
+
+[MainWindow0-ViewSpace 1 0]
+CursorColumn=0
+CursorLine=4
+
+[MainWindow0-ViewSpace 1 2]
+CursorColumn=31
+CursorLine=3
+ScrollLine=294
+
+[MainWindow0-ViewSpace 1 8]
+CursorColumn=29
+CursorLine=70
+ScrollLine=51
+
+[Open Documents]
+Count=14
+
+[Open MainWindows]
+Count=1
+
+[Plugin:kateprojectplugin:]
+projects=
+
+[Plugin:katesearchplugin:MainWindow:0]
+BinaryFiles=false
+CurrentExcludeFilter=0
+CurrentFilter=0
+ExcludeFilters=\\0
+ExpandSearchResults=false
+Filters=\\0
+FollowSymLink=false
+HiddenFiles=false
+MatchCase=false
+Place=0
+Recursive=true
+Replaces=SNAPS,snapspkg,SNAPS-VOX,snapsvox,snaps,.sh,/usr/bin/,/mnt/GAMEDRIVE/LinBack-2/_workspace_wehttamsnaps-obs/wehttamsnaps-obs/scene-cards,paru --needed --noconfirm -S ,yay --needed --noconfirm -S\s
+Search=file://,firefox$,firefox, geometry-corner-radius,    ,iNiR,Mod+Alt+G,Mod+Alt+N,Mod+Shift+M,sdg,sdgvox,SDG-VOX,SDG,sdgpkg,starting Steam first,/usr/local/bin/,sound,SOUND="/usr/local/bin/sound-system",$rofi_input,rofi,SUPER+ALT\\,G,bind=SUPER+ALT\\,w,dms,tagrule=id:2\\,layout_name:dwindle\\,
+SearchAsYouTypeAllProjects=true
+SearchAsYouTypeCurrentFile=true
+SearchAsYouTypeFolder=true
+SearchAsYouTypeOpenFiles=true
+SearchAsYouTypeProject=true
+SearchDiskFiles=
+SearchDiskFiless=\\0
+SizeLimit=128
+UseRegExp=false
+
+[Recent Files]
+File1[$e]=/mnt/GAMEDRIVE/WehttamSnaps-Niri/Packages/NEWpkglist.txt
+File10[$e]=$HOME/.config/niri/config.d/30-window-rules.kdl
+File2[$e]=$HOME/WehttamSnaps-Niri/Packages/pkglist.txt
+File3[$e]=$HOME/.config/niri/config.d/10-input-and-cursor.kdl
+File4[$e]=$HOME/.config/niri/config.d/20-layout-and-overview.kdl
+File5[$e]=$HOME/.config/niri/config.d/70-binds.kdl
+File6[$e]=/mnt/GAMEDRIVE/MY-NOTES/The Ultimate Guide to Arch Linux Gaming for Beginners
+File7[$e]=$HOME/.config/niri/config.d/40-environment.kdl
+File8[$e]=$HOME/.config/niri/config.d/80-layer-rules.kdl
+File9[$e]=$HOME/.config/niri/config.d/85-gaming.kdl
+Name1[$e]=NEWpkglist.txt
+Name10[$e]=30-window-rules.kdl
+Name2[$e]=pkglist.txt
+Name3[$e]=10-input-and-cursor.kdl
+Name4[$e]=20-layout-and-overview.kdl
+Name5[$e]=70-binds.kdl
+Name6[$e]=The Ultimate Guide to Arch Linux Gaming for Beginners
+Name7[$e]=40-environment.kdl
+Name8[$e]=80-layer-rules.kdl
+Name9[$e]=85-gaming.kdl

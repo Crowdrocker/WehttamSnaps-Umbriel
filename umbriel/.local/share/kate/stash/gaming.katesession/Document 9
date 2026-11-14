@@ -1,0 +1,36 @@
+systemctl --user restart pipewire pipewire-pulse wireplumber
+```
+
+### Useful Related Commands
+
+* **Check service status:**
+  ```bash
+  systemctl --user status pipewire pipewire-pulse wireplumber
+  ```
+* **Stop all services:**
+  ```bash
+  systemctl --user stop pipewire pipewire-pulse wireplumber
+  ```
+* **Start all services:**
+  ```bash
+  systemctl --user start pipewire pipewire-pulse wireplumber
+  ```
+* **Force kill hanging processes** (if the services refuse to restart):
+  ```bash
+  pkill -9 pipewire
+  pkill -9 wireplumber
+  systemctl --user start pipewire pipewire-pulse wireplumber
+  ```
+* **View recent logs for troubleshooting:**
+  ```bash
+  journalctl --user -u pipewire -u pipewire-pulse -u wireplumber -f
+  ```
+
+<VideoWrapper>
+  This video demonstrates how to restart PipeWire services and fix common audio issues like crackling or low-volume scaling on Arch Linux:
+  <VideoSrcId srcId="0.6.9" />
+</VideoWrapper>
+
+<FollowUp>
+Are you trying to fix a **specific audio problem** (like crackling sound, missing input devices, or low volume), or do you need help **checking log errors**?
+</FollowUp>
