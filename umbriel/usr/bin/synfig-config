@@ -1,0 +1,82 @@
+#!/bin/sh
+
+prefix=/usr
+exec_prefix=${prefix}
+
+bindir=${exec_prefix}/bin
+libexecdir=${exec_prefix}/libexec
+datadir=${prefix}/share
+sysconfdir=/etc
+sharedstatedir=${prefix}/com
+localstatedir=/var
+libdir=${exec_prefix}/lib
+infodir=${prefix}/share/info
+mandir=${prefix}/share/man
+includedir=${prefix}/include
+
+LIBS="-lz -lglibmm-2.4 -lgobject-2.0 -lsigc-2.0 -lglib-2.0 -lgiomm-2.4 -lgio-2.0 -lglibmm-2.4 -lgobject-2.0 -lsigc-2.0 -lglib-2.0 -lxml++-2.6 -lglibmm-2.4 -lgobject-2.0 -lsigc-2.0 -lglib-2.0 -lcairo -lfftw3 -lmlt++-7 -lmlt-7 -lsigc-2.0"
+
+VERSION=1.4.5
+PACKAGE=synfig
+
+CFLAGS=""
+
+usage()
+{
+	cat <<EOF
+Usage: synfig-config [OPTION]...
+
+Generic options
+  --version	print installed version of synfig.
+  --help        display this help and exit.
+
+Compilation support options
+  --cflags      print pre-processor and compiler flags
+  --libs        print library linking information
+  
+Install directories
+  --prefix --exec-prefix --bindir --libexecdir --datadir
+  --sysconfdir --sharedstatedir --localstatedir --libdir --infodir
+  --mandir --includedir
+
+EOF
+	
+	exit 1
+}
+
+if test $# -eq 0; then
+	usage 1
+fi
+
+case $1 in
+--version)
+	echo $PACKAGE $VERSION
+	exit 0
+	;;
+--exec-prefix)
+	echo $exec_prefix
+	exit 0
+	;;
+--prefix)
+	echo $prefix
+	exit 0
+	;;
+--help)
+	usage 0
+	;;
+--cflags)
+	echo $CFLAGS
+	exit 0
+	;;
+--cxxflags)
+	echo $CFLAGS
+	exit 0
+	;;
+--libs)
+	echo $LIBS
+	exit 0
+	;;
+esac
+
+echo Unknown option "$1"
+exit 4

@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+
+import sys
+
+if __name__ == '__main__':
+    sys.path.insert(1, "/usr/share/uwsm/modules")
+    from uwsm.main import main
+    main()

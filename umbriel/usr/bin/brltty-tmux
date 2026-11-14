@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+###############################################################################
+# BRLTTY - A background process providing access to the console screen (when in
+#          text mode) for a blind person using a refreshable braille display.
+#
+# Copyright (C) 1995-2026 by The BRLTTY Developers.
+#
+# BRLTTY comes with ABSOLUTELY NO WARRANTY.
+#
+# This is free software, placed under the terms of the
+# GNU Lesser General Public License, as published by the Free Software
+# Foundation; either version 2.1 of the License, or (at your option) any
+# later version. Please see the file LICENSE-LGPL for details.
+#
+# Web Page: http://brltty.app/
+#
+# This software is maintained by Dave Mielke <dave@mielke.cc>.
+###############################################################################
+
+readonly programArguments=("${@}")
+. "$(dirname "${0}")/brltty-prologue.sh"
+
+showProgramUsagePurpose() {
+cat <<END_OF_PROGRAM_USAGE_PURPOSE
+Run a brltty instance that monitors the current tmux session and uses BrlAPI to communicate with the main brltty instance.
+END_OF_PROGRAM_USAGE_PURPOSE
+}
+
+showProgramUsageNotes() {
+cat <<END_OF_PROGRAM_USAGE_NOTES
+If brltty is started as root (see the -s option)
+then the current foreground console (tty) is claimed
+and switching between virtual consoles will work as expected.
+If, however, brltty is started as a non-root user then switching
+between virtual consoles won't work properly because determining
+which one is in the foreground requires root privileges.
+The longer explanation is that it will almost still work in that keyboard
+input will go to the new one but the braille display will continue to show
+what's on the virtual console from which this script was run.
+END_OF_PROGRAM_USAGE_NOTES
+}
+
+processExtraProgramParameters() {
+   readonly programParameters=("${@}")
+}
+
+addProgramOption s flag optSudo "use sudo to start brltty as root"
+addProgramOption c flag optContinue "continue as non-root if sudo fails"
+optionalProgramParameters "-brltty" "arguments after -- are passed through to brltty as its options"
+parseProgramArguments "${@}"
+
+tmuxSocketVariable=TMUX
+tmuxSocketPath="${!tmuxSocketVariable}"
+[ -n "${tmuxSocketPath}" ] || semanticError "not using tmux"
+
+ttyNumber=""
+
+if [ "$(id -u)" -eq 0 ]
+then
+   ttyNumber="$(fgconsole)"
+elif "${optSudo}"
+then
+   sudo --validate && {
+      sudoOptions=(
+         --non-interactive
+         --preserve-env="${tmuxSocketVariable}"
+      )
+
+      exec sudo "${sudoOptions[@]}" -- "${programPath}" "${programArguments[@]}"
+      exit "${?}"
+   }
+
+   "${optContinue}" || exit 9
+   logWarning "continuing - starting brltty as \"$(id -u -n)\""
+fi
+
+[ -n "${ttyNumber}" ] || logWarning "can't determine foreground console - console switching won't work properly"
+export WINDOWPATH="${ttyNumber}"
+
+brailleDriver=ba # BrlAPI
+screenDriver=tx # Tmux
+
+brlttyOptions=(
+   --quiet
+   --no-api
+   --braille-driver="${brailleDriver}"
+   --screen-driver="${screenDriver}"
+   --screen-parameters="${screenDriver}:socket=${tmuxSocketPath}"
+)
+
+needSiblingBrltty brlttyPath
+exec "${brlttyPath}" "${brlttyOptions[@]}" "${programParameters[@]}" 2>/dev/null
+exit "${?}"

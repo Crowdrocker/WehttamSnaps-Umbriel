@@ -1,0 +1,149 @@
+#!/bin/bash
+#
+# Detect broken packages that need to be rebuilt
+
+shopt -s nullglob
+shopt -s extglob
+[ -t 0 ] || mapfile -t hook_targets
+
+log="$(mktemp -d)"
+trap 'rm -rf "$log"' EXIT
+
+exit_usage() {
+    echo "Usage: $0 [-v] [-i repo1] [-i repo2]"
+    exit "$1"
+}
+
+verbose=0
+while getopts "hvi:" OPTION; do
+    case $OPTION in
+        v) verbose=1 ;;
+        i) include+=("$OPTARG") ;;
+        h) exit_usage 0 ;;
+        *) exit_usage 1 ;;
+    esac
+done
+
+print_packages() {
+    if (( ${#hook_targets[@]} )); then
+        printf "%s\n" "${hook_targets[@]}" | xargs -rL1 pactree -rud1
+    else
+        pacman -Qq
+    fi
+}
+
+get_included_repos() {
+    echo "__checkrebuild-reserved__" # make sure to pass at least one argument further to pacman -Sl
+    for repo in $(pacconf --repo-list); do
+        if pacconf --repo="$repo" Server | grep -q "file://" || [[ " ${include[@]} " =~ " $repo " ]]; then
+            echo "$repo"
+        fi
+    done
+}
+
+filter_packages_by_repos() {
+    sort -u |
+    comm -12 - <(get_pkgs)
+}
+
+get_package_files() {
+    xargs -r pacman -Qql |
+    perl -pe 's/\n/\0/' |
+    xargs -r0 readlink -ez |
+    sort -uz
+}
+
+filter_executable() {
+    LANG=C xargs -r0 stat --printf "%F %a\t%n\0" |
+    grep -ozP "^regular file \d?[1357]\d\d\t\K.*" |
+    xargs -r0 file -N |
+    grep -oP ".*(?=: ELF )"
+}
+
+check_broken_ldd() {
+    LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$(dirname "$1")" ldd "$1" 2>/dev/null |
+    grep "not found" > >( out="$(cat)"; f="$RANDOM"; (( verbose )) && [ -n "$out" ] && { echo -e "ldd $1\n" >> "$log/$f"; echo "$out" | c++filt >> "$log/$f"; } ) &&
+    pacman -Qqo "$1"
+}
+
+get_broken_ldd_pkgs() {
+    export -f check_broken_ldd
+    export log
+    export verbose
+    print_packages |
+    filter_packages_by_repos |
+    get_package_files |
+    filter_executable |
+    HOME=/tmp parallel --will-cite 'check_broken_ldd "{}"'
+}
+
+get_broken_python_pkgs() {
+    [[ -x /usr/bin/python3 ]] || return
+    python_version="$(/usr/bin/python3 -c 'import sys; print (sys.version_info.minor)')"
+    pkgs="$log/$RANDOM"
+    pacman -Qqo /usr/lib/python3.!("$python_version") 2>/dev/null | grep -v '^python3[0-9]' | filter_packages_by_repos | tee "$pkgs"
+    (( verbose )) && pacman -Qo /usr/lib/python3.!("$python_version") 2>/dev/null | grep -f "$pkgs" >"$log/$RANDOM"
+    rm -f "$pkgs"
+}
+
+get_broken_perl_pkgs() {
+    [[ -x /usr/bin/perl ]] || return
+    perl_version="$(/usr/bin/perl -E 'say $^V =~ /(\d+[.]\d+)/')"
+    pkgs="$log/$RANDOM"
+    pacman -Qqo /usr/lib/perl*/!("$perl_version") 2>/dev/null | filter_packages_by_repos | tee "$pkgs"
+    (( verbose )) && pacman -Qo /usr/lib/perl*/!("$perl_version") 2>/dev/null | grep -f "$pkgs" >"$log/$RANDOM"
+    rm -f "$pkgs"
+}
+
+get_broken_ruby_pkgs() {
+    [[ -x /usr/bin/gem ]] || return
+    ruby_gemdir="$(/usr/bin/gem environment gemdir)"
+    ruby_version="${ruby_gemdir##*/}"
+    ruby_install_path="${ruby_gemdir%/*}"
+    pkgs="$log/$RANDOM"
+    pacman -Qqo "$ruby_install_path"/!("$ruby_version") 2>/dev/null | filter_packages_by_repos | tee "$pkgs"
+    (( verbose )) && pacman -Qo "$ruby_install_path"/!("$ruby_version") 2>/dev/null | grep -f "$pkgs" >"$log/$RANDOM"
+    rm -f "$pkgs"
+}
+
+get_broken_haskell_pkgs() {
+    [[ -x /usr/bin/ghc ]] || return
+    haskell_version="$(/usr/bin/ghc --numeric-version)"
+    pkgs="$log/$RANDOM"
+    pacman -Qqo /usr/lib/ghc-!("$haskell_version") 2>/dev/null | filter_packages_by_repos | tee "$pkgs"
+    (( verbose )) && pacman -Qo /usr/lib/ghc-!("$haskell_version") 2>/dev/null | grep -f "$pkgs" >"$log/$RANDOM"
+    rm -f "$pkgs"
+}
+
+get_broken_pkgs() {
+    {
+        get_broken_ldd_pkgs
+        get_broken_python_pkgs
+        get_broken_perl_pkgs
+        get_broken_ruby_pkgs
+        get_broken_haskell_pkgs
+    } | sort -u
+}
+
+get_repo_pkgs() {
+    {
+        pacman -Sl $(get_included_repos) 2>/dev/null | cut -d' ' -f1-2
+        pacman -Qqm | awk '{print "foreign", $0}'
+    } | sort -k2
+}
+
+get_pkgs() {
+    get_repo_pkgs | awk '{print $2}'
+}
+
+join -12 <(get_repo_pkgs) <(get_broken_pkgs) | awk '{ print $2 "\t" $1 }'
+
+if (( verbose )); then
+    cd "$log"
+    find . -not -empty -type f | while read -r f; do
+        echo
+        cat "$f"
+    done
+fi
+
+exit 0

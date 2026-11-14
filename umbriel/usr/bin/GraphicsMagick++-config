@@ -1,0 +1,55 @@
+#!/bin/sh
+# Copyright Bob Friesenhahn, 2002-2023
+# SPDX-License-Identifier: MIT
+#
+# Configure options script for re-calling compilation
+# options required to use the Magick++ library.
+#
+# Concept derived from gtk-config in the Gtk package except that Autoconf-style
+# configuration information is presented instead so that it may be used more
+# effictively in configure scripts.
+#
+usage='Usage: GraphicsMagick++-config [--cppflags] [--cxx] [--cxxflags] [--exec-prefix] [--ldflags] [--libs] [--prefix] [--version]
+
+ For example, "example.cpp" may be compiled to produce "example" as follows:
+
+  "g++ -o example example.cpp `GraphicsMagick++-config --cppflags --cxxflags --ldflags --libs`"'
+
+if test $# -eq 0; then
+      echo "${usage}" 1>&2
+      exit 1
+fi
+
+while test $# -gt 0; do
+  case $1 in
+    --prefix)
+      echo /usr
+      ;;
+    --exec-prefix)
+      echo /usr
+      ;;
+    --version)
+      echo 1.3.49
+      ;;
+    --cppflags)
+      echo '-I/usr/include/GraphicsMagick'
+      ;;
+    --cxx)
+      echo 'g++'
+      ;;
+    --cxxflags)
+      echo '-march=native -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -mpclmul -Wp,-D_GLIBCXX_ASSERTIONS -g1 -ffile-prefix-map=/startdir/src=/usr/src/debug/graphicsmagick -flto=auto'
+      ;;
+    --ldflags)
+      echo '-L/usr/lib -Wl,-O1 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs -flto=auto'
+      ;;
+    --libs)
+      echo '-lGraphicsMagick++ -lGraphicsMagick -llcms2 -lfreetype -lXext -lX11 -lbz2 -lz -lltdl -lm -lpthread -lgomp'
+      ;;
+    *)
+      echo "${usage}" 1>&2
+      exit 1
+      ;;
+  esac
+  shift
+done

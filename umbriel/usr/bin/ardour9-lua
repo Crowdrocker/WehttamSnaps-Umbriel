@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export LD_LIBRARY_PATH=/usr/lib/ardour9${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+export ARDOUR_DATA_PATH=/usr/share/ardour9
+export ARDOUR_CONFIG_PATH=/etc/ardour9
+export ARDOUR_DLL_PATH=/usr/lib/ardour9
+export VAMP_PATH=/usr/lib/ardour9/vamp
+
+exec /usr/lib/ardour9/luasession "$@"

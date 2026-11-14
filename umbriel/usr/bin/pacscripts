@@ -1,0 +1,147 @@
+#!/usr/bin/bash
+#
+# pacscripts - Print the {pre,post}_{install,remove,upgrade} scripts of a given package
+#
+# Copyright (c) 2009 Xavier Chantry <shiningxc@gmail.com>
+# Copyright (c) 2009-2016 Pacman Development Team <pacman-dev@archlinux.org>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+declare -r myname='pacscripts'
+declare -r myver='1.13.1'
+declare    LIBRARY=${LIBRARY:-'/usr/share/makepkg'}
+
+declare -i USE_COLOR=1
+
+# Import libmakepkg
+# shellcheck source=/dev/null
+source "$LIBRARY"/util/message.sh
+
+die() {
+	error "$@"
+	exit 1
+}
+
+usage() {
+	cat <<EOF
+${myname} v${myver}
+
+Print the {pre,post}_{install,remove,upgrade} scripts of a given package.
+
+Usage: ${myname} [--nocolor] <pkgname | pkgfile>
+
+Options:
+  -h, --help     show this help message and exit
+  -m, --nocolor  do not colorize output
+  -V, --version  display version information and exit
+
+Example: ${myname} gconf-editor
+Example: ${myname} gconf-editor-3.0.1-3-x86_64.pkg.tar.xz
+EOF
+}
+
+if ! DBPath="$(pacman-conf DBPath)"; then
+	die "Unable to read /etc/pacman.conf"
+fi
+pac_db="${DBPath:-/var/lib/pacman}/local"
+
+version() {
+	printf "%s %s\n" "$myname" "$myver"
+	echo 'Copyright (c) 2009 Giulio "giulivo" Fidente <giulivo.navigante@gmail.com>'
+	echo 'Copyright (c) 2009 Xavier Chantry <shiningxc@gmail.com>'
+}
+
+runasroot() {
+	if (( EUID != 0 )); then
+		if ! type -p sudo; then
+			error 'Cannot find the sudo binary!'
+			die "${myname} requires root privileges. Either install \"sudo\" or run as root."
+		else
+			sudo "$@"
+		fi
+	else
+		"$@"
+	fi
+}
+
+print_db() {
+	pkg=$(pacman -Q "$1")
+	pkg=${pkg/ /-}
+	for file in "$pac_db"/"$pkg"*/install; do
+		if [ -f "$file" ]; then
+			cat "$pac_db/$pkg"*/install
+			echo
+			return 0
+		else
+			die "Package $1 does not include any .INSTALL script"
+		fi
+	done
+}
+
+print_pkg() {
+	if ! bsdtar -xqOf "$1" .INSTALL 2>/dev/null; then
+		die "Package $1 does not include any .INSTALL script"
+	fi
+	echo
+}
+
+print_scriptlet() {
+	# check if messages are to be printed using color
+	if [[ -t 2 ]] && (( USE_COLOR )); then
+		colorize
+	else
+		unset ALL_OFF BOLD BLUE GREEN RED YELLOW
+	fi
+
+	if [ -f "$1" ]; then
+		if bsdtar tf "$1" .PKGINFO &>/dev/null; then
+			print_pkg "$1"
+			return
+		fi
+	fi
+	if pacman -Q "$1" &>/dev/null; then
+		print_db "$1"
+		return
+	fi
+	if ! pacman -Si "$1" &>/dev/null; then
+		die "Package $1 not found"
+	fi
+	url=$(pacman -Sddp "$1")
+	if [[ $url != file://* ]]; then
+		if ! runasroot pacman -Sddw --logfile /dev/null --noconfirm "$1" >&2; then
+			die "Failed to download $1"
+		fi
+		echo >&2
+		url=$(pacman -Sddp "$1")
+	fi
+	print_pkg "${url#file://}"
+	return
+}
+
+case $# in
+	2)
+		case "$1" in
+			-m|--nocolor) USE_COLOR=0; shift ;;
+			*) usage; exit 1 ;;
+		esac
+		;&
+	1)
+		case "$1" in
+			-h|--help) usage; exit 0 ;;
+			-V|--version) version; exit 0 ;;
+			*) print_scriptlet "$1" ;;
+		esac
+		;;
+	*) usage; exit 1 ;;
+esac
