@@ -1,0 +1,22 @@
+ include.optional     | [include.optional] files = ["~/.config/umbriel/shaders/..."] | Includes external TOML or shader preset files without failing if missing | https://noctalia.dev | effects
+ include              | [include] files = ["~/.config/umbriel/config.d/90-user-extra.toml"] | Includes required external TOML configuration modules | https://noctalia.dev
+ output               | [[output]] name = "DP-1" mode = "1920x1080@60" | Configures monitor resolution, refresh rate, scale, and position | https://noctalia.devoutputs/
+ input                | [input.keyboard] xkb_layout = "us" | Configures keyboard repeat rate, mouse accel, and touchpad behavior | https://noctalia.devinput/
+ layout               | [layout] gaps = 8 center_focused_column = "never" | Controls scrolling column widths, gaps, borders, and focus rings | https://noctalia.devlayout/ | layout
+ gaps                 | gaps = 8 | Sets inner pixel spacing between tiled windows and columns | https://noctalia.devlayout/ | layout
+ preset_column_widths | preset_column_widths = [{ proportion = 0.5 }, { proportion = 0.8 }] | Defines width presets cycled when pressing the resize keybind | https://noctalia.devlayout/ | layout
+ focus_ring           | [layout.focus_ring] width = 2 active_color = "#89dceb" | Configures the highlight ring around the currently focused window | https://noctalia.devlayout/ | layout
+ border               | [layout.border] width = 2 active_color = "#89dceb" | Configures persistent borders around all tiled and floating windows | https://noctalia.devlayout/ | layout
+ effects              | [effects] border = "spectrum" open = "tv-glitch" | Assigns GLSL shaders to window borders and open/close animations | https://noctalia.deveffects/ | effects
+ animation            | [animation] enabled = true slowdown = 1.0 | Controls compositor animation speed, curves, and workspace transitions | https://noctalia.devanimations/
+ animation.scratchpad | [animation.scratchpad] enabled = true blur = false dim = 0.0 | Configures scratchpad slide/fade transitions and backdrop dim/blur | https://noctalia.devscratchpads/ | scratchpad
+ scratchpad           | [[scratchpad]] name = "games" width = 0.85 height = 0.85 | Declares a named toggleable scratchpad overlay window | https://noctalia.devscratchpads/ | scratchpad
+ window_rule          | [[window_rule]] match.app_id = "^steam$" default_workspace = "Gaming" | Applies floating, workspace, opacity, or scratchpad rules to matching windows | https://noctalia.devwindow-rules/ | window_rule
+ layer_rule           | [[layer_rule]] match.namespace = "^quickshell$" blur = true | Applies blur, shadow, or opacity rules to Wayland layer surfaces | https://noctalia.devlayer-rules/
+ workspace            | [[workspace]] name = "Gaming" open_on_output = "DP-1" | Declares named workspaces pinned to specific monitors | https://noctalia.devworkspaces/
+ spawn_at_startup     | [[spawn_at_startup]] command = ["sound-system", "startup"] | Launches background daemons or scripts once when Umbriel starts | https://noctalia.devmisc/
+ environment          | [environment] RADV_PERFTEST = "sam,aco" | Exports environment variables to Umbriel and all spawned applications | https://noctalia.devmisc/
+ keybinds             | [keybinds] "Mod+Return" = { action = "spawn ghostty" } | Maps keyboard and mouse shortcuts to Umbriel compositor actions | https://noctalia.devkeybinds/ | keybinds
+ binds                | binds { Mod+Return { spawn "ghostty"; } } | Niri KDL block defining keyboard shortcuts and actions | https://github.io
+ window-rule          | window-rule { match app-id="steam"; open-floating true; } | Niri KDL rule customizing window placement, floating, and geometry | https://github.io
+ spawn-at-startup     | spawn-at-startup "waybar" | Niri KDL command executed once upon compositor launch | https://github.io

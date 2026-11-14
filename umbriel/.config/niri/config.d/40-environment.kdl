@@ -1,0 +1,36 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// 40 — Environment variables
+// ─────────────────────────────────────────────────────────────────────────────
+// These are set for every process spawned by Niri (including spawn-at-startup
+// and keybind commands). They are NOT inherited by TTY/SSH sessions — for
+// those, iNiR's setup writes equivalent exports into ~/.bashrc / fish conf.d.
+// ─────────────────────────────────────────────────────────────────────────────
+
+environment {
+    // ── Existing System Rules (Keep these as they are) ──────────────────────────
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_MENU_PREFIX "plasma-"
+    QT_QPA_PLATFORM "wayland"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_LOGGING_RULES "quickshell.dbus.properties=false"
+    QT_QPA_PLATFORMTHEME "kde"
+    QT_STYLE_OVERRIDE "Darkly"
+    INIR_VENV "$HOME/.local/state/quickshell/.venv"
+    ILLOGICAL_IMPULSE_VIRTUAL_ENV "$HOME/.local/state/quickshell/.venv"
+
+    // ── AMD GRAPHICS & PERFORMANCE OPTIMIZATIONS ─────────────────────────────
+
+    // Force the modern Radeon Vulkan driver (RADV) instead of AMDVLK
+    AMD_VULKAN_DRIVER "radv"
+
+    // Direct hardware acceleration backend for video playback (VA-API over Mesa)
+    LIBVA_DRIVER_NAME "radeonsi"
+    VDPAU_DRIVER "radeonsi"
+
+    // Enable hardware acceleration for Firefox and Chromium-based web browsers
+    MOZ_DISABLE_RDD_SANDBOX "1"
+
+    // Optimization: Skip cleaning up shader disk caches to reduce micro-stutters
+    // when loading zones in open-world games like The Division 2
+    __GL_SHADER_DISK_CACHE_SKIP_CLEANUP "1"
+}

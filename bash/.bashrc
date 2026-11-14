@@ -30,7 +30,7 @@ fi
 
 # Trigger a custom miniature terminal tip popup on shell initialization (Optional)
 if [[ $- == *i* ]]; then
-    ~/.config/niri/scripts/tips.sh startup-mini
+    ~/.config/snapsos/tips/tips.sh startup-mini
 fi
 # ================================= prompt ================================= #
 # PS1='$(if [[ "$PWD" = "$HOME" ]]; then echo "\e[1;36m\e[1;0m"; elif [[ "$PWD" = "/" ]]; then echo " \e[1;0m"; elif [[ ! "$PWD" == "$HOME" ]]; then echo "\n\w"; fi)\n\e[1;32m❯\e[1;0m '
@@ -197,8 +197,9 @@ export LIBVIRT_DEFAULT_URI="qemu:///system"
 # scripts that read this file get clean output
 case $- in *i*)
   if [ -f ~/.local/state/quickshell/user/generated/terminal/sequences.txt ]; then
-    cat ~/.local/state/quickshell/user/generated/terminal/sequences.txt
+    /usr/bin/cat ~/.local/state/quickshell/user/generated/terminal/sequences.txt
   fi
+
   # Starship prompt (fish is wired via config.fish; bash needs its own init)
   if command -v starship >/dev/null 2>&1; then
     eval "$(starship init bash)"
@@ -206,3 +207,10 @@ case $- in *i*)
   ;;
 esac
 # end iNiR
+
+# iNiR launcher PATH
+case ":$PATH:" in
+  *:"/home/wehttamsnaps/.local/bin":*) ;;
+  *) export PATH="/home/wehttamsnaps/.local/bin:$PATH" ;;
+esac
+# end iNiR launcher PATH
