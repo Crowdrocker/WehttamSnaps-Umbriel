@@ -1,68 +1,106 @@
-# 🪐 WehttamSnaps-Umbriel
+<div align = center>
+  
+<a href="https://discord.gg/9bAVTCNZ">
+    <img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FnTaknDvdUA%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=WehttamSnaps%20Community&labelColor=ebbcba&color=8A2BE2">
+</a>
 
-Modular, GPU-accelerated Wayland desktop dotfiles for **CachyOS**, built around the **Umbriel** scrolling compositor, **iNiR / Noctalia** shell, **Ghostty**, and **GNU Stow**.
+<p align="center">
+  <img src="https://github.com/Crowdrocker/WehttamSnaps-Umbriel/blob/main/assets/latte.png" width="400" />
+</p>
+
+<h3 align="center">
+<img align="center" width="80%" src=https://github.com/Crowdrocker/WehttamSnaps-Umbriel/blob/main/assets/github-header.png />
+</h3>
+
+<p align="center">
+  <img src="https://github.com/Crowdrocker/WehttamSnaps-Umbriel/blob/main/assets/latte.png" width="400" />
+</p>
+
+<div align="center">
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Arch Linux](https://img.shields.io/badge/Arch-Linux-1793D1?logo=arch-linux&logoColor=white)
+![Niri](https://img.shields.io/badge/WM-Niri-89b4fa)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen)
+![Stars](https://img.shields.io/github/stars/Crowdrocker/WehttamSnaps-Umbriel?style=social)
+
+ 
+[![Twitch](https://img.shields.io/badge/Twitch-WehttamSnaps-9146FF?style=for-the-badge&logo=twitch)](https://www.twitch.tv/wehttamsnaps)
+[![YouTube](https://img.shields.io/badge/YouTube-WehttamSnaps-FF0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/@WehttamSnaps)
+[![GitHub](https://img.shields.io/badge/GitHub-Crowdrocker-181717?style=for-the-badge&logo=github)](https://github.com/Crowdrocker)
+
+</div>
+
+</div><br>
+
+<div align="center">
+  
+<a href="#Overview"><kbd> <br> Overview <br> </kbd></a>&ensp;&ensp;
+<a href="#Screenshots"><kbd> <br> Screenshots <br> </kbd></a>&ensp;&ensp;
+<a href="#Whatisthis"><kbd> <br> Whatisthis <br> </kbd></a>&ensp;&ensp;
+<a href="#Documentation"><kbd> <br> Documentation <br> </kbd></a>&ensp;&ensp;
+<a href="#QuickInstall"><kbd> <br> QuickInstall <br> </kbd></a>&ensp;&ensp;
+<a href="#Updating"><kbd> <br> Updating <br> </kbd></a>&ensp;&ensp;
+<a href="#Keybinds"><kbd> <br> Keybinds <br> </kbd></a>&ensp;&ensp;
+<a href="#Troubleshooting"><kbd> <br> Troubleshooting <br> </kbd></a>&ensp;&ensp; 
+<a href="#Credits"><kbd> <br> Credits <br> </kbd></a>&ensp;&ensp; 
+
+<br/>
+</div>
+
+<div align="center">
+
+![GitHub Repo stars](https://img.shields.io/github/stars/Crowdrocker/WehttamSnaps-Umbriel?style=for-the-badge&color=cba6f7) ![GitHub last commit](https://img.shields.io/github/last-commit/Crowdrocker/WehttamSnaps-Umbriel?style=for-the-badge&color=b4befe) 
+
+<br/>
+</div>
+
+<h3 align="center">
+  <img src="https://github.com/Crowdrocker/Telegram-Animated-Emojis/blob/main/Activity/Video%20Game.webp" alt="Game" width="38" height="38" />
+  Arch Linux configuration optimized for photography, gaming, and content creation.
+  <img src="https://github.com/Crowdrocker/Telegram-Animated-Emojis/blob/main/People/Thumbs%20Up.webp" alt="Up" width="38" height="38" />
+</h3>
+
+<a id="Overview"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Overview" width="450"/>
+
+**Snaps-OS** is a modular **Umbriel** Wayland compositor and **iNiR** Quickshell setup deployed via **GNU Stow**, optimized for photography, gaming, and content creation on CachyOS and Fedora 45.
+* **J.A.R.V.I.S. & iDroid Integration**: Context-aware AI voice feedback.
+* **GPU Shaders & Animations**: Community `spectrum` border shaders and `tv-glitch` window transitions.
+* **Photography & Gaming**: Color-accurate tools (Darktable, GIMP) and RADV/Gamescope/MangoHUD tuning.
+* **Audio Routing & Modularity**: PipeWire matrix via qpwgraph/EasyEffects and clean GNU Stow symlinks.
+
+> [!CAUTION]
+> **Hey.** This is my personal rice. I put effort into it, but it's not a product - don't expect hand-holding or stability guarantees. If you're just here because "it looks cool" and have no clue what Niri even is, maybe check out something more beginner-friendly first. Your system, your responsibility.
+
+> **Heads up:** almost everything here is configurable. Modules, colors, fonts, animations - if something bugs you, there's probably a toggle for it. Hit `Super+,` for settings before you rage-quit.
+
+- **J.A.R.V.I.S. Integration** – Immersive AI assistant theme with custom sounds
+- **Photography Workflow** – Optimized for photo editing and content creation
+- **Gaming Performance** – Tuned for RX 580 with Proton GE configurations
+- **Audio Routing** – PipeWire + qpwgraph for advanced audio control
+- **Custom Branding** – WehttamSnaps theme throughout
+---
+
+## 🖥️ System Architecture Specs
+
+| Component | Target Hardware Specification |
+| :--- | :--- |
+| **CPU** | AMD Ryzen 5 9600X (6 Cores / 12 Threads) |
+| **GPU** | XFX Speedster SWFT210 Radeon RX 7600 (8GB VRAM) |
+| **RAM** | 16GB DDR5 (Upgrading to 32GB Dual-Channel) |
+| **PSU** | EVGA 850W Modular Power Supply |
+| **Chassis** | HYTE Y60 (White with Black Trim, Panoramic Glass) |
+| **Displays** | **Main:** Samsung 4K (Configured to 1920x1080 @ 60Hz)<br>**Left:** Native 1080p @ 60Hz |
 
 ---
 
-## 📸 Desktop & Terminal Preview
+## 🎵 J.A.R.V.I.S Audio Routing Matrix
 
-![Ghostty Terminal, Fastfetch & Cyberpunk MOTD](assets/terminal-motd.png)
-
-* **Terminal Stack:** Ghostty + Zsh + Fastfetch + custom Cyberpunk MOTD
-* **Dynamic Colors:** Live ANSI palette generation synced with desktop wallpapers
-
----
-
-## 🖥️ Hardware & System Stack
-
-* **OS:** CachyOS Linux (Low-Latency Kernel)
-* **Compositor:** Umbriel + iNiR / Noctalia Shell
-* **Hardware:** AMD Ryzen 5 9600X | Radeon RX 7600 | 16GB DDR5
-
----
-### 🎩 Fedora 45 Migration & Deployment
-
-For a lower-maintenance, point-release base system with **Linux Kernel 7.2**, run the automated Fedora installer. It configures **RPM Fusion**, swaps in full **FFmpeg + AMD Mesa VA-API codecs**, adds the **Terra** and **Copr** repositories for **Umbriel**, **Ghostty**, and **Yazi**, applies global **RADV** fixes, and links all dotfiles via **GNU Stow**:
-
-```bash
-git clone https://github.com ~/Documents/GitHub/WehttamSnaps-Umbriel
-cd ~/Documents/GitHub/WehttamSnaps-Umbriel
-chmod +x fedora-install.sh && ./fedora-install.sh
-```
-
-After the script finishes, complete the **iNiR** shell registration and reboot:
-
-```bash
-cd ~/inir && ./setup install   # Select Umbriel when prompted
-inir compositor add umbriel && inir compositor sync
-umbriel config validate
-```
-
-## 🚀 Quick Deployment (GNU Stow)
-
-Clone and install via script or GNU Stow:
-
-```bash
-git clone https://github.com ~/Documents/GitHub/WehttamSnaps-Umbriel
-cd ~/Documents/GitHub/WehttamSnaps-Umbriel && chmod +x install.sh && ./install.sh
-stow -v umbriel mangohud bash zsh
-```
-
----
-
-## 📚 Documentation & Guides
-
-* [🚀 Steam Launch Options & In-Game Graphics Profiles](docs/steam-launch-options.md)
-* [📊 MangoHUD Telemetry & Hotkeys](docs/mangohud.md)
-* [🛠️ Hardware, Ethernet & Compositor Troubleshooting Log](docs/troubleshooting.md)
-* [🔊 Adaptive Sound System (J.A.R.V.I.S. & iDroid)](docs/sound-system.md)
-* [🧩 iNiR Desktop Shell Setup & Maintenance](docs/inir.md)
----
-
-## 📜 License
-
-Released under the [MIT License](LICENSE).
-
+System audio streams are parsed cleanly into isolated virtual lines using PipeW
+📸<a id="Screenshots"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Screenshots" width="450"/>
 ---
 
 ## 🎨 iNiR Shell Layout Gallery
@@ -70,3 +108,261 @@ Released under the [MIT License](LICENSE).
 | Waffle (Taskbar) | iRiS (Island) | Material ii (Sidebars) |
 | :---: | :---: | :---: |
 | ![Waffle Layout](assets/layout-waffle.png) | ![iRiS Layout](assets/layout-iris.png) | ![Material ii Layout](assets/layout-material.png) |
+
+---
+
+✨ <a id="Whatisthis"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Whatisthis" width="450"/>
+
+A shell. Bar at the top, sidebars on the sides, overlays that pop up when you press keys. The usual.
+
+- **Bar** - clock, workspaces, tray, the stuff you expect
+- **Sidebars** - left one has AI chat and wallpaper browser, right one has quick toggles and a notepad
+- **Overview** - workspace grid, adapted for Niri's scrolling model
+- **Alt+Tab** - window switcher that actually works across workspaces
+- **Clipboard** - history panel with search (needs cliphist)
+- **Region tools** - screenshots, screen recording, OCR, reverse image search
+- **Wallpaper** - picker, video support, and matugen pulls colors from whatever you set
+- **Theming** - presets like Gruvbox and Catppuccin, or build your own with the custom theme editor. Fonts are customizable too
+- **Settings** - GUI config with search, so you don't have to edit JSON like a caveman
+- **GameMode** - fullscreen app? Effects go bye-bye. Your games won't stutter
+- **Idle** - screen off, lock, suspend timeouts. swayidle handles it, you configure it
+- **Gamemode + Gamescope** – Performance optimization
+- **Proton GE** – Enhanced game compatibility
+- **Steam Launch Options** – Pre-configured for 16 games
+- **Mod Manager Support** – Window rules for Vortex, MO2, Wabbajack
+
+### Audio
+- **PipeWire Routing** – Separate audio channels (game, browser, Discord, Spotify)
+- **qpwgraph** – Visual audio routing like VoiceMeter
+- **J.A.R.V.I.S. Sounds** – System event audio notifications
+
+### Two flavors, one shell
+
+Can't decide on a look? Good news, you don't have to.
+
+- **Material ii** - The OG. Floating bar, sidebars, that Material Design aesthetic.
+- **Waffle** - Taskbar at the bottom, action center, tray overflow. For the "I kinda miss Windows" crowd.
+
+Press `Mod+Shift+W` to cycle between styles, or go to Settings → Modules to mix and match.
+
+---
+
+  
+🎮<a id="Gaming Optimizations"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=GamingOptimizations" width="450"/>
+### Supported Games (Pre-configured)
+- Call of Duty HQ
+- Cyberpunk 2077
+- Fallout 4
+- FarCry 5
+- Ghost Recon Breakpoint
+- Marvel's Avengers
+- Need for Speed Payback
+- Rise of the Tomb Raider
+- Shadow of the Tomb Raider
+- The First Descendant
+- Tom Clancy's The Division 1 & 2
+- Warframe
+- Watch Dogs 1, 2, & Legion
+
+### Performance Tips
+1. **Enable Gamemode:** Automatic via launch options
+2. **Use Gamescope:** Configured per-game
+3. **Proton GE:** Latest version installed
+4. **Mesa Optimizations:** Pre-configured for RX 580
+5. **Disable Compositor Effects:** Gaming mode toggle
+
+See [docs/GAMING.md](docs/GAMING.md) for detailed per-game configurations and troubleshooting.
+
+```
+
+### Configure Audio Routing
+```bash
+# Launch qpwgraph
+qpwgraph
+
+# Or use automated setup
+./scripts/audio-setup.sh
+```
+
+---
+
+
+🔊<a id="J.A.R.V.I.S. Integration"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=J.A.R.V.I.S.Integration" width="450"/>
+J.A.R.V.I.S. provides audio feedback for system events:
+
+- **Startup:** "Allow me to introduce myself, I am JARVIS..."
+- **Shutdown:** "Shutting down. Have a good day, Matthew."
+- **Notifications:** "Matthew, you have a notification."
+- **Gaming Mode:** "Gaming mode activated. Systems at maximum performance."
+- **Streaming:** "Streaming systems online. All feeds operational."
+- **Warnings:** Temperature alerts and system warnings
+
+### Customize J.A.R.V.I.S.
+Edit `scripts/jarvis-manager.sh` to add or modify sound triggers.
+
+---
+
+📦<a id="Documentation"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Documentation" width="450"/>
+Read these or suffer.
+See the `docs/` directory for guides on iNiR, Steam launch options, MangoHUD, adaptive audio, storage fstab, Fedora vs. CachyOS migration, troubleshooting, and resources.
+
+| Doc | What's in it |
+|-----|--------------|
+| [INSTALL.md](docs/INSTALL.md) | How to install this thing |
+| [PACKAGES.md](docs/PACKAGES.md) | Every package the installer uses, by category |
+| [KEYBINDS.md](docs/KEYBINDS.md) | Default keyboard shortcuts |
+| [IPC.md](docs/IPC.md) | All IPC targets for custom keybindings |
+| [SETUP.md](docs/SETUP.md) | How the setup script works, updates, uninstall |
+| [LIMITATIONS.md](docs/LIMITATIONS.md) | Known limitations and what doesn't work |
+| [🚀 Steam Launch Options & In-Game Graphics Profiles](docs/steam-launch-options.md)
+| [📊 MangoHUD Telemetry & Hotkeys](docs/mangohud.md)
+| [🛠️ Hardware, Ethernet & Compositor Troubleshooting Log](docs/troubleshooting.md)
+| [🔊 Adaptive Sound System (J.A.R.V.I.S. & iDroid)](docs/sound-system.md)
+| [🧩 iNiR Desktop Shell Setup & Maintenance](docs/inir.md)
+---
+
+<a id="QuickInstall"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=QuickInstall" width="450"/>
+### Quick Install
+* **CachyOS / Arch Linux**:
+  ```bash
+  git clone https://github.com/WehttamSnaps-Umbriel.git ~/Documents/GitHub/WehttamSnaps-Umbriel
+  cd ~/Documents/GitHub/WehttamSnaps-Umbriel && chmod +x install.sh && ./install.sh
+  ```
+* **Fedora 45**:
+  ```bash
+  git clone https://github.com/WehttamSnaps-Umbriel.git ~/Documents/GitHub/WehttamSnaps-Umbriel
+  cd ~/Documents/GitHub/WehttamSnaps-Umbriel && chmod +x fedora-install.sh && ./fedora-install.sh
+  ```
+
+Not on Arch? Check [docs/INSTALL.md](docs/INSTALL.md) for manual steps.
+
+---
+
+
+<a id="Updating"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Updating" width="450"/>
+Already installed? Pull and sync:
+
+Pull updates and sync iNiR + Umbriel safely:
+```bash
+cd ~/Documents/GitHub/WehttamSnaps-Umbriel && git pull
+inir update && inir compositor sync
+umbriel config validate && umbriel msg config-reload
+```
+
+Syncs QML and configs. Your customizations stay. Missing keybinds get added. Hot reload does the rest.
+
+---
+
+## (the important ones)
+🎹<a id="Keybinds"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Keybinds" width="450"/>
+These come configured by default:
+
+### Keybinds Reference
+* `Mod + Return`: Launch Ghostty Terminal | `Mod + E`: Yazi File Manager | `Mod + Q`: Close Window
+* `Mod + Space`: iNiR Overview | `Mod + Comma`: iNiR Settings | `Mod + V`: Clipboard History
+* `Mod + Alt + G`: Game Launcher Scratchpad | `Alt + Shift + P`: Spotify Scratchpad
+* `Mod + Alt + S`: Launch Steam (iDroid voice) | `Mod + Shift + G`: Toggle Gaming Mode
+* `Print`: Region/Fullscreen/Window Screenshot | `Mod + Shift + R`: Reload Umbriel Config
+
+Full list in [docs/KEYBINDS.md](docs/KEYBINDS.md).
+
+---
+
+
+🛠️<a id="Troubleshooting"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Troubleshooting" width="450"/>
+Something broke? Shocking.
+
+```bash
+Run `umbriel config validate && umbriel msg config-reload`, check `inir compositor status`, or restart PipeWire via `systemctl --user restart pipewire pipewire-pulse wireplumber`. 
+Built using Umbriel, Quickshell, iNiR, and community projects by noctalia-dev, snowarch, end-4, and CachyOS.
+```
+
+```bash
+# Check the logs
+qs log -c ii
+
+# Restart ii without restarting Niri
+qs kill -c ii && qs -c ii
+
+# Nuclear option: reload everything
+niri msg action load-config-file
+```
+### Niri won't start
+```bash
+# Check logs
+journalctl --user -u niri.service -f
+
+# Validate config
+niri validate
+```
+
+### Audio routing not working
+```bash
+# Restart PipeWire
+systemctl --user restart pipewire pipewire-pulse wireplumber
+
+# Re-run audio setup
+./scripts/audio-setup.sh
+```
+
+### Gaming performance issues
+```bash
+# Check Proton version
+protonup-qt
+
+# Verify Mesa drivers
+vulkaninfo | grep "deviceName"
+
+# Enable performance mode
+./scripts/toggle-gamemode.sh on
+```
+
+If you're still stuck, the logs usually tell you what's missing. Usually.
+
+---
+
+## Fair warning
+
+This is my daily driver. It works. Most of the time. I break things when I'm bored.
+
+This fork diverged a lot from the original - different compositor, different features, different bugs. If you want the Hyprland version, check out end-4's original.
+
+---
+
+
+🙏<a id="Credits"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Credits" width="450"/>
+- [**end-4**](https://github.com/end-4/dots-hyprland) –  a fork with ideas worth taking
+- [**Quickshell**](https://quickshell.outfoxxed.me/) – the framework that makes this possible
+- [**snowarch**](https://github.com/snowarch) – Theming concepts
+- [**niri**](https://github.com/YaLTeR/niri) – by YaLTeR: the compositor
+- [**Umbriel**](https://github.com/noctalia-dev/umbriel) – by the Noctalia team: the other compositor iNiR runs on
+---
+
+## 📞 Contact
+
+- **Twitch:** [twitch.tv/WehttamSnaps](https://twitch.tv/WehttamSnaps)
+- **YouTube:** [youtube.com/@WehttamSnaps](https://youtube.com/@WehttamSnaps)
+- **GitHub:** [github.com/Crowdrocker](https://github.com/Crowdrocker)
+
+---
+
+Made with ❤️ by WehttamSnaps If you found this helpful, please consider giving it a star! It helps others discover this project.
+
+## Star History
+
+<a href="https://www.star-history.com/?type=date&legend=top-left&repos=Crowdrocker%2FWehttamSnaps-Umbriel">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Crowdrocker/WehttamSnaps-Umbriel&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Crowdrocker/WehttamSnaps-Umbriel&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Crowdrocker/WehttamSnaps-Umbriel&type=date&legend=top-left" />
+ </picture>
+</a>
