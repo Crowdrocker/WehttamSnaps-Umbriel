@@ -51,6 +51,11 @@ workspaces = ["Stream", "Comm", "Music", "Files", "Misc", "Leu"]
 # Registers the custom scratchpad block layout properties on your system
 [[scratchpad]]
 name = "dropdown"
+[[scratchpad]]
+name = "games"
+[[scratchpad]]
+name = "music"
+
 
 # ─────────────────────────────────────────────────────────────────────────
 # Dropdown Window Matching Rule
