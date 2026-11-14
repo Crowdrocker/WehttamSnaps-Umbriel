@@ -16,7 +16,7 @@
 "Mod+Shift+O" = "dpms-off"
 
 # ── System & Reload ────────────────────────────────────────────────────────────
-"Mod+Shift+R" = { action = "spawn sh -c 'umbriel msg config-reload && sound-system config-reload'", repeat = false }
+
 "Ctrl+Mod+R" = { action = "spawn sh -c 'umbriel msg config-reload && sound-system config-reload'", repeat = false }
 "Mod+Alt+L" = { action = "spawn sh -c 'sound-system locking-screen && inir lock activate'", allow_when_locked = true }
 
@@ -47,32 +47,64 @@
 #"Super+W" = "spawn inir browser"
 
 # ── App & Mode Launchers ───────────────────────────────────────────────────────
-"Mod+Return" = { action = "spawn sh -c 'sound-system open-terminal && ghostty'", repeat = false }
-"Mod+E" = { action = "spawn sh -c 'sound-system open-files && ghostty -e yazi'", repeat = false }
-"Super+W" = { action = "spawn sh -c 'sound-system launch-browser && inir browser'", repeat = false }
-"Mod+O" = { action = "spawn sh -c 'sound-system launch-obs && flatpak run --env=QT_QPA_PLATFORM=xcb com.obsproject.Studio'", repeat = false }
-"Mod+Alt+S" = { action = "spawn sh -c 'sound-system steam-launch && steam'", repeat = false }
-"Mod+Shift+G" = { action = "spawn sound-system gaming-toggle", repeat = false }
+# Core Applications (with J.A.R.V.I.S. / iDroid audio)
+"Mod+Return" = { action = "spawn sh -c '/usr/bin/sound-system open-terminal && ghostty'", repeat = false }
+"Mod+Shift+Return" = { action = "spawn kitty", repeat = false }
+"Mod+Alt+B" = { action = "spawn sh -c '/usr/bin/sound-system launch-firefox && firefox'", repeat = false }
+"Mod+E" = { action = "spawn sh -c '/usr/bin/sound-system open-files && dolphin'", repeat = false }
+"Mod+Shift+T" = { action = "spawn sh -c '/usr/bin/sound-system launch-kate && kate'", repeat = false }
+"Mod+Ctrl+O" = { action = "spawn sh -c '/usr/bin/sound-system launch-obs && obs'", repeat = false }
+"Mod+Alt+S" = { action = "spawn sh -c '/usr/bin/sound-system steam-launch && steam'", repeat = false }
 
 # Terminal & Yazi (Nano-first)
 "Mod+Alt+Return" = { action = "spawn sh -c \"/usr/bin/sound-system open-terminal && ghostty\"", repeat = false }
 "Super+Alt+E" = { action = "spawn ghostty -e yazi", repeat = false }
 
-# Native close-window (replaces slow `spawn inir close-window` from 70-binds)
-# "Mod+Q" = { action = "window-close", repeat = false }
+# WehttamSnaps Modes & Menus
+"Mod+Ctrl+W" = { action = "spawn sound-system workmode", repeat = false }
+"Mod+Shift+G" = { action = "spawn sound-system gamemode", repeat = false }
+"Mod+Alt+J" = { action = "spawn /usr/bin/jarvis-menu", repeat = false }
 
 
 # Isolated Webapps
-"Mod+Ctrl+T" = { action = "spawn sh -c \"~/.config/niri/scripts/webapp-launcher.sh twitch\"", repeat = false }
-"Mod+Ctrl+Y" = { action = "spawn sh -c \"~/.config/niri/scripts/webapp-launcher.sh youtube\"", repeat = false }
-"Mod+Ctrl+S" = { action = "spawn sh -c \"~/.config/niri/scripts/webapp-launcher.sh spotify\"", repeat = false }
-"Mod+Ctrl+D" = { action = "spawn sh -c \"~/.config/niri/scripts/webapp-launcher.sh discord\"", repeat = false }
+# Web Apps (Mod+Ctrl)
+"Mod+Ctrl+Y" = { action = "spawn firefox --app=https://youtube.com --profile-directory=YouTube", repeat = false }
+"Mod+Ctrl+T" = { action = "spawn firefox --app=https://twitch.tv --profile-directory=Twitch", repeat = false }
+"Mod+Ctrl+S" = { action = "spawn firefox --app=https://open.spotify.com --profile-directory=Spotify", repeat = false }
+"Mod+Ctrl+D" = { action = "spawn firefox --app=https://discord.com/app --profile-directory=Discord", repeat = false }
+
+# System, Help & Tips
+"Mod+Shift+R" = { action = "spawn sh -c 'umbriel msg config-reload && sound-system config-reload'", repeat = false }
+"Mod+Ctrl+H" = { action = "spawn ghostty --title='SNAPS-OS Help' -e ~/.config/snapsos/help/cmd-help.sh", repeat = false }
+"Mod+Alt+H" = { action = "spawn ghostty --title='SNAPS-OS Help' -e ~/.config/snapsos/help/help.sh", repeat = false }
+"Mod+Ctrl+0" = { action = "spawn sh -c 'notify-send \"SNAPS-OS Tips\" \"$(shuf -n 1 ~/.config/snapsos/tips/tips.list | sed \"s/.*: //\")\"'", repeat = false }
+
+# Scratchpads
+# Scratchpads (spawn app via command or bind directly)
+"Mod+Alt+Space" = { action = "scratchpad-toggle scratchpad-term", repeat = false }
+"Mod+Alt+G" = { action = "scratchpad-toggle games", repeat = false }
+"Alt+Shift+P" = { action = "scratchpad-toggle music", repeat = false }
+
+# SNAPS-OS TUIs & Config Tools
+"Mod+C" = { action = "spawn ghostty --title='Umbriel Config Editor' -e ~/.config/snapsos/umbriel-config.sh", repeat = false }
+"Mod+Alt+C" = { action = "spawn ghostty --title='Config Overview' -e ~/.config/snapsos/menu.sh", repeat = false }
+"Mod+Shift+D" = { action = "spawn ghostty --title='Floating-Menu' -e ~/.config/snapsos/tuis/bar-presets.sh", repeat = false }
+"Mod+Alt+T" = { action = "spawn ghostty --title='Floating-Menu' -e ~/.config/snapsos/misc/colors.sh", repeat = false }
+"Mod+Ctrl+M" = { action = "spawn ghostty --title='Floating-Menu' -e ~/.config/snapsos/tuis/documentation.sh", repeat = false }
+"Mod+Shift+Ctrl+Tab" = { action = "spawn ghostty --title='Floating-Menu' -e ~/.config/snapsos/tuis/project-select.sh", repeat = false }
+
+# Glyphs Overlay
+"Mod+G" = { action = "spawn /usr/bin/glyphs", repeat = false }
+"Mod+Ctrl+X" = { action = "spawn /usr/bin/glyphs --record", repeat = false }
+"Mod+Ctrl+G" = { action = "spawn /usr/bin/glyphs --dictionary", repeat = false }
+"Mod+Alt+W" = { action = "spawn pkill -f 'python3 /usr/bin/glyphs'", repeat = false }
+
 
 # ── Window Actions with J.A.R.V.I.S. Feedback ──────────────────────────────────
 "Mod+Q" = { action = "spawn sh -c 'umbriel msg window-close && sound-system window-close'", repeat = false }
 "Mod+F" = { action = "spawn sh -c 'umbriel msg window-toggle-fullscreen && sound-system window-fullscreen'", repeat = false }
 "Mod+A" = { action = "spawn sh -c 'umbriel msg window-toggle-floating && sound-system window-float'", repeat = false }
-"Mod+C" = { action = "spawn sh -c 'umbriel msg column-center && sound-system window-center'", repeat = false }
+"Mod+Ctrl+C" = { action = "spawn sh -c 'umbriel msg column-center && sound-system window-center'", repeat = false }
 
 # Windows
 "Mod+D" = "window-toggle-maximize"
@@ -185,6 +217,11 @@
 "Shift+F10" = { action = "spawn ~/.config/umbriel/scripts/umbriel-screenshot.sh full", repeat = false }
 "Ctrl+F10" = { action = "spawn ~/.config/umbriel/scripts/umbriel-screenshot.sh window", repeat = false }
 
+# Native Umbriel Screenshots
+"Mod+Ctrl+F10" = { action = "screenshot-window", repeat = false }
+# Screenshots via grim + slurp + wl-copy (replaces unknown 'screenshot' action)
+"Mod+F10" = { action = "spawn sh -c 'grim -g \"$(slurp)\" - | wl-copy && notify-send \"Screenshot\" \"Region copied to clipboard\"'", repeat = false }
+"Mod+Shift+F10" = { action = "spawn sh -c 'grim - | wl-copy && notify-send \"Screenshot\" \"Screen copied to clipboard\"'", repeat = false }
 
 # Media and hardware keys (work on the lock screen)
 "XF86AudioRaiseVolume" = { action = "spawn inir audio volumeUp", allow_when_locked = true }

@@ -1,0 +1,250 @@
+[keybinds]
+# ── System ──────────────────────────────────────────────
+"Ctrl+Mod+R" = "config-reload"
+"Mod+Shift+C" = { action = "cheatsheet-toggle", repeat = false }
+"Mod+Shift+Return" = { action = "workspace-set-layout toggle", repeat = false }
+"Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
+"Mod+X" = { action = "spawn noctalia msg panel-toggle session", repeat = false }
+
+# ==============================================================================
+# SNAPS-OS Custom Scripts & Important Binds
+# ==============================================================================
+"Mod+H" = { action = "spawn ghostty -e ~/.config/snapsos/help/cmd-help.sh", repeat = false }
+"Mod+Shift+H" = { action = "spawn ghostty -e ~/.config/snapsos/help/help.sh", repeat = false }
+"Mod+Alt+0" = "spawn notify-send \"SNAPS-OS Tips\" \"$(shuf -n 1 ~/.config/snapsos/tips/tips.list | sed 's/.*: //')\""
+
+# Overview Toggle Shortcut
+"Ctrl+Tab" = { action = "overview-toggle", repeat = false }
+
+# Custom Scripts & TUI Menus
+"Mod+M" = { action = "spawn ghostty -e ~/.config/snapsos/umbriel-config.sh", repeat = false }
+"Mod+Alt+M" = { action = "spawn ghostty -e ~/.config/snapsos/config-overview/menu.sh", repeat = false }
+"Mod+Shift+P" = { action = "spawn ghostty --title=\"Floating-Menu\" -e ~/.config/snapsos/tuis/bar-presets.sh", repeat = false }
+"Mod+Alt+T" = { action = "spawn ghostty --title=\"Floating-Menu\" -e ~/.config/snapsos/misc/colors.sh", repeat = false }
+
+# Package Management
+"Mod+Y" = { action = "spawn shelly-ui", repeat = false }
+"Mod+Alt+Y" = { action = "spawn ghostty -e unipkg launch-tui", repeat = false }
+
+# Glyphs Utilities
+"Mod+G" = { action = "spawn /usr/bin/glyphs", repeat = false }
+"Mod+Ctrl+G" = { action = "spawn /usr/bin/glyphs --dictionary", repeat = false }
+"Mod+Alt+W" = { action = "spawn pkill -f \"python3 /usr/bin/glyphs\"", repeat = false }
+
+# System Documentation & Project Management
+"Mod+Shift+M" = { action = "spawn ghostty -e ~/.config/snapsos/tuis/documentation.sh", repeat = false }
+"Mod+Shift+Tab" = { action = "spawn ghostty -e ~/.config/snapsos/tuis/project-select.sh", repeat = false }
+
+# ==============================================================================
+# Core Applications & Audio-Reactive System Hooks (J.A.R.V.I.S.)
+# ==============================================/mnt/EXTRA1TB/MYBACK-3/usr/================================
+"Mod+Return" = { action = "spawn sh -c \"/usr/bin/sound-system open-terminal && ghostty\"", repeat = false }
+"Mod+Alt+B" = { action = "spawn sh -c \"/usr/bin/sound-system launch-firefox && firefox\"", repeat = false }
+"Mod+Shift+K" = { action = "spawn sh -c \"/usr/bin/sound-system launch-kate && kate\"", repeat = false }
+"Mod+Shift+O" = { action = "spawn sh -c \"/usr/bin/sound-system launch-obs && obs\"", repeat = false }
+# "Alt+Shift+P" = { action = "spawn sh -c \"/usr/bin/sound-system launch-spotify && spotify-launcher\"", repeat = false }
+
+# Webapps (Mod+Ctrl)
+"Mod+Ctrl+Y" = { action = "spawn waterfox --app=https://youtube.com --profile-directory='YouTube'", repeat = false }
+"Mod+Ctrl+S" = { action = "spawn waterfox --app=https://spotify.com --profile-directory='Spotify'", repeat = false }
+"Mod+Ctrl+D" = { action = "spawn waterfox --app=https://discord.com --profile-directory='Discord'", repeat = false }
+
+# Gaming, Performance, & WehttamSnaps Custom Menus
+"Mod+Alt+S" = { action = "spawn sh -c \"/usr/bin/sound-system steam-launch && steam\"", repeat = false }
+"Mod+Shift+W" = { action = "spawn workmode", repeat = false }
+"Mod+Shift+G" = { action = "spawn gamemode", repeat = false }
+# "Mod+Alt+G" = { action = "spawn python3 /usr/bin/game-launcher", repeat = false }
+# ── Named Scratchpad Toggles ────────────────────────────
+"Mod+Alt+G" = { action = "scratchpad-toggle games", repeat = false }
+"Alt+Shift+P" = { action = "scratchpad-toggle music", repeat = false }
+
+# ── Scratchpad (Explicitly targeting "dropdown") ────────
+"Mod+Space" = { action = "scratchpad-toggle dropdown", repeat = false }
+"Mod+Shift+Space" = { action = "window-move-to-scratchpad dropdown", repeat = false }
+"Mod+Ctrl+Space" = { action = "window-restore-from-scratchpad dropdown", repeat = false }
+"Mod+Tab" = "scratchpad-focus-next dropdown"
+"Mod+Alt+Space" = "scratchpad-window-show-next dropdown"
+"Mod+Alt+Shift+Space" = "scratchpad-window-show-previous dropdown"
+
+
+
+
+# ── Window Management ───────────────────────────────────
+"Mod+Q" = { action = "window-close", repeat = false }
+"Mod+Shift+Q" = { action = "window-kill", repeat = false }
+"Mod+V" = { action = "window-toggle-floating", repeat = false }
+"Mod+Alt+P" = { action = "window-toggle-pinned", repeat = false }
+"Mod+F" = { action = "window-toggle-maximize", repeat = false }
+"Mod+Shift+F" = { action = "window-toggle-maximize-to-edges", repeat = false }
+"Ctrl+Shift+Mod+F" = { action = "window-toggle-fullscreen", repeat = false }
+"Mod+R" = { action = "window-cycle-primary-extent", repeat = false }
+"Mod+Shift+R" = { action = "window-cycle-primary-extent-back", repeat = false }
+"Mod+D" = { action = "window-cycle-secondary-extent", repeat = false }
+#"Mod+Shift+D" = { action = "window-cycle-secondary-extent-back", repeat = false }
+"Mod+C" = "column-center"
+"Mod+Shift+X" = "window-center"
+
+# Window focus (vim-style)
+"Mod+J" = "window-focus-down"
+"Mod+K" = "window-focus-up"
+"Mod+L" = "window-focus-right"
+
+# Window move (vim-style)
+"Ctrl+Mod+H" = "window-move-left"
+"Ctrl+Mod+J" = "window-move-down"
+"Ctrl+Mod+K" = "window-move-up"
+"Ctrl+Mod+L" = "window-move-right"
+
+# Swap windows (Alt+vim)
+"Alt+Mod+H" = { action = "window-swap-left", repeat = false }
+"Alt+Mod+J" = { action = "window-swap-down", repeat = false }
+"Alt+Mod+K" = { action = "window-swap-up", repeat = false }
+"Alt+Mod+L" = { action = "window-swap-right", repeat = false }
+
+# Consume/expel
+"Mod+BracketLeft" = { action = "window-consume-left", repeat = false }
+"Mod+BracketRight" = { action = "window-consume-right", repeat = false }
+"Mod+Shift+BracketLeft" = { action = "window-consume-from-left", repeat = false }
+"Mod+Shift+BracketRight" = { action = "window-consume-from-right", repeat = false }
+"Mod+Ctrl+BracketLeft" = { action = "window-consume-or-expel-left", repeat = false }
+"Mod+Ctrl+BracketRight" = { action = "window-consume-or-expel-right", repeat = false }
+
+# ── Apps (repeat=false for launchers) ───────────────────
+"Mod+W" = { action = "spawn helium-browser", repeat = false }
+"Mod+T" = { action = "spawn Telegram", repeat = false }
+"Mod+E" = { action = "spawn dolphin", repeat = false }
+"Mod+Period" = { action = "spawn systemsettings", repeat = false }
+
+# ── Tabs ────────────────────────────────────────────────
+"Mod+Shift+A" = { action = "column-toggle-tabbed", repeat = false }
+"Mod+Shift+B" = { action = "column-toggle-tab-bar", repeat = false }
+"Mod+Shift+N" = "column-move-tab-next"
+"Mod+Shift+D" = "column-move-tab-previous"
+"Ctrl+Mod+Tab" = "column-focus-tab-next"
+"Ctrl+Shift+Mod+Tab" = "column-focus-tab-previous"
+"Mod+Shift+T" = { action = "column-set-display tabbed", repeat = false }
+"Mod+Shift+Y" = { action = "column-set-display normal", repeat = false }
+
+# ── Workspaces (Direct Named Switching) ─────────────────
+"Mod+1" = "workspace-switch Browser"
+"Mod+2" = "workspace-switch Term"
+"Mod+3" = "workspace-switch Gaming"
+"Mod+4" = "workspace-switch Photo"
+"Mod+5" = "workspace-switch Media"
+"Mod+6" = "workspace-switch Stream"
+"Mod+7" = "workspace-switch Comm"
+"Mod+8" = "workspace-switch Music"
+"Mod+9" = "workspace-switch Files"
+"Mod+0" = "workspace-switch Misc"
+"Mod+Minus" = "workspace-switch Leu"
+
+"Mod+I" = { action = "workspace-previous", repeat = false }
+"Mod+U" = { action = "workspace-next", repeat = false }
+"Mod+O" = { action = "overview-toggle", repeat = false }
+
+# Move window to named workspace
+"Ctrl+Mod+I" = "window-move-to-workspace-previous"
+"Ctrl+Mod+U" = "window-move-to-workspace-next"
+"Shift+Ctrl+Mod+1" = "window-move-to-workspace Browser"
+"Shift+Ctrl+Mod+2" = "window-move-to-workspace Term"
+"Shift+Ctrl+Mod+3" = "window-move-to-workspace Gaming"
+"Shift+Ctrl+Mod+4" = "window-move-to-workspace Photo"
+"Shift+Ctrl+Mod+5" = "window-move-to-workspace Media"
+"Shift+Ctrl+Mod+6" = "window-move-to-workspace Stream"
+"Shift+Ctrl+Mod+7" = "window-move-to-workspace Comm"
+"Shift+Ctrl+Mod+8" = "window-move-to-workspace Music"
+"Shift+Ctrl+Mod+9" = "window-move-to-workspace Files"
+"Shift+Ctrl+Mod+0" = "window-move-to-workspace Misc"
+"Shift+Ctrl+Mod+Minus" = "window-move-to-workspace Leu"
+
+# Move column to workspace
+"Ctrl+Shift+Mod+I" = "column-move-to-workspace-previous"
+"Ctrl+Shift+Mod+U" = "column-move-to-workspace-next"
+
+# Workspace reorder
+"Mod+Shift+I" = "workspace-move-up"
+"Mod+Shift+U" = "workspace-move-down"
+
+# ── Output ──────────────────────────────────────────────
+"Shift+Mod+L" = "output-focus-right"
+"Shift+Mod+J" = "output-focus-down"
+
+"Ctrl+Shift+Mod+H" = "column-move-to-output-left"
+"Ctrl+Shift+Mod+L" = "column-move-to-output-right"
+"Ctrl+Shift+Mod+K" = "column-move-to-output-up"
+"Ctrl+Shift+Mod+J" = "column-move-to-output-down"
+
+# ── Submaps ─────────────────────────────────────────────
+# Panels/Launchers: Mod+P -> submap[panels]
+"Mod+P" = { action = "submap panels", repeat = false }
+"submap[panels],Escape" = "submap reset"
+"submap[panels],Space" = { action = "spawn noctalia msg panel-toggle launcher", submap = "reset", repeat = false }
+"submap[panels],C" = { action = "spawn noctalia msg panel-toggle control-center", submap = "reset", repeat = false }
+"submap[panels],N" = { action = "spawn noctalia msg panel-toggle control-center notifications", submap = "reset", repeat = false }
+"submap[panels],M" = { action = "spawn noctalia msg panel-toggle control-center media", submap = "reset", repeat = false }
+"submap[panels],V" = { action = "spawn noctalia msg panel-toggle clipboard", submap = "reset", repeat = false }
+"submap[panels],U" = { action = "spawn noctalia msg panel-toggle noctalia/umbriel-companion:panel", submap = "reset", repeat = false }
+"submap[panels],Z" = { action = "spawn noctalia msg panel-toggle launcher /emo", submap = "reset", repeat = false }
+"submap[panels],Shift+Z" = { action = "spawn noctalia msg panel-toggle launcher /kao", submap = "reset", repeat = false }
+
+# ── Screenshot: Mod+Shift+S -> submap[screenshot] ───
+"Mod+Shift+S" = { action = "submap screenshot", repeat = false }
+"submap[screenshot],Escape" = "submap reset"
+"submap[screenshot],R" = { action = "spawn noctalia msg screenshot-region", submap = "reset", repeat = false }
+"submap[screenshot],F" = { action = "spawn noctalia msg screenshot-fullscreen", submap = "reset", repeat = false }
+"submap[screenshot],W" = { action = "spawn noctalia msg desktop-widgets-toggle-edit", submap = "reset", repeat = false }
+
+# ── Direct Screenshot Keys (Noctalia Native) ────────────
+"F10" = { action = "spawn noctalia msg screenshot-region", repeat = false }
+"Shift+F10" = { action = "spawn noctalia msg screenshot-fullscreen", repeat = false }
+"Ctrl+F10" = { action = "spawn noctalia msg screenshot-window", repeat = false }
+"Alt+F10" = { action = "spawn noctalia msg screenshot-fullscreen all", repeat = false }
+
+# ── Resize mode: Mod+Alt+R -> submap[resize] ───
+"Mod+Alt+R" = { action = "submap resize", repeat = false }
+"submap[resize],Escape" = "submap reset"
+"submap[resize],H" = "window-modify-width-left -0.05"
+"submap[resize],L" = "window-modify-width-right 0.05"
+"submap[resize],K" = "window-modify-height-down -0.05"
+"submap[resize],J" = "window-modify-height-down 0.05"
+"submap[resize],Y" = "window-modify-primary-extent -0.05"
+"submap[resize],O" = "window-modify-primary-extent 0.05"
+"submap[resize],U" = "window-modify-secondary-extent -0.05"
+"submap[resize],I" = "window-modify-secondary-extent 0.05"
+
+# ── Window Switcher ─────────────────────────────────────
+"Alt+Tab" = { action = "spawn noctalia msg window-switcher", repeat = false }
+"Mod+Comma" = { action = "spawn noctalia msg settings-toggle", repeat = false }
+"Alt+Space" = { action = "spawn noctalia msg panel-toggle launcher", repeat = false }
+
+# ── Media/Volume (allow_when_locked) ────────────────────
+"XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up 2%", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down 2%", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn set-mute @DEFAULT_AUDIO_SINK@ toggle", allow_when_locked = true, repeat = false }
+"XF86AudioPlay" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioNext" = { action = "spawn noctalia msg media next", allow_when_locked = true }
+"XF86AudioPrev" = { action = "spawn noctalia msg media previous", allow_when_locked = true }
+
+# ── Brightness (allow_when_locked) ──────────────────────
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down", allow_when_locked = true }
+
+# ── Wheel (with cooldown) ───────────────────────────────
+"Mod+WheelUp" = { action = "window-focus-left", cooldown_ms = 150 }
+"Mod+WheelDown" = { action = "window-focus-right", cooldown_ms = 150 }
+"Shift+Mod+WheelUp" = { action = "workspace-previous", cooldown_ms = 150 }
+"Shift+Mod+WheelDown" = { action = "workspace-next", cooldown_ms = 150 }
+"Ctrl+Mod+WheelUp" = { action = "window-move-to-workspace-previous", cooldown_ms = 150 }
+"Ctrl+Mod+WheelDown" = { action = "window-move-to-workspace-next", cooldown_ms = 150 }
+
+# ── Snap (keyboard-driven) ──────────────────────────────
+"Mod+Shift+Left" = { action = "window-set-region left", repeat = false }
+"Mod+Shift+Right" = { action = "window-set-region right", repeat = false }
+"Mod+Shift+Up" = { action = "window-set-region top", repeat = false }
+"Mod+Shift+Down" = { action = "window-set-region bottom", repeat = false }
+"Mod+Shift+Home" = { action = "window-set-region top_left", repeat = false }
+"Mod+Shift+End" = { action = "window-set-region bottom_left", repeat = false }
+"Mod+Shift+Prior" = { action = "window-set-region top_right", repeat = false }
+"Mod+Shift+Next" = { action = "window-set-region bottom_right", repeat = false }
+"Mod+Backspace" = { action = "window-clear-region", repeat = false }
+

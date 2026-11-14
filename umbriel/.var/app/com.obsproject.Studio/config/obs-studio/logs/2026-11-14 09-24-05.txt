@@ -1,0 +1,269 @@
+09:24:05.848: Platform: Wayland
+09:24:05.848: CPU Name: AMD Ryzen 5 9600X 6-Core Processor
+09:24:05.848: CPU Speed: 2443.730MHz
+09:24:05.849: Physical Cores: 6, Logical Cores: 12
+09:24:05.849: Physical Memory: 15128MB Total, 1528MB Free
+09:24:05.849: Kernel Version: Linux 7.3.4-1-cachyos
+09:24:05.849: Flatpak Branch: stable
+09:24:05.849: Flatpak Arch: x86_64
+09:24:05.849: Flatpak Commit: 28b32b8f9e50b4fc6564266312cce8af79d22b72a2f39ba1556c7cbb516563ec
+09:24:05.849: Flatpak Runtime: runtime/org.freedesktop.Platform/x86_64/26.08
+09:24:05.849: App Extensions:
+09:24:05.849:  - com.obsproject.Studio.Plugin.AsyncAudioFilter
+09:24:05.849:  - com.obsproject.Studio.Plugin.AudioMonitor
+09:24:05.849:  - com.obsproject.Studio.Plugin.BackgroundRemoval
+09:24:05.849:  - com.obsproject.Studio.Plugin.DistroAV
+09:24:05.849:  - com.obsproject.Studio.Plugin.GStreamerVaapi
+09:24:05.849:  - com.obsproject.Studio.Plugin.InputOverlay
+09:24:05.849:  - com.obsproject.Studio.Plugin.OBSVkCapture
+09:24:05.849:  - com.obsproject.Studio.Plugin.Teleport
+09:24:05.849:  - com.obsproject.Studio.Plugin.WebSocket
+09:24:05.849: Runtime Extensions:
+09:24:05.849:  - org.freedesktop.Platform.GL.default
+09:24:05.849:  - org.freedesktop.Platform.Locale
+09:24:05.849:  - org.gtk.Gtk3theme.adw-gtk3-dark
+09:24:05.849:  - org.freedesktop.Platform.amd.amf
+09:24:05.849:  - org.freedesktop.Platform.codecs-extra
+09:24:05.849:  - org.freedesktop.Platform.GL.default
+09:24:05.849: Flatpak Framework Version: 1.18.4
+09:24:05.849: Desktop Environment: umbriel (umbriel)
+09:24:05.849: Session Type: wayland
+09:24:05.849: Current Date/Time: 2026-11-14, 09:24:05 AM
+09:24:05.849: Browser Hardware Acceleration: true
+09:24:05.849: Qt Version: 6.11.1 (runtime), 6.11.1 (compiled)
+09:24:05.849: Portable mode: false
+09:24:05.888: OBS 33.0.1 (linux)
+09:24:05.889: ---------------------------------
+09:24:05.889: ---------------------------------
+09:24:05.889: audio settings reset:
+09:24:05.889: 	samples per sec: 48000
+09:24:05.889: 	speakers:        2
+09:24:05.889: 	max buffering:   960 milliseconds
+09:24:05.889: 	buffering type:  dynamically increasing
+09:24:05.890: ---------------------------------
+09:24:05.890: Initializing OpenGL...
+09:24:05.890: Using EGL/Wayland
+09:24:05.910: Initialized EGL 1.5
+09:24:05.920: Loading up OpenGL on adapter AMD AMD Radeon RX 7600 (radeonsi, navi33, ACO, DRM 3.64, 7.3.4-1-cachyos)
+09:24:05.920: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 26.2.5, shading language 4.60
+09:24:05.938: ---------------------------------
+09:24:05.938: video settings reset:
+09:24:05.938: 	base resolution:   1920x1080
+09:24:05.938: 	output resolution: 1920x1080
+09:24:05.938: 	downscale filter:  Bicubic
+09:24:05.938: 	fps:               60/1
+09:24:05.938: 	format:            NV12
+09:24:05.938: 	YUV mode:          Rec. 709/Partial
+09:24:05.938: NV12 texture support enabled
+09:24:05.938: P010 texture support not available
+09:24:05.939: Audio monitoring device:
+09:24:05.939: 	name: Default
+09:24:05.939: 	id: default
+09:24:05.950: No AJA devices found, skipping loading AJA plugin
+09:24:05.950: Failed to initialize module 'aja.so'
+09:24:05.951: No AJA devices found, skipping loading AJA UI plugin
+09:24:05.951: Failed to initialize module 'aja-output-ui.so'
+09:24:06.035: [pipewire] Available capture sources:
+09:24:06.035: [pipewire]     - Monitor source
+09:24:06.035: [pipewire]     - Window source
+09:24:06.057: [obs-browser]: Version 2.27.5
+09:24:06.057: [obs-browser]: CEF Version 150.0.7871.252 (runtime), 150.0.19+gcf60f42+chromium-150.0.7871.252 (compiled)
+09:24:06.060: VAAPI: API version 1.24
+09:24:06.061: FFmpeg VAAPI H264 encoding supported
+09:24:06.063: FFmpeg VAAPI AV1 encoding supported
+09:24:06.065: FFmpeg VAAPI HEVC encoding supported
+09:24:06.068: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+09:24:06.068: 
+09:24:06.068: NVENC not supported
+09:24:06.068: Failed to initialize module 'obs-nvenc.so'
+09:24:06.082: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.7.6 | RPC Version: 1)
+09:24:06.082: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.11.1 | Qt version (run-time): 6.11.1
+09:24:06.082: [obs-websocket] [obs_module_load] Linked ASIO Version: 103200
+09:24:06.085: [obs-websocket] [obs_module_load] Module loaded.
+09:24:06.087: ---------------------------------
+09:24:06.088: [async-audio-filter] plugin loaded (plugin version 0.4.0, API version 32.0.4)
+09:24:06.094: [Audio Monitor] loaded version 0.10.1
+09:24:06.097: [distroav] obs_module_load: you can haz DistroAV (Version 6.2.2)
+09:24:06.097: [distroav] obs_module_load: NDI library detected
+09:24:06.097: [distroav] obs_module_load: NDI library initialized ('NDI SDK LINUX 12:51:52 Apr 13 2026 6.3.2.0')
+09:24:06.097: [distroav] NDI Library Version detected: 6.3.2.0
+09:24:06.097: [distroav] obs_module_load: NDI library version detected (NDI SDK LINUX 12:51:52 Apr 13 2026 6.3.2.0) is compatible
+09:24:06.097: [distroav] register_plugin_features: NDI plugin features registered
+09:24:06.098: [distroav] plugin loaded (full NDI features) (version 6.2.2)
+09:24:06.099: os_dlopen(/app/plugins/lib/obs-plugins/input-overlay.so->/app/plugins/lib/obs-plugins/input-overlay.so): libobs-frontend-api.so.0: cannot open shared object file: No such file or directory
+09:24:06.099: 
+09:24:06.099: Module '/app/plugins/lib/obs-plugins/input-overlay.so' not loaded
+09:24:06.100: [linux-vkcapture] plugin loaded successfully (version 1.5.6)
+09:24:06.117: [obs-backgroundremoval] Plugin loaded successfully (version 1.3.3)
+09:24:06.117: [obs-backgroundremoval] Failed to open config file /home/wehttamsnaps/.var/app/com.obsproject.Studio/config/obs-studio/plugin_config/obs-backgroundremoval/config.ini
+09:24:06.117: [obs-backgroundremoval] Failed to open config file /home/wehttamsnaps/.var/app/com.obsproject.Studio/config/obs-studio/plugin_config/obs-backgroundremoval/config.ini
+09:24:06.465: [obs-backgroundremoval] Latest release is 
+09:24:06.470: [obs-teleport] version: 0.8.0, go: go1.27.1, jpeg: 3.1.4.1
+09:24:06.472: [obs-vaapi] version: 0.4.2, gst-runtime: 1.28.6
+09:24:06.479: [obs-vaapi] found vah265enc
+09:24:06.479: [obs-vaapi] found vaav1enc
+09:24:06.479: [obs-vaapi] found vah264enc
+09:24:06.479: [obs-vaapi] found varenderD129h265enc
+09:24:06.479: [obs-vaapi] found varenderD129h264enc
+09:24:06.481: [obs-websocket 4.9.1-compat] you can haz websockets (version 4.9.1-compat)
+09:24:06.481: [obs-websocket 4.9.1-compat] qt version (compile-time): 6.6.3 ; qt version (run-time): 6.11.1
+09:24:06.481: [obs-websocket 4.9.1-compat] [obs_module_load] Linked ASIO Version: 101201
+09:24:06.481: DEPRECATION: obs_frontend_get_global_config is deprecated. Use obs_frontend_get_app_config or obs_frontend_get_user_config explicitly instead.
+09:24:06.482: [obs-websocket 4.9.1-compat] module loaded!
+09:24:06.482: ---------------------------------
+09:24:06.482:   Loaded Modules:
+09:24:06.482:     obs-websocket-compat.so
+09:24:06.482:     obs-vaapi.so
+09:24:06.482:     obs-teleport.so
+09:24:06.482:     obs-backgroundremoval.so
+09:24:06.482:     linux-vkcapture.so
+09:24:06.482:     distroav.so
+09:24:06.482:     audio-monitor.so
+09:24:06.482:     async-audio-filter.so
+09:24:06.482:     text-freetype2.so
+09:24:06.482:     rtmp-services.so
+09:24:06.482:     obs-x264.so
+09:24:06.482:     obs-websocket.so
+09:24:06.482:     obs-webrtc.so
+09:24:06.482:     obs-vst.so
+09:24:06.482:     obs-transitions.so
+09:24:06.482:     obs-qsv11.so
+09:24:06.482:     obs-outputs.so
+09:24:06.482:     obs-libfdk.so
+09:24:06.482:     obs-filters.so
+09:24:06.482:     obs-ffmpeg.so
+09:24:06.482:     obs-browser.so
+09:24:06.482:     linux-v4l2.so
+09:24:06.482:     linux-pulseaudio.so
+09:24:06.482:     linux-pipewire.so
+09:24:06.482:     linux-jack.so
+09:24:06.482:     linux-capture.so
+09:24:06.482:     image-source.so
+09:24:06.482:     frontend-tools.so
+09:24:06.482: ---------------------------------
+09:24:06.482: ---------------------------------
+09:24:06.482: Available Encoders:
+09:24:06.482:   Video Encoders:
+09:24:06.482: 	- ffmpeg_svt_av1 (SVT-AV1)
+09:24:06.482: 	- ffmpeg_aom_av1 (AOM AV1)
+09:24:06.482: 	- ffmpeg_vaapi_tex (FFmpeg VAAPI H.264)
+09:24:06.482: 	- av1_ffmpeg_vaapi_tex (FFmpeg VAAPI AV1)
+09:24:06.482: 	- hevc_ffmpeg_vaapi_tex (FFmpeg VAAPI HEVC)
+09:24:06.482: 	- obs_x264 (x264)
+09:24:06.487: 	- obs-va-vah265enc (VAAPI H.265 on Navi 33 [Radeon RX 7600/7600 XT/7600M XT/7600S/7700S / PRO W7600])
+09:24:06.492: 	- obs-va-vaav1enc (VAAPI AV1 on Navi 33 [Radeon RX 7600/7600 XT/7600M XT/7600S/7700S / PRO W7600])
+09:24:06.496: 	- obs-va-vah264enc (VAAPI H.264 on Navi 33 [Radeon RX 7600/7600 XT/7600M XT/7600S/7700S / PRO W7600])
+09:24:06.501: 	- obs-va-varenderD129h265enc (VAAPI H.265 on Granite Ridge [Radeon 610M])
+09:24:06.505: 	- obs-va-varenderD129h264enc (VAAPI H.264 on Granite Ridge [Radeon 610M])
+09:24:06.505:   Audio Encoders:
+09:24:06.505: 	- ffmpeg_aac (FFmpeg AAC)
+09:24:06.505: 	- ffmpeg_opus (FFmpeg Opus)
+09:24:06.505: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+09:24:06.505: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+09:24:06.505: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+09:24:06.505: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+09:24:06.505: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+09:24:06.505: 	- libfdk_aac (libfdk AAC)
+09:24:06.505: ==== Startup complete ===============================================
+09:24:06.530: All scene data cleared
+09:24:06.530: ------------------------------------------------
+09:24:06.531: PipeWire initialized
+09:24:06.535: Device for 'Audio Output Capture' source desktop is also used for audio monitoring.
+09:24:06.535: Deduplication logic is being applied to all monitored sources.
+09:24:06.535: pulse-input: Server name: 'PulseAudio (on PipeWire 1.6.11) 15.0.0'
+09:24:06.535: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+09:24:06.535: pulse-input: Started recording from 'alsa_output.pci-0000_0d_00.6.analog-stereo.monitor'
+09:24:06.535: pulse-input: Server name: 'PulseAudio (on PipeWire 1.6.11) 15.0.0'
+09:24:06.535: pulse-input: Audio format: s16le, 48000 Hz, 1 channels
+09:24:06.535: pulse-input: Started recording from 'alsa_input.usb-HP__Inc_HyperX_Cloud_Alpha_Wireless_00000001-00.mono-fallback'
+09:24:06.536: Switched to scene 'Scene'
+09:24:06.536: ------------------------------------------------
+09:24:06.536: Loaded scenes:
+09:24:06.536: - scene 'Scene':
+09:24:06.536:     - source: 'Screen Capture (PipeWire)' (pipewire-screen-capture-source)
+09:24:06.536:     - source: 'desktop' (pulse_output_capture)
+09:24:06.536:     - source: 'MIC' (pulse_input_capture)
+09:24:06.536: ------------------------------------------------
+09:24:06.546: Device for 'Audio Output Capture' source desktop is also used for audio monitoring.
+09:24:06.546: Deduplication logic is being applied to all monitored sources.
+09:24:06.574: [obs-websocket 4.9.1-compat] WSServer::start: Not locked to IPv4 bindings
+09:24:06.574: [obs-websocket 4.9.1-compat] server started successfully on port 4444
+09:24:06.574: [obs-websocket 4.9.1-compat] IO thread started.
+09:24:06.574: DEPRECATION: obs_frontend_get_global_config is deprecated. Use obs_frontend_get_app_config or obs_frontend_get_user_config explicitly instead.
+09:24:06.589: [distroav] NDI Output Updated. 'OBS PGM'
+09:24:06.589: [distroav] NDI Output Updated. 'OBS Preview'
+09:24:06.590: [pipewire] Screencast session created
+09:24:06.602: [pipewire] Asking for monitor and window
+09:24:06.639: [pipewire] source selected, setting up screencast
+09:24:06.642: [pipewire] Server version: 1.6.11
+09:24:06.642: [pipewire] Library version: 1.6.8
+09:24:06.642: [pipewire] Header version: 1.6.8
+09:24:06.642: [pipewire] Created stream 0x55ccc988cbb0
+09:24:06.642: [pipewire] Stream 0x55ccc988cbb0 state: "connecting" (error: none)
+09:24:06.642: [pipewire] Playing stream 0x55ccc988cbb0
+09:24:06.642: [pipewire] Stream 0x55ccc988cbb0 state: "paused" (error: none)
+09:24:06.644: [pipewire] Negotiated format:
+09:24:06.644: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+09:24:06.644: [pipewire]     Modifier: 0x20000001866bb04
+09:24:06.644: [pipewire]     Size: 1920x1080
+09:24:06.644: [pipewire]     Framerate: 60/1
+09:24:06.645: [pipewire] Stream 0x55ccc988cbb0 state: "streaming" (error: none)
+09:24:07.084: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: desktop)
+09:24:07.084: 
+09:24:13.161: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 with focusing surface 0x55ccc9917c80
+09:24:48.136: User added source 'Teleport' (teleport-source) to scene 'Scene'
+09:24:48.140: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 with focusing surface 0x55ccc9acfca0
+09:25:02.806: [obs-teleport] connected to: 192.168.1.156:34415
+09:25:02.806: [obs-teleport] connect: 192.168.1.156:48190
+09:25:02.806: [obs-teleport] output started
+09:25:10.908: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 with focusing surface 0x55ccc9c05780
+09:25:10.923: [obs-teleport] connected to: 192.168.1.156:34415
+09:25:10.923: [obs-teleport] connect: 192.168.1.156:38784
+09:25:10.935: [obs-teleport] disconnect: 192.168.1.156:48190
+09:27:35.373: [obs-teleport] connected to: 192.168.1.156:34415
+09:27:35.373: [obs-teleport] connect: 192.168.1.156:38522
+09:27:35.383: [obs-teleport] disconnect: 192.168.1.156:38784
+09:27:53.727: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 with focusing surface 0x55ccc9661720
+09:27:53.740: [obs-teleport] connect: 192.168.1.156:55852
+09:27:53.740: [obs-teleport] connected to: 192.168.1.156:34415
+09:27:53.751: [obs-teleport] disconnect: 192.168.1.156:38522
+09:29:08.159: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 with focusing surface 0x55ccc9cdf4d0
+09:29:10.140: [obs-teleport] connected to: 192.168.1.156:34415
+09:29:10.140: [obs-teleport] connect: 192.168.1.156:52890
+09:29:10.145: [obs-teleport] disconnect: 192.168.1.156:55852
+09:29:59.023: [obs-teleport] connect: 192.168.1.156:34950
+09:29:59.023: [obs-teleport] connected to: 192.168.1.156:34415
+09:29:59.023: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 with focusing surface 0x55ccc96db960
+09:29:59.041: [obs-teleport] disconnect: 192.168.1.156:52890
+09:30:12.882: [pipewire] Stream 0x55ccc988cbb0 state: "paused" (error: none)
+09:30:12.882: [pipewire] Stream 0x55ccc988cbb0 state: "unconnected" (error: none)
+09:30:12.883: PipeWire initialized
+09:30:12.884: [pipewire] Screencast session created
+09:30:12.884: [pipewire] Asking for monitor and window
+09:30:21.123: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 with focusing surface 0x55ccc7a012c0
+09:30:23.873: [pipewire] source selected, setting up screencast
+09:30:23.876: [pipewire] Server version: 1.6.11
+09:30:23.876: [pipewire] Library version: 1.6.8
+09:30:23.876: [pipewire] Header version: 1.6.8
+09:30:23.876: [pipewire] Created stream 0x55ccc82405a0
+09:30:23.876: [pipewire] Stream 0x55ccc82405a0 state: "connecting" (error: none)
+09:30:23.876: [pipewire] Playing stream 0x55ccc82405a0
+09:30:23.876: [pipewire] Stream 0x55ccc82405a0 state: "paused" (error: none)
+09:30:23.878: [pipewire] Negotiated format:
+09:30:23.878: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+09:30:23.878: [pipewire]     Modifier: 0x20000001866bb04
+09:30:23.878: [pipewire]     Size: 1920x1080
+09:30:23.878: [pipewire]     Framerate: 60/1
+09:30:23.879: [pipewire] Stream 0x55ccc82405a0 state: "streaming" (error: none)
+09:30:53.673: [obs-teleport] connected to: 192.168.1.156:34415
+09:30:53.673: [obs-teleport] connect: 192.168.1.156:55746
+09:30:53.676: [obs-teleport] disconnect: 192.168.1.156:34950
+09:31:04.117: virtual void QtWaylandClient::QWaylandTextInputv3::zwp_text_input_v3_leave(wl_surface*) Got leave event for surface 0x0 with focusing surface 0x55ccc98e9d30
+09:31:04.123: [obs-teleport] connect: 192.168.1.156:52344
+09:31:04.123: [obs-teleport] connected to: 192.168.1.156:34415
+09:31:04.129: [obs-teleport] disconnect: 192.168.1.156:55746
+09:55:54.407: [pipewire] buffer is corrupt
+09:55:54.410: [pipewire] Stream 0x55ccc82405a0 state: "paused" (error: none)
+09:55:55.375: [pipewire] Stream 0x55ccc82405a0 state: "error" (error: no more input formats)
+09:55:55.375: [pipewire] Error id:2 seq:43 res:-32 (Broken pipe): no more input formats
+09:55:55.737: The Wayland connection broke. Did the Wayland compositor die?

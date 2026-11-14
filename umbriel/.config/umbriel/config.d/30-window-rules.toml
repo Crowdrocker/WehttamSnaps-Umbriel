@@ -43,36 +43,3 @@ default_floating = true
 default_focused = false
 opacity = 0.0
 shadow = false
-
-# ── 4. Scratchpads (Game Launcher TUI & Spotify) ───────────────────────────────
-[[scratchpad]]
-name = "games"
-spawn_when_empty = "ghostty --class=ghostty-gamelauncher -e python3 /usr/bin/game-launcher"
-
-[[window_rule]]
-match.app_id = "^ghostty-gamelauncher$"
-default_scratchpad = "games"
-default_floating = true
-default_floating_size_px = { width = 1000, height = 700 }
-border_color_focused = "#89dceb"
-
-[[scratchpad]]
-name = "music"
-spawn_when_empty = "spotify-launcher"
-
-[[window_rule]]
-match.app_id = "^([Ss]potify|spotify-launcher)$"
-default_scratchpad = "music"
-default_floating = true
-default_floating_size_px = { width = 1280, height = 800 }
-border_color_focused = "#a6e3a1"
-
-# ── 5. Gaming & OBS Window Rules ───────────────────────────────────────────────
-[[window_rule]]
-match.app_id = "^(gamescope|steam_app_.*)$"
-default_fullscreen = true
-confine_pointer = true
-
-[[window_rule]]
-match.app_id = "^(obs|com\\.obsproject\\.Studio)$"
-background_render = true

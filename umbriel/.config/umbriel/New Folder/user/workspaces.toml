@@ -1,0 +1,146 @@
+[workspaces]
+back_and_forth = true
+
+[layout]
+mode = "scrolling"
+gap = 11
+extent_presets = [0.333, 0.5, 0.667]
+
+[layout.scrolling]
+default_extent_fraction = 0.5
+center_underfull_strip = true
+
+[layout.tabs]
+middle_click_closes = true
+
+[overview]
+zoom = 0.5                   # preview scale (0.1-0.75)
+background_blur = true       # uses your blur settings
+workspace_wallpaper = true   # mirror wallpapers in previews
+shortcuts = true             # keyboard badges on windows
+shortcut_keys = "1234567890"
+
+
+# ==============================================================================
+# Multi-Monitor Workspace Layout Array
+# ==============================================================================
+
+# ─── PRIMARY MONITOR (Samsung 4K - Left) ───
+[output.DP-1]
+workspaces = ["Browser", "Term", "Gaming", "Photo", "Media"]
+
+# ─── SECONDARY MONITOR (Samsung - Right) ───
+[output.DP-2]
+workspaces = ["Stream", "Comm", "Music", "Files", "Misc", "Leu"]
+
+
+# ==============================================================================
+# Window Rules
+# ==============================================================================
+
+# Assign your default browser
+[[window_rule]]
+match.app_id = "waterfox"
+default_workspace = "Browser"
+
+# Assign Telegram
+[[window_rule]]
+match.app_id = "Telegram"
+default_workspace = "Comm"
+
+# Assign Dolphin file manager
+[[window_rule]]
+match.app_id = "org.kde.dolphin"
+default_workspace = "Files"
+
+# ==============================================================================
+# Gaming & Modding Window Rules
+# ==============================================================================
+# Gamescope isolated game containers -> Gaming workspace + Fullscreen
+[[window_rule]]
+match.app_id = "^gamescope$"
+default_workspace = "Gaming"
+default_fullscreen = true
+
+# Horizon Forbidden West & general Steam games -> Gaming workspace + Fullscreen
+[[window_rule]]
+match.app_id = "^steam_app_.*$"
+default_workspace = "Gaming"
+default_fullscreen = true
+
+# Game Launchers (Steam, Lutris, Heroic)
+[[window_rule]]
+match.app_id = "^(steam|lutris|heroic)$"
+default_workspace = "Gaming"
+
+# Fullscreen Games (Cyberpunk, Fallout 4, The Division 2)
+[[window_rule]]
+match.title = "^(Cyberpunk 2077|Fallout4|The Division 2)$"
+default_workspace = "Gaming"
+default_fullscreen = true
+
+# Wine/Proton Game Executables
+[[window_rule]]
+match.app_id = "^(battle.net.exe|UbisoftConnect.exe)$"
+default_workspace = "Gaming"
+
+# ─── MODDING TOOLS & STEAM POPUPS (Floating) ───
+# Keeps specialized utilities manageable outside the tiling grid
+[[window_rule]]
+match.title = "^(Vortex|Mod Organizer|Mod Organizer 2|Wabbajack|Special Offers|Friends List|Steam Settings)$"
+default_workspace = "Gaming"
+default_floating = true
+
+[[window_rule]]
+match.app_id = "^com.nexusmods"
+default_workspace = "Gaming"
+default_floating = true
+
+# Wabbajack Modpack Configurations / Fallbacks
+[[window_rule]]
+match.app_id = "steam_app_0"
+default_workspace = "Misc"
+
+
+
+# ==============================================================================
+# Streaming, Creative, & Communication Window Rules
+# ==============================================================================
+
+# OBS Studio (handles both native 'obs' and Flatpak 'com.obsproject.Studio')
+[[window_rule]]
+match.app_id = "^(obs|com\\.obsproject\\.Studio)$"
+default_workspace = "Stream"
+default_maximize = true
+background_render = true
+
+# ─── PHOTOGRAPHY & GRAPHICS (Photo Workspace - DP-2) ───
+[[window_rule]]
+match.app_id = "^(gimp|gimp-2.10|darktable|krita|inkscape|digikam|rawtherapee)$"
+default_workspace = "Photo"
+default_maximize = true
+
+# ─── VIDEO EDITING (Media Workspace - DP-2) ───
+[[window_rule]]
+match.app_id = "^(resolve|kdenlive)$"
+default_workspace = "Media"
+default_maximize = true
+
+# ─── COMMUNICATION (Comm Workspace - DP-1) ───
+[[window_rule]]
+match.app_id = "^(discord|telegramdesktop|slack|Telegram)$"
+default_workspace = "Comm"
+
+# ─── MUSIC & AUDIO (Music Workspace - DP-1) ───
+[[window_rule]]
+match.app_id = "spotify"
+default_workspace = "Music"
+default_maximize = true
+
+# ─── CODE & TEXT EDITORS (Term Workspace - DP-2) ───
+[[window_rule]]
+match.app_id = "^(code|org.kde.kate)$"
+default_workspace = "Term"
+default_maximize = true
+
+

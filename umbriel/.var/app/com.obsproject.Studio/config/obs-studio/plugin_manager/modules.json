@@ -1,0 +1,121 @@
+[
+    {
+        "display_name": "",
+        "enabled": true,
+        "encoders": [],
+        "id": "",
+        "module_name": "obs-websocket-compat",
+        "outputs": [],
+        "services": [],
+        "sources": [],
+        "version": ""
+    },
+    {
+        "display_name": "DistroAV",
+        "enabled": true,
+        "encoders": [],
+        "id": "",
+        "module_name": "distroav",
+        "outputs": [
+            "ndi_output",
+            "test_ndi_output"
+        ],
+        "services": [],
+        "sources": [
+            "ndi_source",
+            "ndi_filter",
+            "ndi_audiofilter",
+            "premultiplied_alpha_filter"
+        ],
+        "version": ""
+    },
+    {
+        "display_name": "",
+        "enabled": true,
+        "encoders": [
+            "obs-va-vah265enc",
+            "obs-va-vaav1enc",
+            "obs-va-vah264enc",
+            "obs-va-varenderD129h265enc",
+            "obs-va-varenderD129h264enc"
+        ],
+        "id": "",
+        "module_name": "obs-vaapi",
+        "outputs": [],
+        "services": [],
+        "sources": [],
+        "version": ""
+    },
+    {
+        "display_name": "",
+        "enabled": true,
+        "encoders": [],
+        "id": "",
+        "module_name": "obs-teleport",
+        "outputs": [
+            "teleport-output"
+        ],
+        "services": [],
+        "sources": [
+            "teleport-source",
+            "teleport-filter",
+            "teleport-video-filter",
+            "teleport-audio-filter",
+            "teleport-dummy"
+        ],
+        "version": ""
+    },
+    {
+        "display_name": "",
+        "enabled": true,
+        "encoders": [],
+        "id": "",
+        "module_name": "obs-backgroundremoval",
+        "outputs": [],
+        "services": [],
+        "sources": [
+            "background_removal",
+            "enhanceportrait"
+        ],
+        "version": ""
+    },
+    {
+        "display_name": "linux-vkcapture",
+        "enabled": true,
+        "encoders": [],
+        "id": "",
+        "module_name": "linux-vkcapture",
+        "outputs": [],
+        "services": [],
+        "sources": [
+            "vkcapture-source"
+        ],
+        "version": ""
+    },
+    {
+        "display_name": "Audio Monitor",
+        "enabled": true,
+        "encoders": [],
+        "id": "",
+        "module_name": "audio-monitor",
+        "outputs": [],
+        "services": [],
+        "sources": [
+            "audio_monitor"
+        ],
+        "version": ""
+    },
+    {
+        "display_name": "Asynchronous Audio Filter",
+        "enabled": true,
+        "encoders": [],
+        "id": "",
+        "module_name": "async-audio-filter",
+        "outputs": [],
+        "services": [],
+        "sources": [
+            "net.nagater.obs.asynchronous-audio-filter"
+        ],
+        "version": ""
+    }
+]

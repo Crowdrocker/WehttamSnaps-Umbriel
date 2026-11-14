@@ -51,10 +51,29 @@ workspaces = ["Stream", "Comm", "Music", "Files", "Misc", "Leu"]
 # Registers the custom scratchpad block layout properties on your system
 [[scratchpad]]
 name = "dropdown"
+
 [[scratchpad]]
-name = "games"
-[[scratchpad]]
-name = "music"
+name = "scratchpad-term"
+
+
+
+
+
+# ── Window Rules for Scratchpads & Floating TUIs ────────────────────────────
+[[window_rule]]
+match.app_id = "^com\\.mitchellh\\.ghostty$"
+match.title = "^scratchpad-term$"
+default_scratchpad = "scratchpad-term"
+default_floating = true
+width = "80%"
+height = "80%"
+
+[[window_rule]]
+match.app_id = "^com\\.mitchellh\\.ghostty$"
+match.title = "^(Floating-Menu|SNAPS-OS Help|Umbriel Config Editor|Config Overview)$"
+default_floating = true
+width = "80%"
+height = "80%"
 
 
 # ─────────────────────────────────────────────────────────────────────────
@@ -67,27 +86,13 @@ default_scratchpad = "dropdown"
 # Sizing and float parameters are applied directly as window constraints here:
 default_floating = true
 
-# ─────────────────────────────────────────────────────────────────────────
-# Game Launcher TUI Scratchpad
-# ─────────────────────────────────────────────────────────────────────────
+# ── Named Scratchpads (Declare above [keybinds]) ────────────────────────────
 
-[[window_rule]]
-match.app_id = "^ghostty-gamelauncher$"
-default_scratchpad = "games"
-default_floating = true
-default_floating_size_px = { width = 1000, height = 700 }
-border_color_focused = "#89dceb"
+[[scratchpad]]
+name = "games"
 
-# ─────────────────────────────────────────────────────────────────────────
-# Spotify Scratchpad
-# ─────────────────────────────────────────────────────────────────────────
-
-[[window_rule]]
-match.app_id = "^([Ss]potify|spotify-launcher)$"
-default_scratchpad = "music"
-default_floating = true
-default_floating_size_px = { width = 1280, height = 800 }
-border_color_focused = "#a6e3a1"
+[[scratchpad]]
+name = "music"
 
 # Prevent full-screen scratchpad backdrop blur/dim from sticking when TUI apps exit
 [animation.scratchpad]
@@ -116,6 +121,13 @@ default_workspace = "Comm"
 match.app_id = "org.kde.dolphin"
 default_workspace = "Files"
 
+# ── Floating Window Rule for SNAPS-OS TUIs ──────────────────────────────────
+[[window_rule]]
+match.app_id = "^com\\.mitchellh\\.ghostty$"
+match.title = "^(Floating-Menu|SNAPS-OS Help|Umbriel Config Editor|Config Overview)$"
+default_floating = true
+width = "80%"
+height = "80%"
 # ==============================================================================
 # Gaming & Modding Window Rules
 # ==============================================================================

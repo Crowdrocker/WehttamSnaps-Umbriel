@@ -1,0 +1,85 @@
+# ==============================================================================
+# SNAPS-OS Scratchpad Configuration
+# ==============================================================================
+
+
+
+# ─────────────────────────────────────────────────────────────────────────
+# Scratchpad Specific Window Rules
+# ─────────────────────────────────────────────────────────────────────────
+
+# Example: Make your music or a dropdown terminal live here permanently
+# [[window_rule]]
+# match.app_id = "spotify"
+# default_scratchpad = true
+
+
+
+# Named scratchpads can launch an application when toggled while empty.
+# [[scratchpad]]
+# name = "music"
+# spawn_when_empty = "spotify"
+
+# [[window_rule]]
+# match.app_id = "^spotify$"
+# default_scratchpad = "music"
+
+# Give scratchpad windows their own border colors.
+# [[window_rule]]
+# match.is_scratchpad = true
+# border_color_focused = "#E5C07BFF"
+# border_color_unfocused = "#5C4A2AFF"
+
+
+# ==============================================================================
+# SNAPS-OS Scratchpad Configuration
+# ==============================================================================
+
+# Registers the custom scratchpad block layout properties on your system
+[[scratchpad]]
+name = "dropdown"
+
+# ─────────────────────────────────────────────────────────────────────────
+# Dropdown Window Matching Rule
+# ─────────────────────────────────────────────────────────────────────────
+[[window_rule]]
+match.app_id = "ghostty-dropdown"
+default_scratchpad = "dropdown"
+
+# Sizing and float parameters are applied directly as window constraints here:
+default_floating = true
+
+# ─────────────────────────────────────────────────────────────────────────
+# Game Launcher TUI Scratchpad
+# ─────────────────────────────────────────────────────────────────────────
+[[scratchpad]]
+name = "games"
+spawn_when_empty = "ghostty --class=ghostty-gamelauncher -e python3 /usr/bin/game-launcher"
+
+[[window_rule]]
+match.app_id = "^ghostty-gamelauncher$"
+default_scratchpad = "games"
+default_floating = true
+default_floating_size_px = { width = 1000, height = 700 }
+border_color_focused = "#89dceb"
+
+# ─────────────────────────────────────────────────────────────────────────
+# Spotify Scratchpad
+# ─────────────────────────────────────────────────────────────────────────
+[[scratchpad]]
+name = "music"
+spawn_when_empty = "spotify-launcher"
+
+[[window_rule]]
+match.app_id = "^([Ss]potify|spotify-launcher)$"
+default_scratchpad = "music"
+default_floating = true
+default_floating_size_px = { width = 1280, height = 800 }
+border_color_focused = "#a6e3a1"
+
+
+
+
+
+
+

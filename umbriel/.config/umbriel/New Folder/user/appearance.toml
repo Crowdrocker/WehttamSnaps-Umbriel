@@ -1,0 +1,130 @@
+# ==============================================================================
+# Appearance
+# Blur uses a smaller radius than the built-in default.
+# https://docs.noctalia.dev/umbriel/appearance/
+#
+[appearance]
+prefer_no_csd = true
+corner_radius = 20
+outer_border_width = 1
+border_width = 1
+drag_opacity = 1.0
+
+
+[appearance.blur]
+enabled = true
+optimized = true
+radius = 2       # 0-100
+noise = 0.02     # 0.0-1.0
+brightness = 1.0 # 0.0-2.0
+contrast = 0.95  # 0.0-2.0
+saturation = 1.8
+
+[appearance.shadow]
+softness = 12
+offset_x = 0
+offset_y = 3
+
+[input.cursor]
+theme = "Bibata-Modern-Classic" # empty = environment/default Xcursor theme
+size = 24                       # 1-512
+hardware_cursor = true
+hide_when_typing = true
+hide_timeout_ms = 0             # 0-3600000, 0 disables hiding
+
+# ==============================================================================
+# Colors & Border Gradients
+# ==============================================================================
+[colors.border]
+focused = "#89dceb"    # Your custom neon cyan color
+unfocused = "#313244"  # A clean, muted dark gray for background windows
+outer = "#a6e3a1"      # Your neon green color for the outer border accent
+
+
+
+
+# Optional title bar with modifier-free dragging and floating frame resizing.
+# [appearance.title_bar]
+# mode = "on" # Follow client decoration preferences.
+# Use "negotiated" to hide bars on Wayland windows that do not negotiate decorations.
+# Use "forced" to always show bars, or "off" to hide them. Window rules can override this.
+# height = 28
+# font = "sans 10"
+# button_position = "right" # or "left"
+# buttons = ["minimize", "maximize", "close"] # From the title outward; leave one out to hide it.
+# button_corner_radius = -1 # Follow the window's corner_radius; 0 makes square buttons.
+# button_glyph = "hover" # X, square, and underscore symbols: "always", "hover" (while hovered or pressed), or "never".
+# button_background = true # Show colored backgrounds behind the symbols.
+
+# Optional button palette. Glyph colors also apply when button backgrounds are off.
+# [colors.title_bar]
+# close = "#FF6B6BFF"
+# close_glyph = "#141419FF"
+# close_glyph_hover = "#141419FF"
+# maximize = "#7AA3FFFF"
+# maximize_glyph = "#141419FF"
+# maximize_glyph_hover = "#141419FF"
+# minimize = "#FFD166FF"
+# minimize_glyph = "#141419FF"
+# minimize_glyph_hover = "#141419FF"
+
+# Choose the background color shown if the lock screen takes too long to appear.
+# [colors]
+# backdrop = "#000000FF"
+[animation.beziers]
+appleEase = [0.25, 1.0, 0.5, 1.0]
+
+[animation.springs]
+appleSpring = { damping = 1.0, stiffness = 256 }
+
+[animation]
+enabled = true
+duration_ms = 350
+curve = "appleEase"
+
+[animation.windows_in]
+enabled = true
+effect = "tv-glitch"
+duration_ms = 750
+curve = "linear"
+
+[animation.windows_out]
+enabled = true
+effect = "tv-glitch"
+duration_ms = 750
+curve = "linear"
+
+[animation.windows_move]
+enabled = true
+curve = "appleSpring"
+
+[animation.workspaces]
+enabled = true
+curve = "appleSpring"
+
+[animation.overview]
+enabled = true
+duration_ms = 400
+curve = "appleEase"
+
+[animation.scratchpad]
+enabled = true
+curve = "appleSpring"
+dim = 0.3
+blur = true
+
+[animation.border]
+enabled = true
+duration_ms = 200
+curve = "linear"
+
+[animation.dim_unfocused]
+enabled = false
+duration_ms = 300
+curve = "appleEase"
+dim = 0.0
+
+[animation.layers]
+enabled = true
+duration_ms = 250
+curve = "appleEase"

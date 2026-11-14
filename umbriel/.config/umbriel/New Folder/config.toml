@@ -1,0 +1,56 @@
+# Umbriel starting configuration
+#
+# Copy this file to ~/.config/umbriel/config.toml. Most changes apply when the
+# file is saved. Check edits with `umbriel config validate`.
+#
+# Complete reference: https://docs.noctalia.dev/umbriel/
+#
+# Commented settings below are examples, not built-in defaults.
+
+# ==============================================================================
+# Includes
+
+# Optional split configuration
+# https://docs.noctalia.dev/umbriel/configuration/#include
+[include]
+files = [
+  "user/appearance.toml",
+  "user/autostart.toml",
+  "user/effects.toml",
+  "user/environment.toml",
+  "user/general.toml",
+  "user/input.toml",
+  "user/keybinds.toml",
+  "user/layerrules.toml",
+  "user/layout.toml",
+  "user/output.toml",
+  "user/overview.toml",
+  "user/windowrules.toml",
+  "user/workspaces.toml",
+  "user/scratchpad.toml",
+  "shaders/community/animation/tv-glitch/effect.toml",
+  "shaders/community/border/spectrum/effect.toml",
+]
+
+[include.optional]
+files = [
+  "~/.config/umbriel/noctalia.toml",
+]
+
+[effects]
+border = "spectrum"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
