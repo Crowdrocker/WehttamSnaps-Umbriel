@@ -2,66 +2,103 @@
 set -euo pipefail
 
 # ==============================================================================
-# WehttamSnaps-Umbriel Automated Deployment Script (CachyOS / Arch)
+# WehttamSnaps-Umbriel Automated Deployment Script (Fedora 45+)
 # Hardware Target: AMD Ryzen 5 9600X + Radeon RX 7600
 # ==============================================================================
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$HOME/.config-backup-$(date +%Y%m%d-%H%M%S)"
+FEDORA_VER="$(rpm -E %fedora)"
 
-echo "🪐 Starting WehttamSnaps-Umbriel deployment from $REPO_DIR..."
+echo "🪐 Starting WehttamSnaps-Umbriel deployment on Fedora $FEDORA_VER..."
 
-# ── 1. System Update & Core Packages ─────────────────────────────────────────
-echo "📦 Installing core compositor, shell, and utility packages..."
-sudo pacman -Syu --noconfirm
-sudo pacman -S --needed --noconfirm \
-    stow git base-devel \
-    ghostty yazi nano starship fastfetch btop bat eza fzf zoxide zsh \
-    wl-clipboard cliphist polkit-gnome \
-    pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber \
-    pavucontrol qpwgraph \
-    steam gamescope mangohud lib32-mangohud gamemode lib32-gamemode \
-    mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon \
-    libva-mesa-driver lib32-libva-mesa-driver
+# ── 1. Optimize DNF 5 Speed & Parallel Downloads ───────────────────────────────
+echo "⚡ Configuring DNF 5 parallel downloads..."
+sudo dnf install -y dnf5-plugins
+sudo dnf config-manager setopt max_parallel_downloads=10 fastestmirror=True || true
 
-# ── 2. AUR Packages (paru / yay) ─────────────────────────────────────────────
-AUR_HELPER=""
-if command -v paru &>/dev/null; then
-    AUR_HELPER="paru"
-elif command -v yay &>/dev/null; then
-    AUR_HELPER="yay"
-fi
+# ── 2. Enable RPM Fusion (Free & Nonfree) + Flathub ──────────────────────────
+echo "📦 Enabling RPM Fusion repositories and Flathub..."
+sudo dnf install -y \
+    "https://rpmfusion.org{FEDORA_VER}.noarch.rpm" \
+    "https://rpmfusion.org{FEDORA_VER}.noarch.rpm"
 
-if [[ -n "$AUR_HELPER" ]]; then
-    echo "🎨 Installing AUR packages using $AUR_HELPER..."
-    $AUR_HELPER -S --needed --noconfirm \
-        umbriel-git noctalia-shell-git \
-        spotify-launcher protonup-qt steamtinkerlaunch-git \
-        bibata-cursor-theme-bin
-else
-    echo "⚠️ No AUR helper (paru/yay) found. Install umbriel-git and noctalia-shell-git manually."
-fi
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1 || true
+flatpak remote-add --if-not-exists flathub https://flathub.org
 
-# ── 3. Flatpak Applications ──────────────────────────────────────────────────
-if command -v flatpak &>/dev/null; then
-    echo "📥 Installing Flatpak apps (OBS Studio & Discord)..."
-    flatpak install -y flathub com.obsproject.Studio com.discordapp.Discord
-    flatpak --user override --filesystem="$HOME/.icons:ro"
-fi
+# ── 3. Enable Terra Repo (Umbriel, Quickshell, Ghostty, Yazi, Starship) ──────
+echo "🛰️  Adding Terra and Copr repositories..."
+sudo dnf install -y --nogpgcheck \
+    --repofrompath "terra,https://fyralabs.com{FEDORA_VER}" \
+    terra-release terra-gpg-keys
 
-# ── 4. Systemd Global AMD RADV & Gaming Environment Fixes ────────────────────
-echo "🎮 Applying global AMD RADV & Smart Access Memory variables..."
+sudo dnf copr enable -y scottames/ghostty || true
+sudo dnf copr enable -y lihaohong/yazi || true
+sudo dnf copr enable -y atim/starship || true
+
+# ── 4. Full System Update & Core Packages ────────────────────────────────────
+echo "⬆️  Updating system and installing compositor, shell, creative & gaming apps..."
+sudo dnf upgrade --refresh -y
+
+sudo dnf install -y --skip-unavailable \
+    stow git gcc-c++ make cmake jq ripgrep fd-find curl unzip \
+    umbriel-nightly xdg-desktop-portal-umbriel-nightly \
+    quickshell-git xwayland-satellite matugen awww \
+    ghostty yazi nano starship fastfetch btop bat lsd fzf zoxide zsh \
+    zsh-autosuggestions zsh-syntax-highlighting \
+    wl-clipboard cliphist grim slurp swaybg swayidle swaylock \
+    brightnessctl playerctl wlr-randr wlsunset ydotool \
+    polkit-kde qt6ct qt5ct kvantum papirus-icon-theme breeze-icon-theme \
+    pipewire pipewire-pulseaudio pipewire-jack-audio-connection-kit wireplumber \
+    pavucontrol qpwgraph helvum easyeffects lsp-plugins-lv2 calf rnnoise \
+    steam gamescope mangohud goverlay gamemode vkBasalt \
+    mesa-vulkan-drivers mesa-vulkan-drivers.i686 vulkan-tools \
+    rocm-opencl rocminfo lact \
+    darktable rawtherapee gimp inkscape krita exiftool imagemagick kdenlive \
+    ntfs-3g smartmontools kde-connect libnotify deskflow \
+    tesseract tesseract-langpack-eng \
+    fira-code-fonts jetbrains-mono-fonts-all google-noto-emoji-fonts
+
+sudo usermod -aG render,video "$USER"
+
+# ── 5. Install Material Symbols & Nerd Fonts for iNiR Bar ────────────────────
+echo "🔤 Installing Material Symbols & Nerd Fonts..."
+mkdir -p "$HOME/.local/share/fonts"
+curl -fsSL "https://github.com" \
+    -o "$HOME/.local/share/fonts/MaterialSymbolsRounded.ttf"
+curl -fsSL "https://github.com" \
+    -o "$HOME/.local/share/fonts/MaterialSymbolsOutlined.ttf"
+fc-cache -fv
+
+# ── 6. Full Multimedia Codecs & AMD Hardware Video Acceleration ──────────────
+echo "🎬 Installing full FFmpeg and AMD Mesa freeworld hardware codecs..."
+sudo dnf swap -y ffmpeg-free ffmpeg --allowerasing || true
+sudo dnf group upgrade -y multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin || true
+sudo dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld || true
+sudo dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld || true
+
+# ── 7. Flatpak Applications (OBS + Teleport, Discord, ProtonPlus, Flatseal) ──
+echo "📥 Installing Flatpak apps..."
+flatpak install -y flathub \
+    com.obsproject.Studio \
+    com.obsproject.Studio.Plugin.Teleport \
+    com.discordapp.Discord \
+    com.vysp3r.ProtonPlus \
+    com.github.tchx84.Flatseal
+flatpak --user override --filesystem="$HOME/.icons:ro"
+
+# ── 8. Global AMD RADV, Qt Theme & Smart Access Memory Fixes ─────────────────
+echo "🎮 Applying global AMD RADV & Qt environment variables..."
 mkdir -p "$HOME/.config/environment.d"
 cat << 'EOF' > "$HOME/.config/environment.d/99-game-fixes.conf"
-# Mitigate driver leaks over long play sessions
 RADV_PERFTEST=sam,aco
 VK_EXT_graphics_pipeline_library=1
-# Prevent shader cache eviction stutters
 __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
+QT_QPA_PLATFORMTHEME=qt6ct
 EOF
 
-# ── 5. Back Up Existing Configs & Link via GNU Stow ──────────────────────────
-echo "🔗 Backing up conflicting configs to $BACKUP_DIR and linking via GNU Stow..."
+# ── 9. Back Up Existing Configs & Link via GNU Stow ──────────────────────────
+echo "🔗 Backing up existing configs to $BACKUP_DIR and linking via GNU Stow..."
 mkdir -p "$BACKUP_DIR" "$HOME/.config"
 
 TARGETS=(
@@ -85,16 +122,18 @@ done
 cd "$REPO_DIR"
 stow -v umbriel mangohud bash zsh
 
-# Ensure ~/.zshrc resolves properly if stored inside zsh/.zsh/.zshrc
 if [[ -f "$HOME/.zsh/.zshrc" && ! -e "$HOME/.zshrc" ]]; then
     ln -sf "$HOME/.zsh/.zshrc" "$HOME/.zshrc"
 fi
 
-# ── 6. Restore Script Executable Permissions ─────────────────────────────────
-echo "⚡ Ensuring custom scripts are executable..."
+# ── 10. Clone iNiR Shell & Validate Umbriel Config ───────────────────────────
+if [[ ! -d "$HOME/.config/quickshell/inir" && ! -d "$HOME/inir" ]]; then
+    echo "🧩 Cloning iNiR desktop shell to ~/inir..."
+    git clone https://github.com "$HOME/inir"
+fi
+
 find "$HOME/.config/umbriel" -type f -name "*.sh" -exec chmod +x {} + 2>/dev/null || true
 
-# ── 7. Validate Umbriel Configuration ────────────────────────────────────────
 if command -v umbriel &>/dev/null; then
     echo "✅ Validating Umbriel configuration..."
     umbriel config validate
@@ -130,5 +169,8 @@ if [[ "${SETUP_FSTAB,,}" == "y" ]]; then
 fi
 
 echo ""
-echo "🎉 Deployment complete! Backup saved at: $BACKUP_DIR"
-echo "➡️  Reboot or log into Umbriel to start your session."
+echo "🎉 Fedora $FEDORA_VER deployment complete! Backup saved at: $BACKUP_DIR"
+echo "➡️  Next steps:"
+echo "   1. Run 'cd ~/inir && ./setup install' (select Umbriel)"
+echo "   2. Run 'inir compositor add umbriel && inir compositor sync'"
+echo "   3. Reboot and select Umbriel from your login screen!"
