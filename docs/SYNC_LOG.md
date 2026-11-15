@@ -1,2 +1,3 @@
 - **2026-11-15 10:45:05**: Added environment.d,systemd,shelly,qt6ct,qt5ct,pulse,noctalia,fuzzel,fontconfig,fastfetch,cachyos,mpv,mozilla,session,libaccounts-glib,lazygit,kitty,gtk-3.0,go,ghostty,
 - **2026-11-15 11:45:43**: Added MangoHud,
+- **2026-11-15 11:51:16**: Added kate,rofi,snapsos,starship,wehttamsnaps,Goverlay,
