@@ -1,0 +1,320 @@
+[2026/10/15 11:21:21] 
+[2026/10/15 11:21:21] =========================================================
+[2026/10/15 11:21:21] =========================================================
+[2026/10/15 11:21:21] =============== VentoyGui x86_64 ===============
+[2026/10/15 11:21:21] =========================================================
+[2026/10/15 11:21:21] =========================================================
+[2026/10/15 11:21:21] log file is <log.txt>
+[2026/10/15 11:21:21] pid:81112 ppid:1228 uid:1000 euid:1000
+[2026/10/15 11:21:21] adjust dir:0  current path:/home/wehttamsnaps/Downloads/ventoy-1.1.18-linux/ventoy-1.1.18
+[2026/10/15 11:21:21] =========RAW ARGS BEGIN===========
+[2026/10/15 11:21:21] argv[0]=</home/wehttamsnaps/Downloads/ventoy-1.1.18-linux/ventoy-1.1.18/VentoyGUI.x86_64>
+[2026/10/15 11:21:21] =========RAW ARGS END===========
+[2026/10/15 11:21:21] uname -m <x86_64> 64bit
+[2026/10/15 11:21:21] Build bit is 64 (x86_64)
+[2026/10/15 11:21:21] Now detect the GUI type ...
+[2026/10/15 11:21:21] 3738 libs found in cache format 1
+[2026/10/15 11:21:21] LIB:<libgtk-4.so.1>
+[2026/10/15 11:21:21] LIB:<libgtk-3.so.0>
+[2026/10/15 11:21:21] LIB:<libgtk-x11-2.0.so.0>
+[2026/10/15 11:21:21] LIB:<libQt6Xml.so.6>
+[2026/10/15 11:21:21] LIB:<libQt5X11Extras.so.5>
+[2026/10/15 11:21:21] ldconfig lib flags 0x37
+[2026/10/15 11:21:21] lib flags GLADE2:[NO] GTK2:[YES] GTK3:[YES] GTK4:[YES] QT4:[NO] QT5:[YES] QT6:[YES]
+[2026/10/15 11:21:21] distro_check_gui_env ...
+[2026/10/15 11:21:21] Key arch is not found in json data.
+[2026/10/15 11:21:21] check <env> <DESKTOP_SESSION> <equal>
+[2026/10/15 11:21:21] Key arch is not found in json data.
+[2026/10/15 11:21:21] check <env> <DESKTOP_SESSION> <equal>
+[2026/10/15 11:21:21] Key arch is not found in json data.
+[2026/10/15 11:21:21] check <env> <DESKTOP_SESSION> <equal>
+[2026/10/15 11:21:21] Key arch is not found in json data.
+[2026/10/15 11:21:21] check <env> <DESKTOP_SESSION> <equal>
+[2026/10/15 11:21:21] Key arch is not found in json data.
+[2026/10/15 11:21:21] check <env> <DESKTOP_SESSION> <equal>
+[2026/10/15 11:21:21] Key arch is not found in json data.
+[2026/10/15 11:21:21] check <env> <DESKTOP_SESSION> <equal>
+[2026/10/15 11:21:21] Key arch is not found in json data.
+[2026/10/15 11:21:21] check <env> <DESKTOP_SESSION> <equal>
+[2026/10/15 11:21:21] Can not distinguish GTK and QT, default use GTK.
+[2026/10/15 11:21:21] This is gtk3 X environment.
+[2026/10/15 11:21:21] exe = /home/wehttamsnaps/Downloads/ventoy-1.1.18-linux/ventoy-1.1.18/tool/x86_64/Ventoy2Disk.gtk3
+[2026/10/15 11:21:21] execute permission check success.
+[2026/10/15 11:21:21] === XDG_SESSION_TYPE is <wayland> ===
+[2026/10/15 11:21:21] Force GDK_BACKEND from wayland to x11 for better compatibility
+[2026/10/15 11:21:21] EUID check failed.
+[2026/10/15 11:21:21] try restart self by pkexec ...
+[2026/10/15 11:21:21] Find pkexec at </usr/bin/pkexec>
+[2026/10/15 11:21:21] create environment param 56
+[2026/10/15 11:21:21] =========PKEXEC ARGS BEGIN===========
+[2026/10/15 11:21:21] argv[0]=</usr/bin/pkexec>
+[2026/10/15 11:21:21] argv[1]=</home/wehttamsnaps/Downloads/ventoy-1.1.18-linux/ventoy-1.1.18/VentoyGUI.x86_64>
+[2026/10/15 11:21:21] argv[2]=<_vtoy_env_str_=HOME=/home/wehttamsnaps
+LANG=en_US.UTF-8
+LC_ADDRESS=en_US.UTF-8
+LC_IDENTIFICATION=en_US.UTF-8
+LC_MEASUREMENT=en_US.UTF-8
+LC_MONETARY=en_US.UTF-8
+LC_NAME=en_US.UTF-8
+LC_NUMERIC=en_US.UTF-8
+LC_PAPER=en_US.UTF-8
+LC_TELEPHONE=en_US.UTF-8
+LC_TIME=en_US.UTF-8
+LOGNAME=wehttamsnaps
+PATH=/home/wehttamsnaps/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+SHELL=/bin/fish
+USER=wehttamsnaps
+XDG_DATA_DIRS=/home/wehttamsnaps/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_RUNTIME_DIR=/run/user/1000
+XCURSOR_THEME=capitaine-cursors-light
+XCURSOR_SIZE=24
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+DEBUGINFOD_URLS=https://debuginfod.archlinux.org https://debuginfod.cachyos.org 
+DESKTOP_SESSION=umbriel
+DISPLAY=:1
+ELECTRON_OZONE_PLATFORM_HINT=auto
+MAIL=/var/spool/mail/wehttamsnaps
+MOTD_SHOWN=pam
+PWD=/home/wehttamsnaps
+QT_QPA_PLATFORM=wayland
+QT_QPA_PLATFORMTHEME=kde
+QT_STYLE_OVERRIDE=Darkly
+SHLVL=1
+UMBRIEL_SOCKET=/run/user/1000/umbriel-wayland-0.sock
+VIRTUAL_ENV_DISABLE_PROMPT=1
+VSSCRIPT_PATH=/usr/lib/python3.14/site-packages/vapoursynth/libvsscript.so
+WAYLAND_DISPLAY=wayland-0
+XDG_CURRENT_DESKTOP=umbriel
+XDG_MENU_PREFIX=plasma-
+XDG_SEAT=seat0
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+XDG_SESSION_CLASS=user
+XDG_SESSION_DESKTOP=umbriel
+XDG_SESSION_ID=2
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session1
+XDG_SESSION_TYPE=wayland
+XDG_VTNR=1
+_=/usr/bin/xargs
+MANAGERPID=1228
+MANAGERPIDFDID=4223
+INVOCATION_ID=eee4884d159d46188900ac324508f0ae
+JOURNAL_STREAM=12:28859
+SYSTEMD_EXEC_PID=1416
+MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/inir.service/memory.pressure
+MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=
+XDG_ACTIVATION_TOKEN=ec79280f8eb31a3dfd3e387e947f1bdf
+_JAVA_AWT_WM_NONREPARENTING=1
+GDK_BACKEND=x11
+>
+[2026/10/15 11:21:21] argv[3]=<_vtoy_gui_path_=/home/wehttamsnaps/Downloads/ventoy-1.1.18-linux/ventoy-1.1.18/tool/x86_64/Ventoy2Disk.gtk3>
+[2026/10/15 11:21:21] =========PKEXEC ARGS END===========
+[2026/10/15 11:23:11] ===============================================
+[2026/10/15 11:23:11] ===== Ventoy2Disk 1.1.18 127.0.0.1:24680 =====
+[2026/10/15 11:23:11] ===============================================
+[2026/10/15 11:23:11] ventoy_disk_enumerate_all
+[2026/10/15 11:23:11] get disk info sdd
+[2026/10/15 11:23:11] is 4k native disk <sdd> <0>
+[2026/10/15 11:23:11] get disk size from sysfs for sdd
+[2026/10/15 11:23:11] ventoy_get_vtoy_data /dev/sdd
+[2026/10/15 11:23:11] Not valid ventoy partition layout [2048 1953452032] [0 0]
+[2026/10/15 11:23:11] disk:</dev/sdd 8:48> model:<WD My Passport 0820 (USB)> size:1000170586112 (1024 GB)
+[2026/10/15 11:23:11] /dev/sdd NO Ventoy detected
+[2026/10/15 11:23:11] get disk info sdb
+[2026/10/15 11:23:11] is 4k native disk <sdb> <0>
+[2026/10/15 11:23:11] get disk size from sysfs for sdb
+[2026/10/15 11:23:11] ventoy_get_vtoy_data /dev/sdb
+[2026/10/15 11:23:11] NO ventoy efi part layout <2048 0>
+[2026/10/15 11:23:11] disk:</dev/sdb 8:16> model:<ATA PNY CS900 1TB SS (scsi)> size:1000204886016 (1024 GB)
+[2026/10/15 11:23:11] /dev/sdb NO Ventoy detected
+[2026/10/15 11:23:11] get disk info sde
+[2026/10/15 11:23:11] is 4k native disk <sde> <0>
+[2026/10/15 11:23:11] get disk size from sysfs for sde
+[2026/10/15 11:23:11] ventoy_get_vtoy_data /dev/sde
+[2026/10/15 11:23:11] NO ventoy efi part layout <2048 0>
+[2026/10/15 11:23:11] disk:</dev/sde 8:64> model:<WD easystore 2647 (USB)> size:5000947302400 (5000 GB)
+[2026/10/15 11:23:11] /dev/sde NO Ventoy detected
+[2026/10/15 11:23:11] get disk info sdc
+[2026/10/15 11:23:11] is 4k native disk <sdc> <0>
+[2026/10/15 11:23:11] get disk size from sysfs for sdc
+[2026/10/15 11:23:11] ventoy_get_vtoy_data /dev/sdc
+[2026/10/15 11:23:13] Not valid ventoy partition layout [2048 1953523119] [0 0]
+[2026/10/15 11:23:13] disk:</dev/sdc 8:32> model:<Seagate USB (USB)> size:1000204885504 (1024 GB)
+[2026/10/15 11:23:13] /dev/sdc NO Ventoy detected
+[2026/10/15 11:23:13] get disk info sda
+[2026/10/15 11:23:13] is 4k native disk <sda> <0>
+[2026/10/15 11:23:13] get disk size from sysfs for sda
+[2026/10/15 11:23:13] ventoy_get_vtoy_data /dev/sda
+[2026/10/15 11:23:13] Invalid efi part2 name <root>
+[2026/10/15 11:23:13] disk:</dev/sda 8:0> model:<ATA KINGSTON SH103S3 (scsi)> size:120034123776 (120 GB)
+[2026/10/15 11:23:13] /dev/sda NO Ventoy detected
+[2026/10/15 11:23:13] ============= DISK DUMP ============
+[2026/10/15 11:23:13] /dev/sdc [1024 GB] Seagate USB (USB)	Ventoy: NA
+[2026/10/15 11:23:13] /dev/sdd [1024 GB] WD My Passport 0820 (USB)	Ventoy: NA
+[2026/10/15 11:23:13] /dev/sde [5000 GB] WD easystore 2647 (USB)	Ventoy: NA
+[2026/10/15 11:23:13] /dev/sda [120 GB] ATA KINGSTON SH103S3 (scsi)	Ventoy: NA
+[2026/10/15 11:23:13] /dev/sdb [1024 GB] ATA PNY CS900 1TB SS (scsi)	Ventoy: NA
+[2026/10/15 11:24:02] ventoy_disk_enumerate_all
+[2026/10/15 11:24:02] get disk info sdf
+[2026/10/15 11:24:02] is 4k native disk <sdf> <0>
+[2026/10/15 11:24:02] get disk size from sysfs for sdf
+[2026/10/15 11:24:02] ventoy_get_vtoy_data /dev/sdf
+[2026/10/15 11:24:02] ventoy partition layout check OK: [2048 29964288] [29966336 65536]
+[2026/10/15 11:24:02] now check secure boot for /dev/sdf ...
+[2026/10/15 11:24:02] /EFI/BOOT/grubx64_real.efi find, secure boot in enabled
+[2026/10/15 11:24:02] disk:</dev/sdf 8:80> model:<SanDisk Cruzer Glide (USB)> size:15376318464 (16 GB)
+[2026/10/15 11:24:02] /dev/sdf Ventoy:<1.1.18> MBR secureboot:1 preserve:0
+[2026/10/15 11:24:02] get disk info sdd
+[2026/10/15 11:24:02] is 4k native disk <sdd> <0>
+[2026/10/15 11:24:02] get disk size from sysfs for sdd
+[2026/10/15 11:24:02] ventoy_get_vtoy_data /dev/sdd
+[2026/10/15 11:24:02] Not valid ventoy partition layout [2048 1953452032] [0 0]
+[2026/10/15 11:24:02] disk:</dev/sdd 8:48> model:<WD My Passport 0820 (USB)> size:1000170586112 (1024 GB)
+[2026/10/15 11:24:02] /dev/sdd NO Ventoy detected
+[2026/10/15 11:24:02] get disk info sdb
+[2026/10/15 11:24:02] is 4k native disk <sdb> <0>
+[2026/10/15 11:24:02] get disk size from sysfs for sdb
+[2026/10/15 11:24:02] ventoy_get_vtoy_data /dev/sdb
+[2026/10/15 11:24:02] NO ventoy efi part layout <2048 0>
+[2026/10/15 11:24:02] disk:</dev/sdb 8:16> model:<ATA PNY CS900 1TB SS (scsi)> size:1000204886016 (1024 GB)
+[2026/10/15 11:24:02] /dev/sdb NO Ventoy detected
+[2026/10/15 11:24:02] get disk info sde
+[2026/10/15 11:24:02] is 4k native disk <sde> <0>
+[2026/10/15 11:24:02] get disk size from sysfs for sde
+[2026/10/15 11:24:02] ventoy_get_vtoy_data /dev/sde
+[2026/10/15 11:24:02] NO ventoy efi part layout <2048 0>
+[2026/10/15 11:24:02] disk:</dev/sde 8:64> model:<WD easystore 2647 (USB)> size:5000947302400 (5000 GB)
+[2026/10/15 11:24:02] /dev/sde NO Ventoy detected
+[2026/10/15 11:24:02] get disk info sdc
+[2026/10/15 11:24:02] is 4k native disk <sdc> <0>
+[2026/10/15 11:24:02] get disk size from sysfs for sdc
+[2026/10/15 11:24:02] ventoy_get_vtoy_data /dev/sdc
+[2026/10/15 11:24:02] Not valid ventoy partition layout [2048 1953523119] [0 0]
+[2026/10/15 11:24:02] disk:</dev/sdc 8:32> model:<Seagate USB (USB)> size:1000204885504 (1024 GB)
+[2026/10/15 11:24:02] /dev/sdc NO Ventoy detected
+[2026/10/15 11:24:02] get disk info sda
+[2026/10/15 11:24:02] is 4k native disk <sda> <0>
+[2026/10/15 11:24:02] get disk size from sysfs for sda
+[2026/10/15 11:24:02] ventoy_get_vtoy_data /dev/sda
+[2026/10/15 11:24:02] Invalid efi part2 name <root>
+[2026/10/15 11:24:02] disk:</dev/sda 8:0> model:<ATA KINGSTON SH103S3 (scsi)> size:120034123776 (120 GB)
+[2026/10/15 11:24:02] /dev/sda NO Ventoy detected
+[2026/10/15 11:24:14] ==================================================================================
+[2026/10/15 11:24:14] ===== ventoy install /dev/sdf style:MBR secureboot:1 align4K:1 reserve:0 =========
+[2026/10/15 11:24:14] ==================================================================================
+[2026/10/15 11:24:14] /dev/sdf mounted </dev/sdf1 /run/media/wehttamsnaps/Ventoy exfat rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022,iocharset=utf8,errors=remount-ro 0 0
+>
+[2026/10/15 11:24:14] disk is mounted, now try to unmount it ...
+[2026/10/15 11:24:14] umount </dev/sdf> </run/media/wehttamsnaps/Ventoy> [ success ]
+[2026/10/15 11:24:14] disk is not mounted now, we can do the install ...
+[2026/10/15 11:24:14] start install thread SanDisk Cruzer Glide (USB) ...
+[2026/10/15 11:24:14] ventoy_install_thread run ...
+[2026/10/15 11:24:14] check disk sdf
+[2026/10/15 11:24:14] disk is not mounted now, we can do continue ...
+[2026/10/15 11:24:14] ventoy_clean_disk fd:5 size:15376318464
+[2026/10/15 11:24:14] write disk at off:0 writelen:65536 datalen:65536
+[2026/10/15 11:24:14] write disk at off:15376252928 writelen:65536 datalen:65536
+[2026/10/15 11:24:14] read core.img.xz rc:0 len:455176
+[2026/10/15 11:24:14] ventoy_unxz_stg1_img len:455176 rc:0
+[2026/10/15 11:24:14] read disk.img.xz rc:0 len:13434140
+[2026/10/15 11:24:14] ventoy_unxz_efipart_img len:13434140 rc:0 unxzlen:33554432
+[2026/10/15 11:24:14] Fill MBR part table
+[2026/10/15 11:24:14] Disk signature: 0x78f7aa54
+[2026/10/15 11:24:14] no need to align with 4KB
+[2026/10/15 11:24:14] ReservedSector: 0
+[2026/10/15 11:24:14] Part1StartSector:2048 Part1SectorCount:29964288 Part2StartSector:29966336
+[2026/10/15 11:24:14] Formatting part1 exFAT /dev/sdf ...
+[0126/10/15 11:24:14] Creating... 
+[0126/10/15 11:24:14] Flushing... 
+[2026/10/15 11:24:14] Formatting part2 EFI ...
+[2026/10/15 11:24:14] Formatting part2 EFI offset:15342764032 ...
+[2026/10/15 11:24:14] VentoyProcSecureBoot 1 ...
+[2026/10/15 11:24:14] Secure boot is enabled ...
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] write disk writelen:1048576 datalen:1048576 [ success ]
+[2026/10/15 11:24:14] Writing legacy grub ...
+[2026/10/15 11:24:14] Write MBR stage1 ...
+[2026/10/15 11:24:14] lseek offset:512(512) writelen:1048064(1048064)
+[2026/10/15 11:24:14] fsync data1...
+[2026/10/15 11:24:16] Checking part2 efi data /dev/sdf ...
+[2026/10/15 11:24:17] efi part data check success
+[2026/10/15 11:24:17] Writting Partition Table style:0...
+[2026/10/15 11:24:17] Writting MBR Partition Table 0 512
+[2026/10/15 11:24:17] fsync data2...
+[2026/10/15 11:24:17] ====================================
+[2026/10/15 11:24:17] ====== ventoy install success ======
+[2026/10/15 11:24:17] ====================================
+[2026/10/15 11:24:17] ventoy_disk_enumerate_all
+[2026/10/15 11:24:17] get disk info sdf
+[2026/10/15 11:24:17] is 4k native disk <sdf> <0>
+[2026/10/15 11:24:17] get disk size from sysfs for sdf
+[2026/10/15 11:24:17] ventoy_get_vtoy_data /dev/sdf
+[2026/10/15 11:24:17] ventoy partition layout check OK: [2048 29964288] [29966336 65536]
+[2026/10/15 11:24:17] now check secure boot for /dev/sdf ...
+[2026/10/15 11:24:17] /EFI/BOOT/grubx64_real.efi find, secure boot in enabled
+[2026/10/15 11:24:17] disk:</dev/sdf 8:80> model:<SanDisk Cruzer Glide (USB)> size:15376318464 (16 GB)
+[2026/10/15 11:24:17] /dev/sdf Ventoy:<1.1.18> MBR secureboot:1 preserve:0
+[2026/10/15 11:24:17] get disk info sdd
+[2026/10/15 11:24:17] is 4k native disk <sdd> <0>
+[2026/10/15 11:24:17] get disk size from sysfs for sdd
+[2026/10/15 11:24:17] ventoy_get_vtoy_data /dev/sdd
+[2026/10/15 11:24:17] Not valid ventoy partition layout [2048 1953452032] [0 0]
+[2026/10/15 11:24:17] disk:</dev/sdd 8:48> model:<WD My Passport 0820 (USB)> size:1000170586112 (1024 GB)
+[2026/10/15 11:24:17] /dev/sdd NO Ventoy detected
+[2026/10/15 11:24:17] get disk info sdb
+[2026/10/15 11:24:17] is 4k native disk <sdb> <0>
+[2026/10/15 11:24:17] get disk size from sysfs for sdb
+[2026/10/15 11:24:17] ventoy_get_vtoy_data /dev/sdb
+[2026/10/15 11:24:17] NO ventoy efi part layout <2048 0>
+[2026/10/15 11:24:17] disk:</dev/sdb 8:16> model:<ATA PNY CS900 1TB SS (scsi)> size:1000204886016 (1024 GB)
+[2026/10/15 11:24:17] /dev/sdb NO Ventoy detected
+[2026/10/15 11:24:17] get disk info sde
+[2026/10/15 11:24:17] is 4k native disk <sde> <0>
+[2026/10/15 11:24:17] get disk size from sysfs for sde
+[2026/10/15 11:24:17] ventoy_get_vtoy_data /dev/sde
+[2026/10/15 11:24:17] NO ventoy efi part layout <2048 0>
+[2026/10/15 11:24:17] disk:</dev/sde 8:64> model:<WD easystore 2647 (USB)> size:5000947302400 (5000 GB)
+[2026/10/15 11:24:17] /dev/sde NO Ventoy detected
+[2026/10/15 11:24:17] get disk info sdc
+[2026/10/15 11:24:17] is 4k native disk <sdc> <0>
+[2026/10/15 11:24:17] get disk size from sysfs for sdc
+[2026/10/15 11:24:17] ventoy_get_vtoy_data /dev/sdc
+[2026/10/15 11:24:17] Not valid ventoy partition layout [2048 1953523119] [0 0]
+[2026/10/15 11:24:17] disk:</dev/sdc 8:32> model:<Seagate USB (USB)> size:1000204885504 (1024 GB)
+[2026/10/15 11:24:17] /dev/sdc NO Ventoy detected
+[2026/10/15 11:24:17] get disk info sda
+[2026/10/15 11:24:17] is 4k native disk <sda> <0>
+[2026/10/15 11:24:17] get disk size from sysfs for sda
+[2026/10/15 11:24:17] ventoy_get_vtoy_data /dev/sda
+[2026/10/15 11:24:17] Invalid efi part2 name <root>
+[2026/10/15 11:24:17] disk:</dev/sda 8:0> model:<ATA KINGSTON SH103S3 (scsi)> size:120034123776 (120 GB)
+[2026/10/15 11:24:17] /dev/sda NO Ventoy detected

@@ -1,0 +1,26 @@
+# Template file for 'nordend'
+# Nordend's xbps-src template for Void Linux. Copy this folder into a
+# void-packages checkout as srcpkgs/nordend, then: ./xbps-src pkg nordend
+pkgname=nordend
+version=0.7.3
+revision=1
+build_style=cmake
+# NORDEND_WERROR: a newer compiler's new warning must not break the package
+configure_args="-DNORDEND_BUILD_TESTS=OFF -DNORDEND_WERROR=OFF"
+hostmakedepends="pkgconf wayland-devel"
+makedepends="wayland-devel wayland-protocols libglvnd-devel libxkbcommon-devel
+ harfbuzz-devel freetype-devel fontconfig-devel tomlplusplus-devel
+ libwebp-devel libjxl-devel zlib-devel sdbus-c++-devel"
+# MIME types from shared-mime-info's database; udisks2 (disks in the sidebar)
+# and xdg-desktop-portal (desktop colours, the file chooser) are used when present
+depends="shared-mime-info hicolor-icon-theme"
+short_desc="Fast, native file manager for Wayland, made for photographers"
+maintainer="pankaspe <7622507+pankaspe@users.noreply.github.com>"
+license="MIT"
+homepage="https://github.com/pankaspe/nordend-fm"
+distfiles="https://github.com/pankaspe/nordend-fm/archive/v${version}.tar.gz"
+checksum=bc74f5144d22afa6951488e5e8e6e689200b74b3b9b33d1ef0f601997199d8b6
+
+post_install() {
+	vlicense LICENSE
+}
