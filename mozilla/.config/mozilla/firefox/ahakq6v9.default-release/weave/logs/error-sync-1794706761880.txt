@@ -1,0 +1,47 @@
+1794706725844	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1794706738135	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change: scheduling a quick-write in 5000ms
+1794706738758	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change, but a quick-write is already scheduled
+1794706743136	Sync.Engine.Tabs	INFO	update_local_state has 6 tab entries
+1794706743136	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/open-uri
+1794706743136	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/close-uri/v1
+1794706743139	Sync.Engine.Tabs	INFO	prepare_for_upload found 6 tabs
+1794706743139	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1794706743139	FirefoxAccounts	DEBUG	getOAuthToken enter for scope 'profile'
+1794706743139	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1794706743139	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token with scope 'profile'
+1794706743139	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1794706743140	Sync.Collection	DEBUG	POST Length: 11459
+1794706743156	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change: scheduling a quick-write in 5000ms
+1794706743164	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change, but a quick-write is already scheduled
+1794706743186	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change, but a quick-write is already scheduled
+1794706743322	Sync.Collection	DEBUG	POST success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/205016359/storage/tabs
+1794706743322	Sync.Telemetry	INFO	Observed notification weave:engine:sync:uploaded but no current sync is being recorded.
+1794706743370	Services.Common.RESTRequest	DEBUG	GET https://profile.accounts.firefox.com/v1/profile 304
+1794706748157	Sync.Engine.Tabs	INFO	update_local_state has 6 tab entries
+1794706748157	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/open-uri
+1794706748157	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/close-uri/v1
+1794706748159	Sync.Engine.Tabs	INFO	prepare_for_upload found 6 tabs
+1794706748160	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1794706748160	Sync.Collection	DEBUG	POST Length: 11459
+1794706748349	Sync.Collection	DEBUG	POST success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/205016359/storage/tabs
+1794706748350	Sync.Telemetry	INFO	Observed notification weave:engine:sync:uploaded but no current sync is being recorded.
+1794706756415	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1794706756415	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1794706756415	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1794706756416	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1794706760818	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1794706761875	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1794706761875	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1794706761876	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1794706761876	Sync.Service	DEBUG	User-Agent: Firefox/160.0 (Linux x86_64) FxSync/1.162.0.20261110030740.desktop
+1794706761876	Sync.Service	INFO	Starting sync at 2026-11-14 19:39:21 in browser session 7LdvPCSWGRAj
+1794706761876	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1794706761877	Sync.Status	INFO	Resetting Status.
+1794706761877	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1794706761877	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1794706761879	Sync.Resource	WARN	GET request to https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/205016359/info/collections failed: [Exception... "The connection was refused"  nsresult: "0x804b000d (NS_ERROR_CONNECTION_REFUSED)"  location: "<unknown>"  data: no] No traceback available
+1794706761879	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1794706761879	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed
+1794706761879	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "The connection was refused"  nsresult: "0x804b000d (NS_ERROR_CONNECTION_REFUSED)"  location: "<unknown>"  data: no] No traceback available
+1794706761879	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=reschedule)
+1794706761880	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "The connection was refused"  nsresult: "0x804b000d (NS_ERROR_CONNECTION_REFUSED)"  location: "<unknown>"  data: no] No traceback available

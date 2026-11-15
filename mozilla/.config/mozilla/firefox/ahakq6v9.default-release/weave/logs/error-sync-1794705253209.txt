@@ -1,0 +1,21 @@
+1794705215758	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1794705247034	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1794705247034	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1794705247035	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1794705247035	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1794705252085	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1794705253203	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1794705253203	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1794705253204	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1794705253205	Sync.Service	DEBUG	User-Agent: Firefox/160.0 (Linux x86_64) FxSync/1.162.0.20261110030740.desktop
+1794705253205	Sync.Service	INFO	Starting sync at 2026-11-14 19:14:13 in browser session 7LdvPCSWGRAj
+1794705253205	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1794705253206	Sync.Status	INFO	Resetting Status.
+1794705253206	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1794705253206	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1794705253208	Sync.Resource	WARN	GET request to https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/205016359/info/collections failed: [Exception... "The connection was refused"  nsresult: "0x804b000d (NS_ERROR_CONNECTION_REFUSED)"  location: "<unknown>"  data: no] No traceback available
+1794705253208	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1794705253208	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed
+1794705253208	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "The connection was refused"  nsresult: "0x804b000d (NS_ERROR_CONNECTION_REFUSED)"  location: "<unknown>"  data: no] No traceback available
+1794705253208	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=reschedule)
+1794705253209	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "The connection was refused"  nsresult: "0x804b000d (NS_ERROR_CONNECTION_REFUSED)"  location: "<unknown>"  data: no] No traceback available

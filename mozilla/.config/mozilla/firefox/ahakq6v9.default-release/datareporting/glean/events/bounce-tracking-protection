@@ -1,0 +1,6 @@
+{"timestamp":7309199,"category":"bounce.tracking.protection","name":"purge_action","extra":{"success":"true","glean_timestamp":"1794706967346","bounce_time":"1794700170","site_host":"youtube.com","is_dry_run":"true"}}
+{"timestamp":160153,"category":"glean","name":"restarted","extra":{"glean.startup.date":"2026-11-14T19:46-06:00","glean_timestamp":"1794707169313"},"execution_counter":1}
+{"timestamp":904509,"category":"glean","name":"restarted","extra":{"glean_timestamp":"1794712678278","glean.startup.date":"2026-11-14T21:17-06:00"},"execution_counter":2}
+{"timestamp":3081468,"category":"glean","name":"restarted","extra":{"glean_timestamp":"1794725253108","glean.startup.date":"2026-11-15T00:47-06:00"},"execution_counter":3}
+{"timestamp":6681827,"category":"bounce.tracking.protection","name":"purge_action","extra":{"site_host":"findmylinks.me","success":"true","bounce_time":"1794717227","is_dry_run":"true","glean_timestamp":"1794728853469"},"execution_counter":3}
+{"timestamp":248779,"category":"glean","name":"restarted","extra":{"glean_timestamp":"1794756116904","glean.startup.date":"2026-11-15T09:21-06:00"},"execution_counter":4}

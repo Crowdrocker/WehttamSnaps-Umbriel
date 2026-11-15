@@ -1,0 +1,62 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// 50 — Processes spawned at login
+// ─────────────────────────────────────────────────────────────────────────────
+// Each line runs once when Niri starts. For daemons that support it,
+// xdg-desktop-autostart (systemd) is an alternative.
+//
+// Tip: use spawn-sh-at-startup for shell pipelines or variable expansion.
+// ─────────────────────────────────────────────────────────────────────────────
+
+
+// WehttamSnaps Niri Configuration
+// Author: Matthew (Crowdrocker)
+// Hardware: AM5 Build - Ryzen 5 9600X, XFX RX 7600 8GB, 16GB DDR5 RAM, 850W PSU
+// Display: DP-2 1920x1080@60Hz
+
+// ╭─────────────────────────────── AUTOSTART ────────────────────────────────────────╮
+
+// Core System Bridges & Wayland Tools
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "bash" "-c" "wl-paste --no-newline --type text --watch ~/.config/quickshell/inir/scripts/lib/accel-run clipboard-store &"
+spawn-at-startup "bash" "-c" "wl-paste --type image --watch ~/.config/quickshell/inir/scripts/clipboard-image-store.sh &"
+spawn-at-startup "udiskie" "--tray"  // Secure storage auto-mounting
+spawn-at-startup "blueman-applet"  // Bluetooth manager tray
+spawn-at-startup "nm-applet"  // Network tray icon
+spawn-sh-at-startup "command -v niri-focused-booster >/dev/null 2>&1 && [ -r /sys/fs/cgroup/dmem.capacity ] && exec niri-focused-booster"
+// Polkit Authentication (Cleanly using single GNOME agent for native GTK integration)
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
+// Desktop Shell & Status Components
+// spawn-at-startup "noctalia" // Handles bar layout, workspaces, and notifications natively
+// spawn-at-startup "qs" "-c" "ii" // Quickshell alternative path hook
+spawn-sh-at-startup "niriswitcher"
+
+// Personalized Creative & System Customization Scripts
+spawn-at-startup "bash" "-c" "~/.config/niri/scripts/config-watcher.sh start &"
+spawn-at-startup "~/.config/niri/scripts/save-program-list.sh"
+
+// Interactive J.A.R.V.I.S Initialization with Audio Router Setup
+// Launches your gaming profile cleanly 5 seconds after desktop load
+spawn-at-startup "sh" "-c" "sound-system startup && notify-send 'J.A.R.V.I.S.' 'Systems online. Welcome back, Matthew.' -i audio-speakers"
+//spawn-at-startup "bash" "-c" "sleep 5 && ~/.config/niri/scripts/audio-routing.sh gaming"
+
+// OBS Automation Pipeline Sync Engine
+// Spawns the WebSocket loop 7 seconds after boot to await your OBS session
+// spawn-at-startup "bash" "-c" "sleep 7 && python3 ~/.config/niri/scripts/obs-audio-sync.py &"
+
+
+// ╰──────────────────────────────────────────────────────────────────────────────────╯
+
+// >>> inir-managed-autostart >>>
+// Managed by iNiR Settings — add or remove entries via Settings › Autostart.
+spawn-at-startup "gtk-launch" "steam"
+// <<< inir-managed-autostart <<<
+
+// iNiR is managed by the user systemd service (inir.service).
+// Do not add a compositor startup entry here or you'll get two shells.
+
+// BEGIN inir-systemd-environment
+// Export XDG_MENU_PREFIX into the systemd user session and rebuild the
+// sycoca database so KDE/Qt apps see the correct .desktop entries.
+spawn-at-startup "bash" "-c" "systemctl --user import-environment XDG_MENU_PREFIX && kbuildsycoca6"
+// END inir-systemd-environment

@@ -1,0 +1,1 @@
+- **2026-11-15 10:45:05**: Added environment.d,systemd,shelly,qt6ct,qt5ct,pulse,noctalia,fuzzel,fontconfig,fastfetch,cachyos,mpv,mozilla,session,libaccounts-glib,lazygit,kitty,gtk-3.0,go,ghostty,
