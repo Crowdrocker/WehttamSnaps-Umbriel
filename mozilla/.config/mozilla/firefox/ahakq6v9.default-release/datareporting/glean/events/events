@@ -1,0 +1,7 @@
+{"timestamp":9345317,"category":"pwmgr","name":"storage_operation_time","extra":{"duration_ms":"0","operation":"count","glean_timestamp":"1794765213442","backend":"json"}}
+{"timestamp":10422953,"category":"pwmgr","name":"storage_operation_time","extra":{"operation":"count","duration_ms":"0","backend":"json","glean_timestamp":"1794766291078"}}
+{"timestamp":10425360,"category":"pwmgr","name":"storage_operation_time","extra":{"operation":"count","glean_timestamp":"1794766293486","backend":"json","duration_ms":"0"}}
+{"timestamp":10429581,"category":"pwmgr","name":"storage_operation_time","extra":{"operation":"count","backend":"json","glean_timestamp":"1794766297706","duration_ms":"0"}}
+{"timestamp":10433320,"category":"pwmgr","name":"storage_operation_time","extra":{"backend":"json","operation":"count","glean_timestamp":"1794766301445","duration_ms":"0"}}
+{"timestamp":10449318,"category":"tab","name":"interaction","extra":{"action":"activate","glean_timestamp":"1794766317443","source":"tab_strip","layout":"horizontal","tab_count":"1"}}
+{"timestamp":10449319,"category":"pwmgr","name":"storage_operation_time","extra":{"operation":"count","backend":"json","duration_ms":"0","glean_timestamp":"1794766317444"}}
