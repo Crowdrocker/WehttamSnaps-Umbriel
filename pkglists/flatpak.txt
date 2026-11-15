@@ -1,0 +1,19 @@
+com.obsproject.Studio
+com.discordapp.Discord
+dev.vencord.Vesktop
+com.valvesoftware.Steam
+com.vysp3r.ProtonPlus
+net.davidotek.pupgui2
+com.github.tchx84.Flatseal
+io.missioncenter.MissionCenter
+com.dec05eba.gpu_screen_recorder
+md.obsidian.Obsidian
+org.signal.Signal
+org.telegram.desktop
+org.qbittorrent.qBittorrent
+com.spotify.Client
+io.github.shiftey.Desktop
+flatpak --noninteractive install flathub com.vysp3r.ProtonPlus
+flatpak --noninteractive install flathub io.github.Faugus.faugus-launcher
+flatpak --noninteractive install flathub io.github.kolunmi.Bazaar
+flatpak --noninteractive install flathub it.mijorus.gearlever
