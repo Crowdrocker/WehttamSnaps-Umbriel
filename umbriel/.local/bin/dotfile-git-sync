@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CONF_DIR="$HOME/.config"
+
+# 1. Get target repository path (defaults to WehttamSnaps-Umbriel if blank)
+EXPORTDIR="${1:-}"
+if [[ -z "$EXPORTDIR" ]]; then
+    read -rp "Local GitHub repository path [~/Documents/GitHub/WehttamSnaps-Umbriel]: " EXPORTDIR
+    EXPORTDIR="${EXPORTDIR:-$HOME/Documents/GitHub/WehttamSnaps-Umbriel}"
+fi
+
+# Expand leading ~ safely
+EXPORTDIR="${EXPORTDIR/#\~/$HOME}"
+
+if [[ ! -d "$EXPORTDIR" ]]; then
+    echo "❌ Directory not found: $EXPORTDIR"
+    exit 1
+fi
+
+# 2. Pick un-stowed real directories inside ~/.config (skips symlinks & files)
+SELECTED=$(find "$CONF_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | \
+    fzf --layout=reverse --multi --prompt="Select configs to import > " \
+        --preview="ls -la '$CONF_DIR/{}'") || true
+
+if [[ -z "$SELECTED" ]]; then
+    echo "⚠️  No folders selected. Exiting without making changes."
+    exit 0
+fi
+
+# 3. Move selected folders into <repo>/<pkg>/.config/<pkg> and stow them back
+while IFS= read -r PKG; do
+    [[ -z "$PKG" ]] && continue
+
+    # Match your repo's lowercase package folder convention
+    PKG_LOWER="${PKG,,}"
+    TARGET_PARENT="$EXPORTDIR/$PKG_LOWER/.config"
+    TARGET_DIR="$TARGET_PARENT/$PKG"
+
+    if [[ -e "$TARGET_DIR" ]]; then
+        BACKUP_NAME="${TARGET_DIR}_old_$(date +%Y%m%d-%H%M%S)"
+        echo "📦 Existing $PKG found in repo, backing up to $BACKUP_NAME..."
+        mv "$TARGET_DIR" "$BACKUP_NAME"
+    fi
+
+    mkdir -p "$TARGET_PARENT"
+    echo "➡️  Moving $CONF_DIR/$PKG -> $TARGET_DIR"
+    mv "$CONF_DIR/$PKG" "$TARGET_DIR"
+
+    # Stow only this package back to $HOME (creates ~/.config/$PKG symlink)
+    echo "🔗 Stowing $PKG_LOWER -> $HOME"
+    stow -d "$EXPORTDIR" -t "$HOME" "$PKG_LOWER"
+done <<< "$SELECTED"
+
+# 4. Commit and push to GitHub if inside a git repo
+if [[ -d "$EXPORTDIR/.git" ]]; then
+    echo "🚀 Git repository detected, syncing changes..."
+    cd "$EXPORTDIR"
+
+    mkdir -p "$EXPORTDIR/docs"
+    {
+        echo "- **$(date '+%Y-%m-%d %H:%M:%S')**: Added $(echo "$SELECTED" | tr '\n' ', ' | sed 's/, $//')"
+    } >> "$EXPORTDIR/docs/SYNC_LOG.md"
+
+    git add -A
+    git commit -m "chore(dotfiles): sync $(echo "$SELECTED" | tr '\n' ' ' | xargs)"
+    git push
+    echo "✅ Pushed cleanly to GitHub!"
+else
+    echo "ℹ️  No .git folder found in $EXPORTDIR; skipped git commit/push."
+fi
