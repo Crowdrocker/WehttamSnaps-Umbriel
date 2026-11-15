@@ -301,7 +301,7 @@ user_pref("services.sync.prefs.sync-seen.media.videocontrols.picture-in-picture.
 user_pref("services.sync.prefs.sync-seen.pref.privacy.disable_button.cookie_exceptions", true);
 user_pref("services.sync.prefs.sync-seen.privacy.clearOnShutdown_v2.formdata", true);
 user_pref("services.sync.prefs.syncID", "eeQZAdT30K_j");
-user_pref("services.sync.syncInterval", 600000);
+user_pref("services.sync.syncInterval", 3600000);
 user_pref("services.sync.syncThreshold", 300);
 user_pref("services.sync.tabs.lastSync", "1794764607.93");
 user_pref("services.sync.username", "berksapexlegends@gmail.com");
