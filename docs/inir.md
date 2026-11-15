@@ -9,8 +9,8 @@ Guide for installing, updating, and syncing the **iNiR** Quickshell desktop envi
 Clone the upstream repository and run the setup wizard (select **Umbriel** when prompted):
 
 ```bash
-git clone https://github.com ~/inir
-cd ~/inir
+git clone https://github.com/snowarch/inir.git
+cd inir
 ./setup install
 ```
 
