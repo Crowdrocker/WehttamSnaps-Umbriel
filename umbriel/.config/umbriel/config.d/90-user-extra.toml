@@ -65,16 +65,13 @@ match.app_id = "^com\\.mitchellh\\.ghostty$"
 match.title = "^scratchpad-term$"
 default_scratchpad = "scratchpad-term"
 default_floating = true
-width = "80%"
-height = "80%"
+default_floating_size_px = { width = 1536, height = 864 }
 
 [[window_rule]]
 match.app_id = "^com\\.mitchellh\\.ghostty$"
 match.title = "^(Floating-Menu|SNAPS-OS Help|Umbriel Config Editor|Config Overview)$"
 default_floating = true
-width = "80%"
-height = "80%"
-
+default_floating_size_px = { width = 1536, height = 864 }
 
 # ─────────────────────────────────────────────────────────────────────────
 # Dropdown Window Matching Rule
@@ -126,8 +123,7 @@ default_workspace = "Files"
 match.app_id = "^com\\.mitchellh\\.ghostty$"
 match.title = "^(Floating-Menu|SNAPS-OS Help|Umbriel Config Editor|Config Overview)$"
 default_floating = true
-width = "80%"
-height = "80%"
+default_floating_size_px = { width = 1536, height = 864 }
 # ==============================================================================
 # Gaming & Modding Window Rules
 # ==============================================================================
