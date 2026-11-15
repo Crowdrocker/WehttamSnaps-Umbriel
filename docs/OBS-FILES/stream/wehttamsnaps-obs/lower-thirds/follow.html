@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>wehttamsnaps — Follow lower-third</title>
+<link rel="stylesheet" href="theme.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="lt loop">
+  <div class="content">
+    <div class="row">
+      <span class="label">FOLLOW</span>
+      <span class="value">@wehttamsnaps</span>
+    </div>
+    <div class="sub" id="sub">twitch.tv/wehttamsnaps • youtube • tiktok • x</div>
+  </div>
+  <div class="tag">★</div>
+</div>
+<script>
+(function () {
+  const p = new URLSearchParams(location.search);
+  const sub = p.get('sub');
+  if (sub) document.getElementById('sub').textContent = sub;
+})();
+</script>
+</body>
+</html>

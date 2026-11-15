@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>wehttamsnaps — Now Playing lower-third</title>
+<link rel="stylesheet" href="theme.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="lt">
+  <div class="content">
+    <div class="row">
+      <span class="label">NOW PLAYING</span>
+      <span class="value" id="track">— track / artist</span>
+    </div>
+    <div class="sub" id="sub">album • streaming source</div>
+  </div>
+  <div class="tag">@wehttamsnaps</div>
+</div>
+<script>
+/*
+  Two ways to feed this:
+  (A) Manual — edit the two spans below, or pass ?track=...&sub=... in the URL.
+  (B) StreamElements — replace this script with the SE Now Playing widget's
+      data fields. See streamelements/README.md.
+*/
+(function () {
+  const p = new URLSearchParams(location.search);
+  const track = p.get('track');
+  const sub   = p.get('sub');
+  if (track) document.getElementById('track').textContent = track;
+  if (sub)   document.getElementById('sub').textContent   = sub;
+})();
+</script>
+</body>
+</html>

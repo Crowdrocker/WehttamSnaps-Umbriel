@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>wehttamsnaps — Chat Box</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* chat-box specific */
+  #chat {
+    width: 520px; height: 600px;
+    padding: 12px;
+    display: flex; flex-direction: column-reverse;
+    gap: 8px;
+    overflow: hidden;
+  }
+  .msg {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 10px 14px;
+    background: var(--bg);
+    border-left: 3px solid var(--cyan);
+    border-radius: 0 8px 8px 0;
+    animation: slide-in .4s cubic-bezier(.22,1,.36,1);
+  }
+  .msg .badge {
+    width: 18px; height: 18px; border-radius: 4px;
+    background: var(--bar); flex-shrink: 0; margin-top: 2px;
+  }
+  .msg .body { flex: 1; min-width: 0; }
+  .msg .user {
+    font-weight: 700; color: var(--cyan);
+    text-shadow: 0 0 4px rgba(0,229,255,.4);
+    margin-right: 8px;
+  }
+  .msg .text { color: var(--white); font-size: 15px; word-break: break-word; }
+  .msg .text em { color: var(--magenta); font-style: normal; } /* action/me */
+  .msg.mention { border-left-color: var(--magenta); background: rgba(255,70,180,.12); }
+
+  /* StreamElements injects its own markup; these rules skin the SE chat widget
+     when you host index.html inside an SE Custom Widget. The standalone demo
+     below uses #chat. */
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateX(-30px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  .aperture-tick {
+    width: 14px; height: 14px; flex-shrink: 0; margin-top: 3px;
+    border-radius: 50%;
+    background: conic-gradient(from 15deg,
+      var(--purple), var(--cyan), var(--magenta), var(--purple));
+    box-shadow: var(--glow-c);
+  }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<!--
+  This is a standalone demo of the chat-box look. To use it with REAL Twitch
+  chat, point an OBS Browser source at the StreamElements Chat Box widget URL
+  and paste the CSS above into its Custom CSS box. The SE widget handles the
+  live chat; this CSS just skins it.
+
+  For a fully self-hosted chat (no StreamElements account), use the
+  Twitch popout chat in a browser dock instead — see scripts/README.md and
+  docs/WEHTTAMSNAPS-OBS-GUIDE.md "Custom dock".
+-->
+<div id="chat">
+  <!-- demo messages (remove for production; SE injects live ones) -->
+  <div class="msg">
+    <div class="aperture-tick"></div>
+    <div class="body"><span class="user">wehttamsnaps</span><span class="text">welcome to the stream 🎬</span></div>
+  </div>
+  <div class="msg mention">
+    <div class="aperture-tick"></div>
+    <div class="body"><span class="user">viewer_one</span><span class="text">hey @wehttamsnaps love the aperture logo</span></div>
+  </div>
+  <div class="msg">
+    <div class="aperture-tick"></div>
+    <div class="body"><span class="user">snaps_fan</span><span class="text"><em>arrives with a camera</em></span></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>wehttamsnaps — Overlay Package</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* This is a single 1920x1080 overlay scene that positions all the widgets.
+     Use it as ONE OBS Browser source for the whole overlay, OR use the
+     individual widget HTML files as separate sources for more control. */
+  html, body { width: 1920px; height: 1080px; background: transparent; overflow: hidden; }
+  #overlay { position: relative; width: 1920px; height: 1080px; }
+
+  /* widget placement zones */
+  #alerts-zone { position: absolute; left: 560px; top: 60px; width: 800px; height: 200px; }
+  #np-zone     { position: absolute; left: 460px; top: 860px; }
+  #follow-zone { position: absolute; left: 460px; top: 960px; }
+  #chat-zone   { position: absolute; right: 30px; top: 30px; }
+  #logo-zone   { position: absolute; left: 30px; bottom: 30px; }
+
+  /* logo bug (the transparent PNG we rendered) */
+  #logo-zone img { width: 140px; opacity: .95; }
+
+  /* label the zones faintly (remove in production) */
+  body.preview .zone-label {
+    display: block; font-size: 11px; color: rgba(255,70,180,.6);
+    border: 1px dashed rgba(255,70,180,.3); padding: 2px 6px; margin-bottom: 4px;
+  }
+  .zone-label { display: none; }
+
+  iframe { border: 0; background: transparent; }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body class="preview">
+<div id="overlay">
+  <div id="alerts-zone">
+    <div class="zone-label">alerts (follow/sub/tip)</div>
+    <iframe src="alerts.html" width="800" height="200"></iframe>
+  </div>
+  <div id="chat-zone">
+    <div class="zone-label">chat box</div>
+    <iframe src="chat-box.html" width="520" height="600"></iframe>
+  </div>
+  <div id="np-zone">
+    <div class="zone-label">now playing</div>
+    <iframe src="now-playing.html" width="1000" height="100"></iframe>
+  </div>
+  <div id="follow-zone">
+    <div class="zone-label">follow call-to-action</div>
+    <iframe src="../lower-thirds/follow.html" width="1000" height="180"></iframe>
+  </div>
+  <div id="logo-zone">
+    <div class="zone-label">logo bug</div>
+    <img src="../logo-overlay/wehttamsnaps-logo-cam-bug.png" alt="wehttamsnaps logo">
+  </div>
+</div>
+<script src="overlay.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>wehttamsnaps — Alerts (Follow/Sub/Tip)</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  #alerts { width: 800px; height: 200px; position: relative; }
+  .alert {
+    position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 100%; padding: 22px 30px;
+    display: flex; align-items: center; gap: 18px;
+    opacity: 0; transform: translateY(-50%) scale(.8);
+    animation: alert-in .5s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  .alert .icon {
+    width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
+    background: conic-gradient(from 15deg,
+      var(--purple), var(--cyan), var(--magenta), var(--purple));
+    box-shadow: 0 0 18px rgba(0,229,255,.6);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px;
+  }
+  .alert .body { flex: 1; }
+  .alert .type { font-size: 16px; color: var(--magenta); text-shadow: var(--glow-c); letter-spacing: 2px; }
+  .alert .who  { font-size: 30px; font-weight: 700; color: var(--white); text-shadow: var(--glow-c); }
+  .alert .msg  { font-size: 16px; color: var(--dim); margin-top: 2px; }
+  .alert .tag  { margin-left: auto; }
+
+  @keyframes alert-in {
+    0%   { opacity: 0; transform: translateY(-50%) translateX(-40px) scale(.8); }
+    100% { opacity: 1; transform: translateY(-50%) translateX(0) scale(1); }
+  }
+  @keyframes alert-out {
+    to { opacity: 0; transform: translateY(-50%) scale(.9); }
+  }
+  .alert.out { animation: alert-out .4s ease-in forwards; }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div id="alerts"></div>
+<script src="overlay.js"></script>
+<script>
+/* Demo: cycle through alert types so you can preview the look in OBS.
+   In production, StreamElements fires its own alert events — wire
+   SE's alert fields to the .type/.who/.msg spans, or use this as a
+   Custom Widget that listens to SE's `onEvent` callback (see README). */
+const demo = [
+  { type: "NEW FOLLOWER", who: "viewer_one", msg: "welcome to the snaps fam 📸", icon: "♥" },
+  { type: "SUBSCRIBE",    who: "snaps_fan",  msg: "tier 1 • 3 months", icon: "★" },
+  { type: "TIP",          who: "lens_lover", msg: "$5 • \"keep the aperture open\"", icon: "$" },
+];
+let i = 0;
+function showNext() {
+  const a = demo[i % demo.length]; i++;
+  const el = document.createElement("div");
+  el.className = "alert neon-bar";
+  el.innerHTML = `
+    <div class="icon">${a.icon}</div>
+    <div class="body">
+      <div class="type">${a.type}</div>
+      <div class="who">${a.who}</div>
+      <div class="msg">${a.msg}</div>
+    </div>
+    <div class="tag">@wehttamsnaps</div>`;
+  const c = document.getElementById("alerts");
+  c.innerHTML = "";
+  c.appendChild(el);
+  setTimeout(() => el.classList.add("out"), 3000);
+}
+showNext();
+setInterval(showNext, 4500);
+</script>
+</body>
+</html>

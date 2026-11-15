@@ -3,24 +3,24 @@
  * This file is overwritten when you change wallpaper.
  */
 
-@define-color accent_color #EDB7D2;
-@define-color accent_fg_color #5B3449;
-@define-color accent_bg_color #EDB7D2;
+@define-color accent_color #B6C7EE;
+@define-color accent_fg_color #21304D;
+@define-color accent_bg_color #B6C7EE;
 
-@define-color window_bg_color #120D0F;
-@define-color window_fg_color #F4E0E8;
+@define-color window_bg_color #121316;
+@define-color window_fg_color #E4E2E6;
 
-@define-color headerbar_bg_color #120D0F;
-@define-color headerbar_fg_color #F4E0E8;
+@define-color headerbar_bg_color #121316;
+@define-color headerbar_fg_color #E4E2E6;
 
-@define-color popover_bg_color #20171B;
-@define-color popover_fg_color #F4E0E8;
+@define-color popover_bg_color #1F2023;
+@define-color popover_fg_color #E4E2E6;
 
-@define-color view_bg_color #120D0F;
-@define-color view_fg_color #F4E0E8;
+@define-color view_bg_color #121316;
+@define-color view_fg_color #E4E2E6;
 
-@define-color card_bg_color #191115;
-@define-color card_fg_color #F4E0E8;
+@define-color card_bg_color #1B1B1E;
+@define-color card_fg_color #E4E2E6;
 
 @define-color sidebar_bg_color @window_bg_color;
 @define-color sidebar_fg_color @window_fg_color;
@@ -34,42 +34,42 @@
 .nautilus-window placessidebar list,
 placessidebar,
 placessidebar list {
-    background-color: #120D0F !important;
-    color: #F4E0E8 !important;
+    background-color: #121316 !important;
+    color: #E4E2E6 !important;
     border-right: none !important;
 }
 
 placessidebar row {
     background-color: transparent !important;
-    color: #F4E0E8 !important;
+    color: #E4E2E6 !important;
 }
 
 placessidebar row:hover {
-    background-color: #2B2226 !important;
+    background-color: #2B2B2E !important;
 }
 
 placessidebar row:selected,
 placessidebar row:selected:hover {
-    background-color: #69495A !important;
-    color: #F4E0E8 !important;
+    background-color: #4E5972 !important;
+    color: #E4E2E6 !important;
 }
 
 .nautilus-window headerbar {
-    background-color: #120D0F !important;
-    color: #F4E0E8 !important;
+    background-color: #121316 !important;
+    color: #E4E2E6 !important;
 }
 
 .nautilus-window .view {
-    background-color: #120D0F !important;
-    color: #F4E0E8 !important;
+    background-color: #121316 !important;
+    color: #E4E2E6 !important;
 }
 
 placessidebar image {
-    color: #F4E0E8 !important;
+    color: #E4E2E6 !important;
 }
 
 placessidebar row:selected image {
-    color: #F4E0E8 !important;
+    color: #E4E2E6 !important;
 }
 
 separator.sidebar {

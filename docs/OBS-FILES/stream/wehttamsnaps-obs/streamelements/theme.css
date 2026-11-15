@@ -1,0 +1,45 @@
+/* wehttamsnaps StreamElements overlay theme
+   Shared by all widgets in this package. Paste into the "Custom CSS" box of
+   each StreamElements widget, OR load via <link> if hosting the HTML yourself.
+   Brand: purple(#8A2BE2) -> cyan(#00E5FF) gradient, magenta(#FF46B4) accent,
+   Orbitron/DejaVu font, camera-aperture vibe. */
+
+:root {
+  --purple:  #8A2BE2;
+  --cyan:    #00E5FF;
+  --magenta: #FF46B4;
+  --white:   #FFFFFF;
+  --dim:     #C8D2E6;
+  --bg:      rgba(12, 8, 24, 0.78);
+  --bar:     linear-gradient(90deg, var(--purple), var(--cyan));
+  --glow-c:  0 0 8px var(--cyan);
+  --glow-m:  0 0 8px var(--magenta);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: transparent;
+  font-family: 'Orbitron', 'DejaVu Sans', system-ui, sans-serif;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.neon-bar {
+  background: var(--bar);
+  box-shadow: 0 0 18px rgba(138,43,226,.5), 0 0 30px rgba(0,229,255,.25);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.neon-bar::before {
+  content: ""; position: absolute; left: 0; top: 0;
+  width: 100%; height: 2px; background: var(--magenta);
+  box-shadow: 0 0 6px var(--magenta);
+}
+
+.tag {
+  font-weight: 700; color: var(--magenta);
+  text-shadow: var(--glow-c);
+  letter-spacing: 1px;
+}

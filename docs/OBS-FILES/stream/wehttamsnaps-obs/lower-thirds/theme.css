@@ -1,0 +1,96 @@
+/* wehttamsnaps lower-third theme — purple→cyan neon, magenta accent
+   Used by now-playing.html and follow.html. Drop into OBS as a Browser source. */
+
+:root {
+  --purple: #8A2BE2;
+  --cyan:   #00E5FF;
+  --magenta:#FF46B4;
+  --white:  #FFFFFF;
+  --dim:    #C8D2E6;
+  --bar-w:  880px;
+  --bar-h:  100px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 1000px; height: 180px;
+  background: transparent;
+  overflow: hidden;
+  font-family: 'Orbitron', 'DejaVu Sans', system-ui, sans-serif;
+}
+
+.lt {
+  position: absolute;
+  left: 60px; top: 40px;
+  width: var(--bar-w); height: var(--bar-h);
+  border-radius: 10px;
+  /* purple→cyan gradient bar with neon glow */
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  box-shadow: 0 0 24px rgba(138,43,226,.55), 0 0 40px rgba(0,229,255,.30);
+  overflow: hidden;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: bar-in .45s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+/* magenta accent line on top edge */
+.lt::before {
+  content: "";
+  position: absolute; left: 0; top: -2px;
+  width: 100%; height: 2px;
+  background: var(--magenta);
+  box-shadow: 0 0 8px var(--magenta);
+}
+
+/* subtle moving shimmer sweep */
+.lt::after {
+  content: "";
+  position: absolute; top: 0; left: -30%;
+  width: 30%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+  animation: shimmer 3.5s linear infinite;
+}
+
+.content {
+  position: absolute;
+  left: 28px; top: 14px;
+  display: flex; flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: text-in .55s cubic-bezier(.22,1,.36,1) .25s forwards;
+}
+.row { display: flex; align-items: baseline; gap: 16px; }
+
+.label {
+  font-size: 30px; font-weight: 700; color: var(--white);
+  text-shadow: 0 0 6px var(--cyan);
+  letter-spacing: 1px;
+}
+.value {
+  font-size: 36px; font-weight: 700; color: var(--cyan);
+  text-shadow: 0 0 8px var(--magenta);
+}
+.sub {
+  font-size: 22px; color: var(--dim);
+  font-family: 'DejaVu Sans', system-ui, sans-serif;
+  text-shadow: 0 0 4px rgba(255,70,180,.5);
+}
+
+.tag {
+  position: absolute;
+  right: 20px; top: 50%; transform: translateY(-50%);
+  font-size: 22px; font-weight: 700; color: var(--magenta);
+  text-shadow: 0 0 6px var(--cyan);
+  opacity: 0;
+  animation: text-in .5s ease-out .5s forwards;
+}
+
+@keyframes bar-in   { to { transform: scaleX(1); } }
+@keyframes text-in  { to { opacity: 1; transform: translateX(0); } }
+@keyframes shimmer  { to { left: 130%; } }
+
+/* loop mode: replay the entrance every ~8s (comment out if you want one-shot) */
+.loop .lt  { animation: bar-in .45s cubic-bezier(.22,1,.36,1) both, replay 8s linear .45s infinite; }
+.loop .content, .loop .tag { animation-fill-mode: both; }

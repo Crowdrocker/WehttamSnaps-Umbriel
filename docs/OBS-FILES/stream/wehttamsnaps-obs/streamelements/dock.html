@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>wehttamsnaps — Custom Dock (chat + stream info)</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* This page is meant to be loaded as an OBS CUSTOM BROWSER DOCK
+     (View → Docks → Custom Browser Docks). It embeds the Twitch popout chat
+     and shows live stream stats. It is the answer to "OBS doesn't seem to have
+     a custom dock option" — Browser Docks ARE the custom dock option. */
+  html, body { width: 100%; height: 100%; background: #0c0818; color: var(--white); }
+  #dock { display: flex; flex-direction: column; height: 100vh; }
+  header {
+    padding: 10px 14px; display: flex; align-items: center; gap: 10px;
+    background: var(--bar); box-shadow: 0 2px 12px rgba(138,43,226,.5);
+  }
+  header .logo {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: conic-gradient(from 15deg, var(--purple), var(--cyan), var(--magenta), var(--purple));
+    box-shadow: var(--glow-c);
+  }
+  header h1 { font-size: 15px; font-weight: 700; letter-spacing: 1px; }
+  header .live {
+    margin-left: auto; font-size: 11px; color: var(--magenta);
+    text-shadow: var(--glow-c); padding: 2px 8px; border: 1px solid var(--magenta);
+    border-radius: 10px;
+  }
+
+  #stats { padding: 8px 14px; display: flex; gap: 18px; font-size: 12px;
+           background: rgba(0,0,0,.3); border-bottom: 1px solid rgba(0,229,255,.2); }
+  #stats span b { color: var(--cyan); }
+
+  iframe#chat {
+    flex: 1; width: 100%; border: 0; background: #0c0818;
+  }
+  footer { padding: 6px 14px; font-size: 11px; color: var(--dim);
+           border-top: 1px solid rgba(0,229,255,.2); }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div id="dock">
+  <header>
+    <div class="logo"></div>
+    <h1>wehttamsnaps</h1>
+    <span class="live">● LIVE</span>
+  </header>
+  <div id="stats">
+    <span>Viewers: <b id="viewers">—</b></span>
+    <span>Uptime: <b id="uptime">—</b></span>
+    <span>Bits: <b id="bits">0</b></span>
+    <span>FPS: <b id="fps">—</b></span>
+  </div>
+  <iframe id="chat" src="https://www.twitch.tv/popout/wehttamsnaps/chat?popout="></iframe>
+  <footer>@wehttamsnaps • twitch.tv/wehttamsnaps</footer>
+</div>
+<script src="overlay.js"></script>
+<script>
+/* Live stream stats via the Twitch API (anonymous) — best-effort.
+   If CORS blocks it in the dock, the values stay "—" and chat still works.
+   For guaranteed stats, wire the obs-websocket GetStreamStatus instead
+   (see scripts/scene-switcher.sh status). */
+const CHANNEL = 'wehttamsnaps';
+async function tick() {
+  try {
+    const r = await fetch(`https://decapi.me/twitch/viewercount/${CHANNEL}`);
+    if (r.ok) document.getElementById('viewers').textContent = (await r.text()).trim();
+  } catch (e) {}
+  try {
+    const r = await fetch(`https://decapi.me/twitch/uptime/${CHANNEL}`);
+    if (r.ok) {
+      const t = (await r.text()).trim();
+      document.getElementById('uptime').textContent = t === 'wehttamsnaps is offline' ? 'offline' : t;
+    }
+  } catch (e) {}
+}
+tick();
+setInterval(tick, 20000);
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>wehttamsnaps — Now Playing (StreamElements)</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  #np {
+    width: 1000px; height: 100px;
+    padding: 0 30px;
+    display: flex; align-items: center; gap: 18px;
+    transform: scaleX(0); transform-origin: left center;
+    animation: bar-in .45s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  #np .disc {
+    width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0;
+    background: conic-gradient(from 0deg, var(--purple), var(--cyan), var(--magenta), var(--purple));
+    box-shadow: var(--glow-c);
+    animation: spin 4s linear infinite;
+  }
+  #np .disc::after {
+    content: ""; position: absolute; /* not needed, decorative */
+  }
+  #np .meta { flex: 1; min-width: 0; }
+  #np .label { font-size: 14px; color: var(--magenta); text-shadow: var(--glow-c); letter-spacing: 2px; }
+  #np .track { font-size: 24px; font-weight: 700; color: var(--white); text-shadow: var(--glow-c); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #np .sub   { font-size: 14px; color: var(--dim); }
+  #np .tag   { margin-left: auto; }
+
+  @keyframes bar-in { to { transform: scaleX(1); } }
+  @keyframes spin   { to { transform: rotate(360deg); } }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div id="np" class="neon-bar">
+  <div class="disc"></div>
+  <div class="meta">
+    <div class="label">NOW PLAYING</div>
+    <div class="track" id="track">— nothing yet —</div>
+    <div class="sub" id="sub">spotify • wehttamsnaps</div>
+  </div>
+  <div class="tag">@wehttamsnaps</div>
+</div>
+<script>
+/* StreamElements "Now Playing" data: SE exposes the current track via a
+   widget. If you're hosting this as a Custom Widget, SE calls
+   window.updateTrack(title, artist). Otherwise, edit the spans or pass
+   ?track=...&sub=... in the URL. */
+window.updateTrack = function (title, sub) {
+  document.getElementById('track').textContent = title || '— nothing yet —';
+  if (sub) document.getElementById('sub').textContent = sub;
+};
+(function () {
+  const p = new URLSearchParams(location.search);
+  if (p.get('track')) window.updateTrack(p.get('track'), p.get('sub'));
+})();
+</script>
+</body>
+</html>
