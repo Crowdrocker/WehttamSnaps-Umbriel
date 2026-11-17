@@ -5,3 +5,4 @@
 - **2026-11-15 17:04:11**: Added faugus-launcher,
 - **2026-11-16 19:19:55**: Added umbriel-config,
 - **2026-11-16 19:24:27**: Added kate,
+- **2026-11-16 19:27:43**: Added fuzzel,
