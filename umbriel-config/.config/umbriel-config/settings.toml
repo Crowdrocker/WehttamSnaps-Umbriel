@@ -1,0 +1,7 @@
+check_updates_on_start = true
+window_width = 922
+window_height = 1003
+dark = true
+backup_count = 10
+backup_dir = 
+prereleases = true

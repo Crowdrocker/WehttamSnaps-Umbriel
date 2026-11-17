@@ -1,5 +1,0 @@
-#!/bin/sh
-prefix=/usr
-exec_prefix=${prefix}
-
-exec dotnet ${exec_prefix}/lib/pinta/Pinta.dll "$@"

@@ -1,6 +1,0 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-from DisplayCAL.main import main
-
-main("synthprofile")

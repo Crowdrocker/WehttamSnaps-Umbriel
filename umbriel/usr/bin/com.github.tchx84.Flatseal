@@ -1,9 +1,0 @@
-#!/usr/bin/gjs
-imports.package.init({
-  name: "flatseal",
-  version: "2.4.1",
-  prefix: "/usr",
-  libdir: "/usr/lib",
-  datadir: "/usr/share",
-});
-imports.package.run(imports.main);

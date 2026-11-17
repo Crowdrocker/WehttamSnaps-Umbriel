@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-exec electron43 /usr/lib/heroic-games-launcher/app.asar "$@"

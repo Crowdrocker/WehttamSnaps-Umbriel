@@ -3,3 +3,5 @@
 - **2026-11-15 11:51:16**: Added kate,rofi,snapsos,starship,wehttamsnaps,Goverlay,
 - **2026-11-15 12:13:13**: Added pipewire,
 - **2026-11-15 17:04:11**: Added faugus-launcher,
+- **2026-11-16 19:19:55**: Added umbriel-config,
+- **2026-11-16 19:24:27**: Added kate,

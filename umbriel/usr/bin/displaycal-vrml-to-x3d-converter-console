@@ -1,6 +1,0 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-from DisplayCAL.wxVRML2X3D import main
-
-main()
