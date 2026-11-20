@@ -230,12 +230,12 @@ See the `docs/` directory for guides on iNiR, Steam launch options, MangoHUD, ad
 ### Quick Install
 * **CachyOS / Arch Linux**:
   ```bash
-  git clone https://github.com/WehttamSnaps-Umbriel.git ~/Documents/GitHub/WehttamSnaps-Umbriel
+  git clone https://github.com/Crowdrocker/WehttamSnaps-Umbriel ~/Documents/GitHub/WehttamSnaps-Umbriel
   cd ~/Documents/GitHub/WehttamSnaps-Umbriel && chmod +x install.sh && ./install.sh
   ```
 * **Fedora 45**:
   ```bash
-  git clone https://github.com/WehttamSnaps-Umbriel.git ~/Documents/GitHub/WehttamSnaps-Umbriel
+  git clone https://github.com/Crowdrocker/WehttamSnaps-Umbriel ~/Documents/GitHub/WehttamSnaps-Umbriel
   cd ~/Documents/GitHub/WehttamSnaps-Umbriel && chmod +x fedora-install.sh && ./fedora-install.sh
   ```
 
