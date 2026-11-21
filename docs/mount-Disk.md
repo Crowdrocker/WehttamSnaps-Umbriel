@@ -52,8 +52,44 @@ echo -e "\n📁 AUTO-MOUNT AT BOOT (fstab):"
 echo "# Edit fstab: sudo nano /etc/fstab"
 echo "# Example entry:"
 echo "/dev/sdd1 /mnt/PC-EXTRA-2 ntfs-3g defaults,uid=1000,gid=1000,umask=002 0 0"
+
 echo ""
 echo "# Apply changes:"
 echo "sudo systemctl daemon-reload"
 echo "sudo mount -a"
+
+sudo systemctl daemon-reload
+sudo mount -a
+
+2. Clean /etc/fstab Block for Your Void Reinstall
+
+Before you wipe and reinstall Void, save this exact block to append to /etc/fstab after creating the mount directories (sudo mkdir -p /mnt/{LINUXDRIVE,EXTRA1TB,GAMEDRIVE,WettamSnapsMain}). Make sure ntfs-3g is installed via sudo xbps-install -S ntfs-3g so WettamSnapsMain mounts without halting boot:
+
+# --- WehttamSnaps Data Drives ---
+UUID=c0f59cf7-9437-4ee3-be68-e27e7b1e52ae  /mnt/LINUXDRIVE      ext4     defaults,noatime,nofail  0  2
+UUID=d3283959-c9d3-494a-b832-72f961ea7a92  /mnt/EXTRA1TB        ext4     defaults,noatime,nofail  0  2
+UUID=3f996c97-b699-4208-b9fc-1a64bc65b478  /mnt/GAMEDRIVE       ext4     defaults,noatime,nofail  0  2
+UUID=2C66D88566D850E6                      /mnt/WettamSnapsMain ntfs-3g  defaults,uid=1000,gid=1000,dmask=022,fmask=133,nofail  0  0
+
+
+(After mounting, run sudo chown -R $USER:$USER /mnt/LINUXDRIVE /mnt/EXTRA1TB /mnt/GAMEDRIVE once to verify your new Void UID/GID owns all existing Steam and mod folders).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
