@@ -77,6 +77,45 @@ UUID=2C66D88566D850E6                      /mnt/WettamSnapsMain ntfs-3g  default
 
 
 
+Your secondary drives are all showing up cleanly—you just need to add them to /etc/fstab so they auto-mount at boot (especially GAMEDRIVE so Steam and Faugus Launcher can immediately find your existing game libraries without hanging).
+
+1. Install ntfs-3g for Your NTFS Drives (512GB & WettamSnapsMain)
+
+Void's base install does not include ntfs-3g by default, which is needed for read/write mounting on sdc1 and sde1:
+bash
+sudo xbps-install -S ntfs-3g
+Use code with caution.
+
+2. Create Your Mount Directories
+
+bash
+sudo mkdir -p /mnt/LINUXDRIVE /mnt/512GB /mnt/GAMEDRIVE /mnt/WettamSnapsMain /mnt/EXTRA1TB
+Use code with caution.
+
+3. Add All Drives to /etc/fstab by UUID
+
+Run this block to append your drives safely using their exact UUIDs (nofail prevents boot hangs if a drive is ever disconnected):
+bash
+cat << 'EOF' | sudo tee -a /etc/fstab
+UUID=2be94340-fe0c-464c-9afc-fde6ddc300cc  /mnt/LINUXDRIVE       ext4     defaults,noatime,nofail  0  2
+UUID=47780A83503AF675                      /mnt/512GB            ntfs-3g  defaults,uid=1000,gid=1000,nofail  0  0
+UUID=3f996c97-b699-4208-b9fc-1a64bc65b478  /mnt/GAMEDRIVE        ext4     defaults,noatime,nofail  0  2
+UUID=2C66D88566D850E6                      /mnt/WettamSnapsMain  ntfs-3g  defaults,uid=1000,gid=1000,nofail  0  0
+UUID=d3283959-c9d3-494a-b832-72f961ea7a92  /mnt/EXTRA1TB         ext4     defaults,noatime,nofail  0  2
+EOF
+Use code with caution.
+
+4. Mount Everything & Grant Flatpak Faugus Access
+
+Mount all drives immediately, ensure your user owns the ext4 mount folders, and give Flatpak Faugus access to /mnt so it can launch games stored on GAMEDRIVE:
+bash
+sudo systemctl daemon-reload 2>/dev/null || true
+sudo mount -a
+sudo chown -R $USER:$USER /mnt/LINUXDRIVE /mnt/GAMEDRIVE /mnt/EXTRA1TB
+sudo flatpak override io.github.Faugus.faugus-launcher --filesystem=/mnt
+Use code with caution.
+(Note: If you run chown on large folders, use sudo chown $USER:$USER /mnt/LINUXDRIVE /mnt/GAMEDRIVE /mnt/EXTRA1TB without -R first so it finishes instantly while keeping your existing file permissions intact).
+Once sudo mount -a finishes without errors, let me know if Steam and Faugus pick up your existing libraries on /mnt/GAMEDRIVE and launch cleanly!
 
 
 
